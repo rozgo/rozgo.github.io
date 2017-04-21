@@ -1,0 +1,29 @@
+section{
+	padding: 50px 0px 50px 0px;
+}
+
+/* --- Adjust the padding to Section Video Gallery ------------ */
+.bg-light-white.height, .bg-light-gray.height{
+	padding: 25px 0px 50px 0px;
+
+}
+
+/* --- Center the filters elements ---------------------------- */
+.cbp-l-filters-alignRight {
+    text-align: center;
+}
+
+/* --- Resize the height to de DIV for captions --------------- */
+.cbp-caption-overlayBottomAlong .cbp-caption-activeWrap {
+    height: 80px;
+}
+
+/* --- Reduce the padding top and bottom to the captions ----- */
+.cbp-l-caption-alignCenter .cbp-l-caption-body {
+    padding: 2px 0;
+}
+
+section h3.section-subheading.text-muted.near{
+
+    margin-bottom: 15px;
+}
