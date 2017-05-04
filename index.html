@@ -17,13 +17,18 @@
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <!-- Cube Portfolio CSS -->
+    <link href="css/cubeportfolio.min.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet' type='text/css'> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,7 +51,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Alex Rozgo</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <div class="container_logoskills">
+                        <div class="logo"><span class="Alex">Alex</span><span class="Rozgo">Rozgo</span></div>
+                    </div>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,13 +65,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Experiments</a>
+                        <a class="page-scroll" href="#game-portfolio">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">Reviews</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#game-portfolio">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">About Me</a>
@@ -88,129 +94,787 @@
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
+
+    <!-- VIDEO GALLERY SECTION -->
+    <section id="game-portfolio" class="ConceptBkgDark">
+
         <div class="container">
             <div class="row">
+                <div class="col-lg-12 text-center redes">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/rozgo"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/rozgo"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/alex-rozgo-8b69122"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
                 <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading text-muted">
-
-                      I design and develop interactive dynamical systems for virtual and augmented reality games and simulations.
-
-                    </h3>
-                    <h2 class="section-heading">Dynamical Systems</h2>
-                    <h3 class="section-subheading text-muted">A dynamical system is a set of variables and a set of rules saying how those variables change over time. Those rules are called differential equations.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-space-shuttle fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Games and Simulations</h4>
-                    <p class="text-muted">2D/3D realtime GPU rendering. Physics and game engines. Procedural and parametric generation. Control systems.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Distributed Systems</h4>
-                    <p class="text-muted">Highly connected and scalable communication systems. Pub/Sub, Peer-to-Peer, Bluetooth.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Internet of Things</h4>
-                    <p class="text-muted">Cross-platform development, devices, and input systems. VR and AR. Motion capture.</p>
+                    <h2 class="section-heading">Portfolio</h2>
+                    <h3 class="section-subheading text-muted near">I design and develop interactive dynamical systems for virtual and augmented reality games and simulations.</h3>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Experiments</h2>
-                    <h3 class="section-subheading text-muted">"With four parameters I can fit an elephant, and with five I can make him wiggle his trunk." -John Von Neumann</h3>
-                </div>
+        <div id="js-filters-masonry" class="cbp-l-filters-alignRight">
+            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                All <div class="cbp-filter-counter"></div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/experiments/pixar-thumb.gif" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Real-time Pixar Rendering</h4>
-                        <p class="text-muted">Reverse engineering Pixar's lighting techniques.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/experiments/inputs-thumb.gif" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Input Devices and Networking</h4>
-                        <p class="text-muted">Connected devices allow for real-time control of dynamical systems.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/experiments/ai-thumb.gif" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Physics and Artificial Intelligence</h4>
-                        <p class="text-muted">Exploring emergent behavior of dynamical systems.</p>
-                    </div>
-                </div>
-
-
-
+            <div data-filter=".unreal" class="cbp-filter-item">
+                Unreal <div class="cbp-filter-counter"></div>
             </div>
-
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                  <!-- <h2 class="section-heading">Unreal Engine 4 - Playlist</h2> -->
-                  <h3>Unreal Engine 4</h3>
-                  <h4 class=" text-muted">playlist</h4>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="853" height="480" src="https://www.youtube.com/embed/3iOi2vYeWjo?listType=playlist&list=PLpDgOnZpfh6GGh4JJ_7hkSItI87LwYrlK" frameborder="0" allowfullscreen></iframe>              </div>
-                  </div>
+            <div data-filter=".unity" class="cbp-filter-item">
+                Unity<div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".games" class="cbp-filter-item">
+                Games <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".simulations" class="cbp-filter-item">
+                Simulations <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".ai" class="cbp-filter-item">
+                AI <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".experiments" class="cbp-filter-item">
+                Experiments <div class="cbp-filter-counter"></div>
             </div>
         </div>
-    </section>
+
+        <div id="js-grid-masonry" class="cbp">
+
+            <!-- === FILA 1 : DEL VIDEO 1 AL 5 =============================================================  -->
+
+            <div class="cbp-item unreal simulations"><!-- VIDEO 1 -->
+                <a href="https://www.youtube.com/watch?v=735aedKBwY4" class="cbp-caption cbp-lightbox" data-title="Superformula Particles">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video1.png" alt="Superformula Particles"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Superformula Particles</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 2 -->
+                <a href="https://www.youtube.com/watch?v=ARK4xeIR2BM" class="cbp-caption cbp-lightbox" data-title="Superformula driven by Signal Generators">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video2.png" alt="Superformula driven by Signal Generators"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Superformula driven by Signal Generators</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 3 -->
+                <a href="https://www.youtube.com/watch?v=3iOi2vYeWjo" class="cbp-caption cbp-lightbox" data-title="SuperShapes using SuperFormula in Unreal Engine">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video3.png" alt="SuperShapes using SuperFormula in Unreal Engine"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">SuperShapes using SuperFormula in Unreal Engine</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 4 -->
+                <a href="https://www.youtube.com/watch?v=hnYrq4Qkfyc" class="cbp-caption cbp-lightbox" data-title="GPU Particles - Unreal Engine">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video4.png" alt="GPU Particles - Unreal Engine"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">GPU Particles - Unreal Engine</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 5 -->
+                <a href="https://www.youtube.com/watch?v=0SMB3IvMI1Y" class="cbp-caption cbp-lightbox" data-title="Particles VectorFields - Unreal Engine 4">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video5.png" alt="Particles VectorFields - Unreal Engine 4"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Particles VectorFields - Unreal Engine 4</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************** FILA 2 : DEL VIDEO 6 AL 10 *****************************************************************  -->
+
+            <div class="cbp-item unreal"><!-- VIDEO 6 -->
+                <a href="https://www.youtube.com/watch?v=ob4G_mD639s" class="cbp-caption cbp-lightbox" data-title="Signals for Unreal Engine 4">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video6.png" alt="Signals for Unreal Engine 4"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Signals for Unreal Engine 4 </div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal ai"><!-- VIDEO 7 -->
+                <a href="https://www.youtube.com/watch?v=MmrLJpW2c4g" class="cbp-caption cbp-lightbox" data-title="Tentacle Inverse Kinematics - VR - Unreal Engine 4">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video7.png" alt="Tentacle Inverse Kinematics - VR - Unreal Engine 4"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Tentacle Inverse Kinematics - VR - Unreal Engine 4</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal experiments"><!-- VIDEO 8 -->
+                <a href="https://www.youtube.com/watch?v=3nNGf1DVOkM" class="cbp-caption cbp-lightbox" data-title="Fractal RenderTexture - Unreal Engine">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video8.png" alt="Fractal RenderTexture - Unreal Engine"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Fractal RenderTexture - Unreal Engine</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 9 -->
+                <a href="https://www.youtube.com/watch?v=x28CmFgx1Bc" class="cbp-caption cbp-lightbox" data-title="Feedback Loop Controlled Motion for VR">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video9.png" alt="Feedback Loop Controlled Motion for VR"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Feedback Loop Controlled Motion for VR</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 10 -->
+                <a href="https://www.youtube.com/watch?v=Sv3FWTfFNc4" class="cbp-caption cbp-lightbox" data-title="PIDController - Physics - Unreal Engine">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video10.png" alt="PIDController - Physics - Unreal Engine"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">PIDController - Physics - Unreal Engine</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ********************** FILA 3 : DEL VIDEO 11 AL 15 *****************************************************************  -->
+
+             <div class="cbp-item unreal"><!-- VIDEO 11-->
+                <a href="https://www.youtube.com/watch?v=cDKqvrfIu3M" class="cbp-caption cbp-lightbox" data-title="Vector Displacement Map">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video11.png" alt="Vector Displacement Map"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Vector Displacement Map</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 12 -->
+                <a href="https://www.youtube.com/watch?v=PR5JiRGRXo4" class="cbp-caption cbp-lightbox" data-title="3D Digital Production - Product Shot Demo">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video12.png" alt="3D Digital Production - Product Shot Demo"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">3D Digital Production - Product Shot Demo</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 13 -->
+                <a href="https://www.youtube.com/watch?v=bK5l5kUPDL4" class="cbp-caption cbp-lightbox" data-title="3D Animated - Tech Demo">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video13.png" alt="3D Animated - Tech Demo"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">3D Animated - Tech Demo</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 14 -->
+                <a href="https://www.youtube.com/watch?v=Nd6nemhE8N0" class="cbp-caption cbp-lightbox" data-title="3D Post Production Test">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video14.png" alt="3D Post Production Test"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">3D Post Production Test</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 15 -->
+                <a href="https://www.youtube.com/watch?v=bktNzHAwwYQ" class="cbp-caption cbp-lightbox" data-title="NVidia Cataclysm">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video15.png" alt="NVidia Cataclysm"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">NVidia Cataclysm</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- *************************** FILA 4 : DEL VIDEO 16 AL 20 *****************************************************************  -->
+
+            <div class="cbp-item unreal simulations experiments"><!-- VIDEO 16 -->
+                <a href="https://www.youtube.com/watch?v=i5gS6ipWRJo" class="cbp-caption cbp-lightbox" data-title="Wine - Liquid Physics Experiment">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video16.png" alt="Wine - Liquid Physics Experiment"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Wine - Liquid Physics Experiment</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 17 -->
+                <a href="https://www.youtube.com/watch?v=J-Hqxx9S6tE" class="cbp-caption cbp-lightbox" data-title="Buffalo - Nvidia HairWorks">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video17.png" alt="Buffalo - Nvidia HairWorks"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Buffalo - Nvidia HairWorks</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 18 -->
+                <a href="https://www.youtube.com/watch?v=laE7BB4ZAh8" class="cbp-caption cbp-lightbox" data-title="Particles Lead">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video18.png" alt="Particles Lead"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Particles Lead</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations"><!-- VIDEO 19 -->
+                <a href="https://www.youtube.com/watch?v=JilA_-inePk" class="cbp-caption cbp-lightbox" data-title="Force Directed Nodes">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video19.png" alt="Force Directed Nodes"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Force Directed Nodes</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 20 -->
+                <a href="https://www.youtube.com/watch?v=8dxVQeRzfeU" class="cbp-caption cbp-lightbox" data-title="Depth Cloud">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video20.png" alt="Depth Cloud"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Depth Cloud</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************ FILA 5 : DEL VIDEO 21 AL 25 ******************************************************************  -->
+
+            <div class="cbp-item unreal"><!-- VIDEO 21 -->
+                <a href="https://www.youtube.com/watch?v=r3o2vN5y7b4" class="cbp-caption cbp-lightbox" data-title="VR IK in UE4">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video21.png" alt="VR IK in UE4"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">VR IK in UE4</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 22 -->
+                <a href="https://www.youtube.com/watch?v=onbuz5Xq-mA" class="cbp-caption cbp-lightbox" data-title="Internal">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video22.png" alt="Internal"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Internal</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal simulations experiments"><!-- VIDEO 23 -->
+                <a href="https://www.youtube.com/watch?v=kVCqk4EAytI" class="cbp-caption cbp-lightbox" data-title="Reaction Diffuse">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video23.png" alt="Reaction Diffuse"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Reaction Diffuse</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unreal"><!-- VIDEO 24 -->
+                <a href="https://www.youtube.com/watch?v=wKVUG04qhC0" class="cbp-caption cbp-lightbox" data-title="Musical VR World">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video24.png" alt="Musical VR World"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Musical VR World</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity experiments"><!-- VIDEO 25-->
+                <a href="https://www.youtube.com/watch?v=M4YXZSy0cts" class="cbp-caption cbp-lightbox" data-title="BumbleBee with experimental mobile shader">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video25.png" alt="BumbleBee with experimental mobile shader"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">BumbleBee with experimental mobile shader</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************ FILA 6 : DEL VIDEO 26 AL 30 ******************************************************************  -->
+
+            <div class="cbp-item unity"><!-- VIDEO 26 -->
+                <a href="https://www.youtube.com/watch?v=t04p4_IrkYU" class="cbp-caption cbp-lightbox" data-title="Pixar style lighting realtime render">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video26.png" alt="Pixar style lighting realtime render"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Pixar style lighting realtime render - initial experiments</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity"><!-- VIDEO 27 -->
+                <a href="https://www.youtube.com/watch?v=7uXZWniMz9U" class="cbp-caption cbp-lightbox" data-title="Rawbots - Technical Preview">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video27.png" alt="Rawbots - Technical Preview"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Rawbots - Technical Preview</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity experiments"><!-- VIDEO 28 -->
+                <a href="https://www.youtube.com/watch?v=uxVujZwqbnE" class="cbp-caption cbp-lightbox" data-title="Verlet Integration and Signal Generated Gait">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video28.png" alt="Verlet Integration and Signal Generated Gait"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Verlet Integration and Signal Generated Gait</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity ai"><!-- VIDEO 29 -->
+                <a href="https://www.youtube.com/watch?v=8hfKs02QHR4" class="cbp-caption cbp-lightbox" data-title="Snake PID">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video29.png" alt="Snake PID"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Snake PID</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity ai"><!-- VIDEO 30 -->
+                <a href="https://www.youtube.com/watch?v=DYtIbzNz_hU" class="cbp-caption cbp-lightbox" data-title="Creatures First Steps">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video30.png" alt="Creatures First Steps"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Creatures First Steps</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************ FILA 7 : DEL VIDEO 31 AL 35 ******************************************************************  -->
+
+            <div class="cbp-item unity ai"><!-- VIDEO 31 -->
+                <a href="https://www.youtube.com/watch?v=3WOSKPjf0bQ" class="cbp-caption cbp-lightbox" data-title="Robo Biped Keeping Balance">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video31.png" alt="Robo Biped Keeping Balance"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Robo Biped Keeping Balance</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity ai"><!-- VIDEO 32 -->
+                <a href="https://www.youtube.com/watch?v=xT8ToOVrWnk" class="cbp-caption cbp-lightbox" data-title="Tiny Battle">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video32.png" alt="Tiny Battle"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Tiny Battle</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity ai"><!-- VIDEO 33 -->
+                <a href="https://www.youtube.com/watch?v=YpjMm7DzYXU" class="cbp-caption cbp-lightbox" data-title="PID Robots">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video33.png" alt="PID Robots"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">PID Robots</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity experiments"><!-- VIDEO 34 -->
+                <a href="https://www.youtube.com/watch?v=RTOVZrg2k8s" class="cbp-caption cbp-lightbox" data-title="Experimental World Building">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video34.png" alt="Experimental World Building"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Experimental World Building</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity games"><!-- VIDEO 35 -->
+                <a href="https://www.youtube.com/watch?v=ml_4jj_SFnw" class="cbp-caption cbp-lightbox" data-title="Kitty Toy - iPhone & iPad">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video35.png" alt="Kitty Toy - iPhone & iPad"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Kitty Toy - iPhone & iPad</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************ FILA 8 : DEL VIDEO 36 AL 40 ******************************************************************  -->
+
+            <div class="cbp-item unity games"><!-- VIDEO 36 -->
+                <a href="https://www.youtube.com/watch?v=F3yLaQeqw7w" class="cbp-caption cbp-lightbox" data-title="Bubblelicious">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video36.png" alt="Bubblelicious"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Bubblelicious</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity games"><!-- VIDEO 37 -->
+                <a href="https://www.youtube.com/watch?v=xrNNogedy9o" class="cbp-caption cbp-lightbox" data-title="MasterDealer - Teaser II">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video37.png" alt="MasterDealer - Teaser II"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">MasterDealer - Teaser II</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity games"><!-- VIDEO 38 -->
+                <a href="https://www.youtube.com/watch?v=ENOMqPVl5Ms" class="cbp-caption cbp-lightbox" data-title="Grokion developed with Unity 3D">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video38.png" alt="Grokion developed with Unity 3D"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Grokion developed with Unity 3D</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity games simulations ai"><!-- VIDEO 39 -->
+                <a href="https://www.youtube.com/watch?v=WTiKMW5CrM4" class="cbp-caption cbp-lightbox" data-title="Airport Simulation Game">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video39.png" alt="Airport Simulation Game"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Airport Simulation Game</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item unity games"><!-- VIDEO 40 -->
+                <a href="https://www.youtube.com/watch?v=Xa0atrR26dg" class="cbp-caption cbp-lightbox" data-title="Cards Battle MMO Game - iPad">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video40.png" alt="Cards Battle MMO Game - iPad"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Cards Battle MMO Game - iPad</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ************************ FILA 9 : DEL VIDEO 41 AL 45 ******************************************************************  -->
+
+            <div class="cbp-item unity"><!-- VIDEO 41 -->
+                <a href="https://www.youtube.com/watch?v=Ob8icqlv7Ns" class="cbp-caption cbp-lightbox" data-title="Infinite Terrain">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video41.png" alt="Infinite Terrain"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Infinite Terrain</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item games"><!-- VIDEO 42 -->
+                <a href="https://www.youtube.com/watch?v=RkBiYpD3SDc" class="cbp-caption cbp-lightbox" data-title="Star Wars: The Force Unleashed Trailer">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video42.png" alt="Star Wars: The Force Unleashed Trailer"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Star Wars: The Force Unleashed Trailer</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item games"><!-- VIDEO 43 -->
+                <a href="https://www.youtube.com/watch?v=XPIS_aA4lrc" class="cbp-caption cbp-lightbox" data-title="Rawbots - Official Teaser Trailer">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video43.png" alt="Rawbots - Official Teaser Trailer"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Rawbots - Official Teaser Trailer</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item games"><!-- VIDEO 44 -->
+                <a href="https://www.youtube.com/watch?v=GYT0u0skyb0" class="cbp-caption cbp-lightbox" data-title="Ghost Pirates of Vooju Island Trailer">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video44.png" alt="Ghost Pirates of Vooju Island Trailer"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Ghost Pirates of Vooju Island Trailer</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item games"><!-- VIDEO 45 -->
+                <a href="https://www.youtube.com/watch?v=efobLuudkp8" class="cbp-caption cbp-lightbox" data-title="A Vampyre Story - Trailer - PC">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video45.png" alt="A Vampyre Story - Trailer - PC"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">A Vampyre Story - Trailer - PC</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- *********************** FILA 10 : DEL VIDEO 46 AL 50 ******************************************************************  -->
+
+            <div class="cbp-item games"><!-- VIDEO 46 -->
+                <a href="https://www.youtube.com/watch?v=ip6KeuE0edU" class="cbp-caption cbp-lightbox" data-title="STP Video--Briscas">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video46.png" alt="STP Video--Briscas"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">STP Video--Briscas</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item games experiments"><!-- VIDEO 47 -->
+                <a href="https://www.youtube.com/watch?v=ExgrBFXMvPc" class="cbp-caption cbp-lightbox" data-title="Retro Game for first iPhone">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video47.png" alt="Retro Game for first iPhone"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Retro Game for first iPhone</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item simulations ai"><!-- VIDEO 48 -->
+                <a href="https://www.youtube.com/watch?v=r-0xqr8tvK0" class="cbp-caption cbp-lightbox" data-title="Vehicle Lidar Simulation">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video48.png" alt="Vehicle Lidar Simulation"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Vehicle Lidar Simulation</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item ai"><!-- VIDEO 49 -->
+                <a href="https://www.youtube.com/watch?v=x7-aAJ7uc5o" class="cbp-caption cbp-lightbox" data-title="PID Turret">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video49.png" alt="PID Turret"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">PID Turret</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item experiments"><!-- VIDEO 50 -->
+                <a href="https://www.youtube.com/watch?v=av6XyfeHr-g" class="cbp-caption cbp-lightbox" data-title="Mobile AR NFT Test">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video50.png" alt="Mobile AR NFT Test"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Mobile AR NFT Test</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- *********************** FILA 11 : DEL VIDEO 51 AL 55 ******************************************************************  -->
+
+            <div class="cbp-item experiments"><!-- VIDEO x -->
+                <a href="https://www.youtube.com/watch?v=BHfVtFZEkM0" class="cbp-caption cbp-lightbox" data-title="Input Experiments">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video51.png" alt="Input Experiments"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Input Experiments</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item experiments"><!-- VIDEO x -->
+                <a href="https://www.youtube.com/watch?v=xEsJVL8hUyg" class="cbp-caption cbp-lightbox" data-title="Tracking">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video52.png" alt="Tracking"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Tracking</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item experiments"><!-- VIDEO x -->
+                <a href="https://www.youtube.com/watch?v=THnYD5_382k" class="cbp-caption cbp-lightbox" data-title="Custom Web Browser for iPad">
+                    <div class="cbp-caption-defaultWrap"><img src="img/video53.png" alt="Custom Web Browser for iPad"></div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Custom Web Browser for iPad</div>
+                                <div class="cbp-l-caption-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ******************** FIN DE LAS FILAS *******************************************************************  -->
+    </div>
+</section>
+
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="bg-light-white height ConceptBkgReviews">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Reviews</h2>
                     <h3 class="section-subheading text-muted">A few good things said about my work.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
+
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
@@ -270,69 +934,20 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>And
-                                    <br>yet
-                                    <br>it moves!</h4>
+                                <h4>And<br>yet<br>it moves!</h4>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="game-portfolio" class="bg-light-gray">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Game experiences I helped develop. Including 3 awesome years at LucasArts.</h3>
-                </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/RkBiYpD3SDc?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/XPIS_aA4lrc?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/ENOMqPVl5Ms?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/efobLuudkp8?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/xrNNogedy9o?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <i class="fa"></i>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/ip6KeuE0edU?rel=0" allowfullscreen></iframe>
-                </div>
-              </div>
+                <div class="col-lg-12"></div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <section id="team" class="bg-light-white height ConceptBkgDark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -344,7 +959,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/AlexRozgo.jpg" class="img-responsive img-circle" alt="">
                         <h4>Alex Rozgo</h4>
                         <p class="text-muted">Dynamical Systems Engineer</p>
                         <ul class="list-inline social-buttons">
@@ -383,14 +998,9 @@
 
     <!-- Clients Aside -->
     <!-- <i class="fa"></i> -->
-    <section class="clients">
-
-      <!-- <i class="fa"></i> -->
-
-      <!-- <div class="row"><br></div> -->
+    <section class="clients bg-light-gray height ConceptBkg">
 
         <div class="container text-center">
-
           <div class="row">
               <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Technologies</h2>
@@ -419,55 +1029,48 @@
             </ul>
           </div>
 
-          <div class="row"><p><br></p></div>
-
-          <div class="row text-center">
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/steamvr.png" class="img-responsive img-centered" alt="">
+        <div class="row text-center separateTop">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/steam-vr.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/unreal.png" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/unreal.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/unity.png" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/unity.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/htc-vive.jpg" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/htc-vive.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/oculus.gif" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/oculus.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/targets.png" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/targets.png" class="img-responsive img-centered" alt=""></div>
             </div>
-            <div class="col-md-2 col-sm-3">
-              <img src="img/logos/browsers.png" class="img-responsive img-centered" alt="">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="containerImg"><img src="img/logos/browsers.png" class="img-responsive img-centered" alt=""></div>
             </div>
-          </div>
-
-          <i class="fa"></i>
-
-
-          <div class="row"><p><br></p></div>
-
         </div>
+
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="height ConceptBkgDark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Me</h2>
                     <h3 class="section-subheading text-muted">Currently busy, but free to talk about creating unique experiences.</h3>
-                    <img src="img/about/email.png" class="img-responsive img-centered" alt="">
+                    <a class="emailme" href="mailto:alex.rozgo@gmail.com" target="_top">alex.rozgo@gmail.com</a>
+                    <!-- <img src="img/about/email.png" class="img-responsive img-centered" alt=""> -->
                     <!-- <h3 class="section-subheading text-muted">Skype: rozgok | WhatsApp: rozgok | Telegram: alex_rozgo</h3> -->
                 </div>
             </div>
 
             <div class="row">
-              <ul class="list-inline text-center">
-                  <li><a href="#">Skype: rozgok</a></li>
+              <ul class="list-inline text-center skype">
+                  <li><a class="skypeme" href="#">Skype: rozgok</a></li>
                   <!-- <li><a href="#">WhatsApp: rozgok</a></li>
                   <li><a href="#">Telegram: alex_rozgo</a></li> -->
               </ul>
@@ -476,23 +1079,20 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Rozgo 2016</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/rozgo"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://github.com/rozgo"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/alex-rozgo-8b69122"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
+        <a id="back-to-top" href="#" class="btn btn-primary btn-lg scrollToTop" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center redes">
+                <span class="copyright">Copyright &copy; Rozgo 2017</span>
+                <ul class="list-inline social-buttons">
+                    <li><a href="https://twitter.com/rozgo"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/rozgo"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/alex-rozgo-8b69122"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
             </div>
         </div>
+    </div>
     </footer>
 
     <!-- Portfolio Modals -->
@@ -589,7 +1189,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -606,6 +1206,28 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
 
+
+    <!-- load jquery -->
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+
+    <script>
+        $(document).ready(function(){
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollToTop').fadeIn();
+                } else {
+                    $('.scrollToTop').fadeOut();
+                }
+            });
+            //Click event to scroll to top
+            $('.scrollToTop').click(function(){
+                $('html, body').animate({scrollTop : 0},3200);
+                return false;
+            });
+        });
+    </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -614,8 +1236,12 @@
 
       ga('create', 'UA-73087513-1', 'auto');
       ga('send', 'pageview');
-
     </script>
+
+    <!-- load cubeportfolio -->
+    <script type="text/javascript" src="js/jquery.cubeportfolio.min.js"></script>
+    <!-- init cubeportfolio -->
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 
