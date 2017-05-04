@@ -3,10 +3,11 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 }
 .text-muted {
-  color: #777;
+  /*color: #777;*/
+  color: #ccc;
 }
 .text-primary {
   color: #e49875;
@@ -24,9 +25,10 @@ a:focus,
 a:active,
 a.active {
   outline: none;
+  text-decoration: none;
 }
 a {
-  color: #e49875;
+  font-family: 'Proza Libre', sans-serif;
 }
 a:hover,
 a:focus,
@@ -40,25 +42,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;*/
+  font-family: 'Proza Libre', sans-serif;
   font-weight: 700;
 }
 .img-centered {
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #f6f6f9;
+  /*background-color: #f6f6f9;*/
 }
 .bg-darkest-gray {
-  background-color: #222;
+  /*background-color: #222;*/
 }
 .btn-primary {
   color: white;
   background-color: #e49875;
   border-color: #e49875;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;*/
+  font-family: 'Proza Libre', sans-serif;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -101,8 +105,9 @@ fieldset[disabled] .btn-primary.active {
   color: white;
   background-color: #e49875;
   border-color: #e49875;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;*/
+  font-family: 'Proza Libre', sans-serif;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
@@ -144,19 +149,27 @@ fieldset[disabled] .btn-xl.active {
   color: #e49875;
   background-color: white;
 }
+
+.navbar-nav {
+    margin: 15px 0 0 100px;
+    font-size: 2rem;
+}
+
 .navbar-default {
-  background-color: #222;
+  /*background-color: #222;*/
+  background-color: #000;
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
   color: #e49875;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  /*font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;*/
+  font-family: 'Proza Libre', sans-serif;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-  color: #dc784a;
+  color: #dc784a;  
 }
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -173,30 +186,30 @@ fieldset[disabled] .btn-xl.active {
   background-color: #e49875;
 }
 .navbar-default .nav li a {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;*/
+  font-family: 'Proza Libre', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-  color: #e49875;
   outline: none;
 }
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
-  color: white;
+  color: #fff;
   background-color: #e49875;
 }
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
+  color: #fff;
   background-color: #dc784a;
 }
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-color: #000;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -219,8 +232,71 @@ fieldset[disabled] .btn-xl.active {
   .navbar-default.navbar-shrink .navbar-brand {
     font-size: 1.5em;
   }
+  .sk{
+    font-family: Helvetica;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+  }
 }
+
+.skills{
+    width: 100%;
+    position: relative;
+    height: auto;
+    top:-2rem;
+    float:left;
+}
+.skills > span{
+    font-family: Helvetica;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+}
+.nav.navbar-nav.navbar-right.move-left{
+    position: relative;
+    top: 0rem;
+    left: 30%;
+    float: left !important;
+}
+
+a:active,
+a.active {
+  border-top: solid #f94d6f 3px !important;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    margin: 0px 5px;
+}
+
+.navbar-default .nav li a:link{ 
+  border-top: solid #fff 1px; 
+  color: #fafafa !important;
+}
+.navbar-default .nav li a:visited{ 
+  border-top: solid #fff 1px;
+  color: #fafafa !important;
+}
+.navbar-default .nav li a:hover{ 
+  border-top: solid #f94d6f 1px;
+  color: #fff !important;
+}
+.navbar-default .nav li a:focus{
+  border-top: solid #f94d6f 1px !important;
+  color: #f94d6f !important;
+}
+.navbar-default .nav li a:active{
+  border-top: solid #f94d6f 1px !important;
+  color: #f94d6f !important;
+}
+
+
+
 header {
+  display:none;
+  /*
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
   background-attachment: scroll;
@@ -229,6 +305,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  */
   text-align: center;
   color: white;
 }
@@ -237,14 +314,16 @@ header .intro-text {
   padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
@@ -257,14 +336,16 @@ header .intro-text .intro-heading {
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
@@ -282,9 +363,9 @@ section h2.section-heading {
 }
 section h3.section-subheading {
   font-size: 16px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: none;
-  font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
 }
@@ -372,8 +453,9 @@ section h3.section-subheading {
   bottom: 0;
   position: absolute;
   content: "";
-  width: 2px;
-  background-color: #f1f1f1;
+  width: 5px;
+  /*background-color: #f1f1f1;*/
+  background-color: #f94d6f;
   left: 40px;
   margin-left: -1.5px;
 }
@@ -416,10 +498,11 @@ section h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #e49875;
+  background-color: #4a3347;
   color: white;
   border-radius: 100%;
-  border: 7px solid #f1f1f1;
+  /*border: 7px solid #f1f1f1;*/
+  border: 5px solid #f94d6f;
   text-align: center;
 }
 .timeline > li .timeline-image h4 {
@@ -541,6 +624,9 @@ section h3.section-subheading {
   margin-top: 25px;
   margin-bottom: 0;
   text-transform: none;
+  color:#fff;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 4rem;
 }
 .team-member p {
   margin-top: 0;
@@ -549,7 +635,6 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background-color: #222;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -574,27 +659,31 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
 section#contact :-ms-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
@@ -608,14 +697,16 @@ footer {
 }
 footer span.copyright {
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   text-transform: none;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   text-transform: uppercase;
   text-transform: none;
 }
@@ -689,7 +780,8 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Proza Libre', sans-serif;
   font-style: italic;
   font-size: 16px;
 }
