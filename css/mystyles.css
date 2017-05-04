@@ -1,5 +1,186 @@
+body {
+  font-family: 'Proza Libre', sans-serif !important;
+}
+
+a, h1, h2, h3 { 	
+	font-family: 'Proza Libre', sans-serif;
+}
+
+.scrollToTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px; 
+    height: 45px;
+    padding: 10px; 
+    text-align: center; 
+    font-size: 2rem;
+    line-height: 2,
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    background-color: #f94d6f;
+    border: none;
+    z-index: 99999;
+}
+.btn.btn-primary.btn-lg.scrollToTop{
+    text-decoration:none;
+    background-color: #f94d6f;
+}
+.btn.btn-primary.btn-lg.scrollToTop:hover{
+    text-decoration:none;
+    background-color: #4a3347;
+}
+
+
+/* --- Logo ---------------------------------------- */
+
+.container_logoskills{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top:0rem;
+    left:0rem;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top:0rem;
+    float:left;
+    clear: both;
+}
+.Alex, .Rozgo{
+  font-family: 'Proza Libre', sans-serif !important;
+  font-size:5rem;
+  text-align: center;
+  color: #403f3d;
+}
+.Rozgo{
+  color: #fff;
+}
+@media (max-width: 2500px) {
+    .logo{
+        top:1rem;
+        left:40%;
+        /*background-color: green;*/
+    }
+}
+@media (max-width: 1200px) {
+    .logo{
+        top:0rem;
+        left:35%;
+        /*background-color: yellow;*/
+    }
+    .Alex, .Rozgo{
+	  font-size:5rem;
+	}
+}
+@media (max-width: 995px) {
+    .logo{
+        top:0rem;
+        left:43%;
+        /*background-color: red;*/
+    }
+    .Alex, .Rozgo{
+	  font-size:4.5rem;
+	}
+}
+@media (max-width: 480px) {
+	.logo{
+        top:0rem;
+        left:10%;
+        /*background-color: gray;*/
+    }
+	.Alex, .Rozgo{
+	  font-size:3.5rem;
+	}
+}
+@media (max-width: 320px) {
+	.logo{
+        top:0rem;
+        left:8%;
+        /*background-color: blue;*/
+    }
+}
+
+/* --------------------------------------------------- */
+
+section h3.section-subheading { margin-bottom: 25px; }
+
 section{
-	padding: 50px 0px 50px 0px;
+	padding: 90px 0px 50px 0px;
+}
+#about, #team{
+    padding: 110px 0px 50px 0px;
+}
+.ConceptBkg{
+	background-image: url(../img/ConceptBkg.png);
+	/*background-position: center center;*/
+	/*background-repeat: no-repeat;*/
+}
+.ConceptBkgDark{
+	background-image: url(../img/ConceptBkgDark.png);
+	/*background-position: center center;*/
+	/*background-repeat: no-repeat;*/
+}
+.ConceptBkgReviews{
+	background-image: url(../img/ConceptBkg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	/*background-color: #363636;*/
+}
+
+footer{
+	background-color: #0a0a0a!important;
+}
+
+/* ---  Fonts for Title and Texts -------------------------------------- */
+
+.gris5{ color: #313133; }
+.gris4{ color: #403f3d; }
+.gris3{ color: #7f7e7a; }
+.gris2{ color: #bfbcb8; }
+.gris1{ color: #fafafa; }
+
+.color5{ color: #070507; }
+.color4{ color: #180e15; }
+.color3{ color: #2d1e26; }
+.color2{ color: #4a3347; }
+.color1{ color: #f94d6f; }
+
+
+section h3.section-subheading.text-muted.near{
+    font-family: 'Proza Libre', sans-serif;
+	color: #bfbcb8;
+}
+
+/* --- VIDEO GALLERY ----------------------------------------------------- */
+.cbp-l-filters-alignRight .cbp-filter-item.cbp-filter-item-active {
+    color: #FFFFFF;
+    background-color: #4a3347;
+    border-color: #f94d6f;
+    cursor: default;
+}
+
+.cbp-l-filters-alignRight .cbp-filter-counter {
+    background-color: #f94d6f;
+}
+
+.cbp-l-filters-alignRight .cbp-filter-counter::after {
+    border-top: 4px solid #f94d6f;
+}
+
+.cbp-l-filters-alignRight .cbp-filter-item {
+    border: 1px solid #f94d6f;
+}
+/* --- Color white of filters on hover  ------------ */
+.cbp-l-filters-alignRight .cbp-filter-item:hover {
+	 border: 1px solid #4a3347;
+     background-color: #2d1e26;
+     color: #FFF;
 }
 
 /* --- Adjust the padding to Section Video Gallery ------------ */
@@ -23,7 +204,157 @@ section{
     padding: 2px 0;
 }
 
-section h3.section-subheading.text-muted.near{
+/* --------------------------------------------------------------------------- */
 
+section h3.section-subheading.text-muted.near{
     margin-bottom: 15px;
 }
+
+section#contact .section-heading,
+section h2.section-heading, .service-heading {
+	  color: #f94d6f;
+}
+
+.timeline-heading{
+	color: #fff;
+}
+
+.list-inline > li {
+    padding: 20px 20px 0px 20px;
+}
+
+ul.tech-buttons li a {
+	background-color: #313133;
+    color: #fff !important;
+}
+
+ul.tech-buttons li a:hover {
+   background-color: #fafafa !important;
+}
+
+ul.tech-buttons li a:hover,
+ul.tech-buttons li a:focus,
+ul.tech-buttons li a:active {
+  background-color: #fafafa;
+  color: #000 !important;
+}
+.text-primary {
+    color: #049372;
+}
+.text-primary:hover {
+    color: blue;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    background-color: #049372;
+    background-color:rgba(4, 147, 114, 0.5)
+}
+
+.redes{
+	padding: 15px 0px;
+	color:#fff;
+}
+
+ul.social-buttons li a {
+    background-color: #4a3347;
+}
+ul.social-buttons li a:hover {
+    background-color: #f94d6f;
+    color: #fff !important;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    background-color: #943616;
+}
+#portfolio .portfolio-item .portfolio-caption h4 {
+    color: #fff;
+}
+
+
+.emailme, .skypeme{
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    color: #fff;
+    text-decoration:none;
+}
+.emailme:hover, .skypeme:hover{
+   color: #bfbcb8;
+}
+.skypeme{
+    font-size: 4rem;
+}
+
+@media (max-width: 1500px) {
+	.emailme{
+	    font-size: 6rem;
+	}
+	.skypeme{
+	    font-size: 4rem;
+	}
+}
+@media (max-width: 1024px) {
+	.emailme, .skypeme{
+	    font-size: 5rem;
+	}
+}
+@media (max-width: 767px) {
+	.emailme, .skypeme{
+	    font-size: 4rem;
+	}
+}
+@media (max-width: 480px) {
+	.emailme, .skypeme{
+	    font-size: 3rem;
+	}
+}
+@media (max-width: 320px) {
+	.emailme, .skypeme{
+	    font-size: 2.5rem;
+	}
+}
+
+
+.img-centered {
+  max-width: 100%;
+}
+
+.containerImg{
+	width: 18rem;
+	height: 12rem;
+	margin: 3px 3px 10px 0px;
+	/*background-color: red;*/
+}
+.separateTop{
+	margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+	.containerImg{
+		width: 16rem;
+		height: 10rem;
+		margin: 2px 2px 7px 0px;
+		
+	}
+	.containerImg > img{
+  		max-width: 70%;
+	}
+
+}
+@media (max-width: 320px) {
+	.containerImg{
+		width: 14rem;
+		height: 8rem;
+		margin: 2px 1px 5px 0px;
+	}
+	.containerImg > img{
+  		max-width: 70%;
+	}
+}
+
+
+
+Luego harè filtos mezclados, por ejemplo:
+
+unreal games
+unity simulations
