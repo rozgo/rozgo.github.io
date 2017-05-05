@@ -698,6 +698,7 @@ footer {
   text-align: center;
 }
 footer span.copyright {
+  font-size: 3rem;
   line-height: 40px;
   /*font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: 'Proza Libre', sans-serif;
@@ -730,22 +731,23 @@ ul.tech-buttons li a {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 ul.tech-buttons li a:hover,
 ul.tech-buttons li a:focus,
 ul.tech-buttons li a:active {
   background-color: #e49875;
 }
 ul.social-buttons {
-  margin-bottom: 0;
+  margin: 100px 0px;
 }
 ul.social-buttons li a {
   display: block;
   background-color: #222;
-  height: 40px;
-  width: 40px;
+  height: 80px;
+  width: 80px;
   border-radius: 100%;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 80px;
   color: white;
   outline: none;
   -webkit-transition: all 0.3s;
