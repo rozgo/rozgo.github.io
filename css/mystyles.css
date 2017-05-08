@@ -21,17 +21,17 @@ a, h1, h2, h3 {
     text-decoration: none;
     cursor: pointer;
     display: none;
-    background-color: #f94d6f;
+    background-color: #4a3347;
     border: none;
     z-index: 99999;
 }
 .btn.btn-primary.btn-lg.scrollToTop{
     text-decoration:none;
-    background-color: #f94d6f;
+    background-color: #4a3347;
 }
 .btn.btn-primary.btn-lg.scrollToTop:hover{
     text-decoration:none;
-    background-color: #4a3347;
+    background-color: #f94d6f;
 }
 
 
