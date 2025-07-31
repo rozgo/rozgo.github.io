@@ -1,5 +1,21 @@
+/* Apple-style Color Palette */
+:root {
+    --apple-blue: #007AFF;
+    --apple-blue-dark: #0051D5;
+    --apple-gray-1: #8E8E93;
+    --apple-gray-2: #C7C7CC;
+    --apple-gray-3: #D1D1D6;
+    --apple-gray-4: #E5E5EA;
+    --apple-gray-5: #F2F2F7;
+    --apple-background: #FFFFFF;
+    --apple-background-dark: #000000;
+    --apple-text: #1D1D1F;
+    --apple-text-secondary: #86868B;
+}
+
 body {
   font-family: 'Proza Libre', sans-serif !important;
+  color: var(--apple-text);
 }
 
 a, h1, h2, h3 { 	
@@ -7,12 +23,12 @@ a, h1, h2, h3 {
 }
 
 .navbar-default .navbar-toggle {
-    background-color: #4a3347;
-    border-color: #4a3347;
+    background-color: #007AFF;
+    border-color: #007AFF;
 }
 .navbar-default .navbar-toggle:hover {
-    background-color: #f94d6f;
-    border-color: #f94d6f;
+    background-color: #0051D5;
+    border-color: #0051D5;
 }
 
 .scrollToTop{
@@ -30,19 +46,192 @@ a, h1, h2, h3 {
     text-decoration: none;
     cursor: pointer;
     display: none;
-    background-color: #4a3347;
+    background-color: #007AFF;
     border: none;
     z-index: 99999;
 }
 .btn.btn-primary.btn-lg.scrollToTop{
     text-decoration:none;
-    background-color: #4a3347;
+    background-color: #007AFF;
 }
 .btn.btn-primary.btn-lg.scrollToTop:hover{
     text-decoration:none;
-    background-color: #f94d6f;
+    background-color: #0051D5;
 }
 
+/* --- Hero Section ---------------------------------------- */
+
+.hero-section {
+    text-align: center;
+    color: #fff;
+    background-color: #1a1a1a;
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding: 150px 0 100px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section .intro-text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-section .intro-text .intro-lead-in {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: #007AFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-section .intro-text .intro-heading {
+    font-family: 'Proza Libre', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 20px;
+}
+
+.hero-section .intro-text .intro-subtitle {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.hero-section .intro-text .intro-description {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #ccc;
+}
+
+.hero-section .intro-buttons {
+    margin-top: 40px;
+}
+
+.hero-section .intro-buttons .btn {
+    margin: 10px;
+}
+
+.hero-section .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #007AFF;
+    color: #007AFF;
+}
+
+.hero-section .btn-secondary:hover {
+    background-color: #007AFF;
+    color: #fff;
+}
+
+@media(max-width:768px) {
+    .hero-section {
+        padding: 100px 0 50px;
+    }
+    
+    .hero-section .intro-text {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .hero-section .intro-text .intro-lead-in {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-section .intro-text .intro-heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-section .intro-text .intro-subtitle {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-section .intro-text .intro-description {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* --- Technology Section ---------------------------------------- */
+
+.tech-description {
+    font-size: 20px;
+    color: var(--apple-text);
+    margin: 20px 0 40px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.section-subheading {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: var(--apple-text);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.clients.height {
+    padding: 80px 0;
+}
+
+/* --- Modern Section Styles ---------------------------------------- */
+
+section {
+    position: relative;
+    background-color: var(--apple-background);
+}
+
+section.dark-section {
+    background-color: var(--apple-background-dark);
+    color: var(--apple-background);
+}
+
+section.gray-section {
+    background-color: var(--apple-gray-5);
+}
+
+.section-heading {
+    color: var(--apple-text);
+    font-weight: 600;
+}
+
+.text-muted {
+    color: var(--apple-text-secondary) !important;
+}
 
 /* --- Logo ---------------------------------------- */
 
@@ -172,27 +361,33 @@ section h3.section-subheading.text-muted.near{
 
 .cbp-l-filters-alignRight .cbp-filter-item.cbp-filter-item-active {
     color: #FFFFFF;
-    background-color: #4a3347;
-    border-color: #f94d6f;
+    background-color: var(--apple-blue);
+    border-color: var(--apple-blue);
     cursor: default;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-counter {
-    background-color: #f94d6f;
+    background-color: var(--apple-gray-1);
+    color: white;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-counter::after {
-    border-top: 4px solid #f94d6f;
+    border-top: 4px solid var(--apple-gray-1);
 }
 
 .cbp-l-filters-alignRight .cbp-filter-item {
-    border: 1px solid #f94d6f;
+    border: 1px solid var(--apple-gray-3);
+    background-color: var(--apple-gray-5);
+    color: var(--apple-text);
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 /* --- Color white of filters on hover  ------------ */
 .cbp-l-filters-alignRight .cbp-filter-item:hover {
-	 border: 1px solid #4a3347;
-     background-color: #2d1e26;
-     color: #FFF;
+    border: 1px solid var(--apple-blue);
+    background-color: var(--apple-blue);
+    color: #FFF;
+    transform: scale(1.05);
 }
 
 /* --- Adjust the padding to Section Video Gallery ------------ */
@@ -235,21 +430,7 @@ section h2.section-heading, .service-heading {
     padding: 20px 20px 0px 20px;
 }
 
-ul.tech-buttons li a {
-	background-color: #313133;
-    color: #fff !important;
-}
-
-ul.tech-buttons li a:hover {
-   background-color: #fafafa !important;
-}
-
-ul.tech-buttons li a:hover,
-ul.tech-buttons li a:focus,
-ul.tech-buttons li a:active {
-  background-color: #fafafa;
-  color: #000 !important;
-}
+/* Tech buttons removed - using text descriptions instead */
 .text-primary {
     color: #049372;
 }

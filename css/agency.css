@@ -103,15 +103,16 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
   color: white;
-  background-color: #e49875;
-  border-color: #e49875;
+  background-color: #007AFF;
+  border-color: #007AFF;
   /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;*/
   font-family: 'Proza Libre', sans-serif;
   font-weight: 700;
-  border-radius: 3px;
+  border-radius: 12px;
   font-size: 18px;
   padding: 20px 40px;
+  transition: all 0.3s ease;
 }
 .btn-xl:hover,
 .btn-xl:focus,
@@ -119,8 +120,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #dc784a;
-  border-color: #da7242;
+  background-color: #0051D5;
+  border-color: #0051D5;
+  transform: scale(1.05);
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -157,19 +159,23 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
   /*background-color: #222;*/
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.98);
   border-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1);
 }
 .navbar-default .navbar-brand {
-  color: #e49875;
+  color: #1D1D1F;
   /*font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;*/
   font-family: 'Proza Libre', sans-serif;
+  font-weight: 600;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-  color: #dc784a;  
+  color: #007AFF;  
 }
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -211,7 +217,7 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
   .navbar-default {
     /*background-color: transparent;*/
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.98);
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -274,24 +280,25 @@ a.active {
 }
 
 .navbar-default .nav li a:link{ 
-  border-top: solid #fff 1px; 
-  color: #fafafa !important;
+  border-top: solid transparent 1px; 
+  color: #1D1D1F !important;
+  transition: all 0.3s ease;
 }
 .navbar-default .nav li a:visited{ 
-  border-top: solid #fff 1px;
-  color: #fafafa !important;
+  border-top: solid transparent 1px;
+  color: #1D1D1F !important;
 }
 .navbar-default .nav li a:hover{ 
-  border-top: solid #f94d6f 1px;
-  color: #fff !important;
+  border-top: solid #007AFF 1px;
+  color: #007AFF !important;
 }
 .navbar-default .nav li a:focus{
-  border-top: solid #f94d6f 1px !important;
-  color: #f94d6f !important;
+  border-top: solid #007AFF 1px !important;
+  color: #007AFF !important;
 }
 .navbar-default .nav li a:active{
-  border-top: solid #f94d6f 1px !important;
-  color: #f94d6f !important;
+  border-top: solid #0051D5 1px !important;
+  color: #0051D5 !important;
 }
 
 
@@ -742,13 +749,13 @@ ul.social-buttons {
 }
 ul.social-buttons li a {
   display: block;
-  background-color: #222;
+  background-color: #F2F2F7;
   height: 80px;
   width: 80px;
   border-radius: 100%;
   font-size: 40px;
   line-height: 80px;
-  color: white;
+  color: #1D1D1F;
   outline: none;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -757,7 +764,9 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-  background-color: #e49875;
+  background-color: #007AFF;
+  color: white;
+  transform: scale(1.1);
 }
 .btn:focus,
 .btn:active,
