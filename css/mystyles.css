@@ -132,10 +132,11 @@ a, h1, h2, h3 {
 }
 
 .hero-section .intro-text .intro-subtitle {
-    font-size: 28px;
-    font-weight: 300;
+    font-size: 32px;
+    font-weight: 400;
     margin-bottom: 30px;
-    color: var(--gray-600);
+    color: var(--gray-700);
+    line-height: 1.4;
 }
 
 .hero-section .intro-text .intro-description {
@@ -188,7 +189,7 @@ a, h1, h2, h3 {
     }
     
     .hero-section .intro-text .intro-subtitle {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
     

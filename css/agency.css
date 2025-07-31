@@ -305,7 +305,7 @@ a.active {
 
 
 header {
-  display:none;
+  display:block;
   /*
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
