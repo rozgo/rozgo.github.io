@@ -1,16 +1,28 @@
-/* Apple-style Color Palette */
+/* Black and White Color Palette */
 :root {
-    --apple-blue: #007AFF;
-    --apple-blue-dark: #0051D5;
-    --apple-gray-1: #8E8E93;
-    --apple-gray-2: #C7C7CC;
-    --apple-gray-3: #D1D1D6;
-    --apple-gray-4: #E5E5EA;
-    --apple-gray-5: #F2F2F7;
-    --apple-background: #FFFFFF;
-    --apple-background-dark: #000000;
-    --apple-text: #1D1D1F;
-    --apple-text-secondary: #86868B;
+    --primary-black: #000000;
+    --primary-white: #FFFFFF;
+    --gray-900: #111111;
+    --gray-800: #1A1A1A;
+    --gray-700: #333333;
+    --gray-600: #4D4D4D;
+    --gray-500: #666666;
+    --gray-400: #808080;
+    --gray-300: #999999;
+    --gray-200: #B3B3B3;
+    --gray-100: #E6E6E6;
+    --gray-50: #F5F5F5;
+    --apple-blue: var(--gray-700);
+    --apple-blue-dark: var(--primary-black);
+    --apple-gray-1: var(--gray-600);
+    --apple-gray-2: var(--gray-400);
+    --apple-gray-3: var(--gray-300);
+    --apple-gray-4: var(--gray-200);
+    --apple-gray-5: var(--gray-100);
+    --apple-background: var(--primary-white);
+    --apple-background-dark: var(--primary-black);
+    --apple-text: var(--primary-black);
+    --apple-text-secondary: var(--gray-600);
 }
 
 body {
@@ -23,12 +35,12 @@ a, h1, h2, h3 {
 }
 
 .navbar-default .navbar-toggle {
-    background-color: #007AFF;
-    border-color: #007AFF;
+    background-color: var(--gray-700);
+    border-color: var(--gray-700);
 }
 .navbar-default .navbar-toggle:hover {
-    background-color: #0051D5;
-    border-color: #0051D5;
+    background-color: var(--primary-black);
+    border-color: var(--primary-black);
 }
 
 .scrollToTop{
@@ -46,26 +58,26 @@ a, h1, h2, h3 {
     text-decoration: none;
     cursor: pointer;
     display: none;
-    background-color: #007AFF;
+    background-color: var(--gray-700);
     border: none;
     z-index: 99999;
 }
 .btn.btn-primary.btn-lg.scrollToTop{
     text-decoration:none;
-    background-color: #007AFF;
+    background-color: var(--gray-700);
 }
 .btn.btn-primary.btn-lg.scrollToTop:hover{
     text-decoration:none;
-    background-color: #0051D5;
+    background-color: var(--primary-black);
 }
 
 /* --- Hero Section ---------------------------------------- */
 
 .hero-section {
     text-align: center;
-    color: #fff;
-    background-color: #1a1a1a;
-    background-image: url('../img/header-bg.jpg');
+    color: var(--primary-black);
+    background-color: var(--gray-50);
+    /*background-image: url('../img/header-bg.jpg');*/
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -84,7 +96,8 @@ a, h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);*/
+    background: none;
     z-index: 1;
 }
 
@@ -103,7 +116,7 @@ a, h1, h2, h3 {
     font-size: 22px;
     line-height: 22px;
     margin-bottom: 25px;
-    color: #007AFF;
+    color: var(--gray-600);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -115,13 +128,14 @@ a, h1, h2, h3 {
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 20px;
+    color: var(--primary-black);
 }
 
 .hero-section .intro-text .intro-subtitle {
     font-size: 28px;
     font-weight: 300;
     margin-bottom: 30px;
-    color: #ddd;
+    color: var(--gray-600);
 }
 
 .hero-section .intro-text .intro-description {
@@ -129,7 +143,7 @@ a, h1, h2, h3 {
     line-height: 28px;
     max-width: 800px;
     margin: 0 auto 40px;
-    color: #ccc;
+    color: var(--gray-700);
 }
 
 .hero-section .intro-buttons {
@@ -142,13 +156,13 @@ a, h1, h2, h3 {
 
 .hero-section .btn-secondary {
     background-color: transparent;
-    border: 2px solid #007AFF;
-    color: #007AFF;
+    border: 2px solid var(--gray-700);
+    color: var(--gray-700);
 }
 
 .hero-section .btn-secondary:hover {
-    background-color: #007AFF;
-    color: #fff;
+    background-color: var(--gray-700);
+    color: var(--primary-white);
 }
 
 @media(max-width:768px) {
@@ -216,8 +230,8 @@ section {
 }
 
 section.dark-section {
-    background-color: var(--apple-background-dark);
-    color: var(--apple-background);
+    background-color: var(--gray-100);
+    color: var(--primary-black);
 }
 
 section.gray-section {
@@ -254,10 +268,10 @@ section.gray-section {
   font-family: 'Proza Libre', sans-serif !important;
   font-size:5rem;
   text-align: center;
-  color: #403f3d;
+  color: var(--primary-black);
 }
 .Rozgo{
-  color: #fff;
+  color: var(--primary-black);
 }
 @media (max-width: 2500px) {
     .logo{
@@ -320,19 +334,20 @@ section{
 	/*background-repeat: no-repeat;*/
 }
 .ConceptBkgDark{
-	background-image: url(../img/ConceptBkgDark.jpg);
+	background-color: var(--gray-100);
+	/*background-image: url(../img/ConceptBkgDark.jpg);*/
 	/*background-position: center center;*/
 	/*background-repeat: no-repeat;*/
 }
 .ConceptBkgReviews{
-	background-image: url(../img/ConceptBkg.jpg);
+	background-color: var(--gray-50);
+	/*background-image: url(../img/ConceptBkg.jpg);*/
 	background-position: center center;
 	background-repeat: no-repeat;
-	/*background-color: #363636;*/
 }
 
 footer{
-	background-color: #0a0a0a!important;
+	background-color: var(--gray-50)!important;
     padding-bottom:275px; 
 }
 
@@ -347,8 +362,8 @@ footer{
 .color5{ color: #070507; }
 .color4{ color: #180e15; }
 .color3{ color: #2d1e26; }
-.color2{ color: #4a3347; }
-.color1{ color: #f94d6f; }
+.color2{ color: var(--gray-700); }
+.color1{ color: var(--gray-500); }
 
 
 section h3.section-subheading.text-muted.near{
@@ -419,11 +434,11 @@ section h3.section-subheading.text-muted.near{
 
 section#contact .section-heading,
 section h2.section-heading, .service-heading {
-	  color: #f94d6f;
+	  color: var(--primary-black);
 }
 
 .timeline-heading{
-	color: #fff;
+	color: var(--primary-black);
 }
 
 .list-inline > li {
@@ -445,14 +460,14 @@ section h2.section-heading, .service-heading {
 
 .redes{
 	/*padding: 100px 0px 0px 0px;*/
-	color:#fff;
+	color: var(--primary-black);
 }
 ul.social-buttons li a {
-    background-color: #4a3347;
+    background-color: var(--gray-100);
 }
 ul.social-buttons li a:hover {
-    background-color: #f94d6f;
-    color: #fff !important;
+    background-color: var(--gray-700);
+    color: var(--primary-white) !important;
 }
 
 @media (max-width: 2048px) {
@@ -534,11 +549,11 @@ ul.social-buttons li a:hover {
     font-family: 'Proza Libre', sans-serif;
     font-size: 6rem;
     text-align: center;
-    color: #fff;
+    color: var(--primary-black);
     text-decoration:none;
 }
 .emailme:hover, .skypeme:hover{
-   color: #bfbcb8;
+   color: var(--gray-600);
 }
 .skypeme{
     font-size: 4rem;
