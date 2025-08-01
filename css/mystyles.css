@@ -379,10 +379,13 @@ section.gray-section {
   font-family: 'Proza Libre', sans-serif !important;
   font-size:5rem;
   text-align: center;
-  color: var(--primary-black);
+}
+.Alex {
+  color: var(--gray-200);
 }
 .Rozgo{
   color: var(--primary-black);
+  font-weight: 700;
 }
 @media (max-width: 2500px) {
     .logo{
