@@ -155,6 +155,7 @@
                 <div class="portfolio-lightbox__bar">
                     <div>
                         <p class="portfolio-lightbox__title"></p>
+                        <p class="portfolio-lightbox__desc"></p>
                         <p class="portfolio-lightbox__count"></p>
                     </div>
                     <div class="portfolio-lightbox__actions">
@@ -175,6 +176,7 @@
         const lightbox = createLightbox();
         const frame = lightbox.querySelector('.portfolio-lightbox__frame');
         const title = lightbox.querySelector('.portfolio-lightbox__title');
+        const description = lightbox.querySelector('.portfolio-lightbox__desc');
         const count = lightbox.querySelector('.portfolio-lightbox__count');
         const closeButton = lightbox.querySelector('.portfolio-lightbox__close');
         const prevButton = lightbox.querySelector('.portfolio-lightbox__prev');
@@ -187,8 +189,11 @@
             const link = activeLinks[activeIndex];
             if (!link) return;
             const embed = youtubeEmbedUrl(link.href);
+            const desc = link.querySelector('.cbp-l-caption-desc')?.textContent.trim() || '';
             frame.innerHTML = embed ? `<iframe src="${embed}" title="${link.dataset.title || 'Portfolio video'}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>` : '';
             title.textContent = link.dataset.title || link.textContent.trim() || 'Portfolio video';
+            description.textContent = desc;
+            description.hidden = !desc;
             count.textContent = `${activeIndex + 1} of ${activeLinks.length}`;
         }
 

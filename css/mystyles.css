@@ -631,11 +631,15 @@ ul.social-buttons li a:hover {
 
 
 .emailme, .skypeme{
+    display: inline-block;
+    max-width: 100%;
     font-family: 'Proza Libre', sans-serif;
-    font-size: 6rem;
+    font-size: clamp(2rem, 5vw, 6rem);
+    line-height: 1.2;
     text-align: center;
     color: var(--primary-black);
     text-decoration:none;
+    overflow-wrap: anywhere;
 }
 .emailme:hover, .skypeme:hover{
    color: var(--gray-600);
@@ -643,36 +647,6 @@ ul.social-buttons li a:hover {
 .skypeme{
     font-size: 4rem;
 }
-
-@media (max-width: 1500px) {
-	.emailme{
-	    font-size: 6rem;
-	}
-	.skypeme{
-	    font-size: 4rem;
-	}
-}
-@media (max-width: 1024px) {
-	.emailme, .skypeme{
-	    font-size: 5rem;
-	}
-}
-@media (max-width: 767px) {
-	.emailme, .skypeme{
-	    font-size: 4rem;
-	}
-}
-@media (max-width: 480px) {
-	.emailme, .skypeme{
-	    font-size: 3rem;
-	}
-}
-@media (max-width: 320px) {
-	.emailme, .skypeme{
-	    font-size: 2.5rem;
-	}
-}
-
 
 .img-centered {
   max-width: 100%;

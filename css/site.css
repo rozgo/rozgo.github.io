@@ -402,6 +402,14 @@ ul.social-buttons li a:active {
     line-height: 1.4;
 }
 
+.portfolio-lightbox__desc {
+    max-width: 720px;
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 .portfolio-lightbox__count {
     margin: 4px 0 0;
     color: rgba(255, 255, 255, 0.68);
