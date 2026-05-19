@@ -72,7 +72,7 @@
 | 6 | Bubblelicious | 0:35 | https://www.youtube.com/watch?v=F3yLaQeqw7w |
 | 7 | MasterDealer - Teaser II | 1:25 | https://www.youtube.com/watch?v=xrNNogedy9o |
 | 8 | Airport Simulation Game | 5:00 | https://www.youtube.com/watch?v=WTiKMW5CrM4 |
-| 9 | [Private video] | - | https://www.youtube.com/watch?v=Xa0atrR26dg |
+| 9 | Cards Battle MMO Game - iPad | - | https://www.youtube.com/watch?v=Xa0atrR26dg |
 | 10 | Retro Game for first iPhone | 3:50 | https://www.youtube.com/watch?v=ExgrBFXMvPc |
 
 ### Rozgo - Control Theory
@@ -110,7 +110,7 @@
 | 13 | MasterDealer - Teaser II | 1:25 | https://www.youtube.com/watch?v=xrNNogedy9o |
 | 14 | Grokion developed with Unity3D | 2:25 | https://www.youtube.com/watch?v=ENOMqPVl5Ms |
 | 15 | Airport Simulation Game | 5:00 | https://www.youtube.com/watch?v=WTiKMW5CrM4 |
-| 16 | [Private video] | - | https://www.youtube.com/watch?v=Xa0atrR26dg |
+| 16 | Cards Battle MMO Game - iPad | - | https://www.youtube.com/watch?v=Xa0atrR26dg |
 | 17 | Infinite Terrain | 0:32 | https://www.youtube.com/watch?v=Ob8icqlv7Ns |
 
 ### Rozgo - Unreal
@@ -137,7 +137,7 @@
 | 15 | NVidia Cataclysm | 0:17 | https://www.youtube.com/watch?v=bktNzHAwwYQ |
 | 16 | Wine - Liquid Physics Experiment | 0:48 | https://www.youtube.com/watch?v=i5gS6ipWRJo |
 | 17 | Buffalo - Nvidia HairWorks | 0:37 | https://www.youtube.com/watch?v=J-Hqxx9S6tE |
-| 18 | [Private video] | - | https://www.youtube.com/watch?v=laE7BB4ZAh8 |
+| 18 | Particles Lead | - | https://www.youtube.com/watch?v=laE7BB4ZAh8 |
 | 19 | ForceDirectedNodes01 | 0:57 | https://www.youtube.com/watch?v=JilA_-inePk |
 | 20 | DepthCloud01 | 0:49 | https://www.youtube.com/watch?v=8dxVQeRzfeU |
 | 21 | VR IK in UE4 | 2:39 | https://www.youtube.com/watch?v=r3o2vN5y7b4 |

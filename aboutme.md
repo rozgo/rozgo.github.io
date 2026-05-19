@@ -146,7 +146,7 @@ Featured in The Verge (2013) - "'Rawbots' lets you build the Wall-E of your drea
 
 Described as "Lego Mindstorms in video game form."
 
-[Read on The Verge](http://www.theverge.com/2013/5/9/4311742/rawbots-build-and-program-a-virtual-robot)
+[Read on The Verge](https://www.theverge.com/2013/5/9/4311742/rawbots-build-and-program-a-virtual-robot)
 
 ### Grokion
 Featured in Touch Arcade (2009):
@@ -154,13 +154,13 @@ Featured in Touch Arcade (2009):
 
 Described as a Metroid and Megaman-inspired game that "looked impressive in screenshots, but seeing it in motion is something else."
 
-[Read on Touch Arcade](http://toucharcade.com/2009/10/27/untitled-metroid-and-megaman-inspired-game-shows-promise/)
+[Read on Touch Arcade](https://toucharcade.com/2009/10/27/untitled-metroid-and-megaman-inspired-game-shows-promise/)
 
 ### Briscas
 Featured in Slide to Play:
 > "For a casual card game, Briscas looks fantastic. The game is fully animated, and includes special effects like lightning bolts and earthquakes for winning big tricks."
 
-[Read on Slide to Play](http://www.slidetoplay.com/briscas-review/)
+[Read on Slide to Play](https://www.slidetoplay.com/briscas-review/)
 
 ---
 
