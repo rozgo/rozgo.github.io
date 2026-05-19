@@ -77,14 +77,6 @@ a, h1, h2, h3 {
     text-align: center;
     color: var(--primary-black);
     background-color: var(--gray-50);
-    /*background-image: url('../img/header-bg.jpg');*/
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     padding: 150px 0 100px;
     position: relative;
 }
@@ -96,7 +88,6 @@ a, h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);*/
     background: none;
     z-index: 1;
 }
@@ -442,22 +433,11 @@ section{
 #about, #team{
     padding: 110px 0px 50px 0px;
 }
-.ConceptBkg{
-	background-image: url(../img/ConceptBkg.jpg);
-	/*background-position: center center;*/
-	/*background-repeat: no-repeat;*/
-}
 .ConceptBkgDark{
 	background-color: var(--gray-100);
-	/*background-image: url(../img/ConceptBkgDark.jpg);*/
-	/*background-position: center center;*/
-	/*background-repeat: no-repeat;*/
 }
 .ConceptBkgReviews{
 	background-color: var(--gray-50);
-	/*background-image: url(../img/ConceptBkg.jpg);*/
-	background-position: center center;
-	background-repeat: no-repeat;
 }
 
 footer{
@@ -493,15 +473,6 @@ section h3.section-subheading.text-muted.near{
     background-color: var(--apple-blue);
     border-color: var(--apple-blue);
     cursor: default;
-}
-
-.cbp-l-filters-alignRight .cbp-filter-counter {
-    background-color: var(--apple-gray-1);
-    color: white;
-}
-
-.cbp-l-filters-alignRight .cbp-filter-counter::after {
-    border-top: 4px solid var(--apple-gray-1);
 }
 
 .cbp-l-filters-alignRight .cbp-filter-item {
