@@ -1875,3 +1875,32 @@ body::after {
         linear-gradient(90deg, rgba(6, 6, 7, 0.78) 0%, rgba(6, 6, 7, 0.35) 42%, rgba(6, 6, 7, 0) 70%),
         linear-gradient(180deg, rgba(6, 6, 7, 0) 65%, rgba(6, 6, 7, 0.65) 100%);
 }
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line-strong);
+}
+
+.hero-byline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-byline img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #060607;
+    box-shadow: 0 0 0 1.5px var(--accent), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
