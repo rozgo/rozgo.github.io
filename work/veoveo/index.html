@@ -59,7 +59,7 @@
                 <div class="hero-actions"><a class="button button--primary" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code on GitHub ↗</a><a class="button" href="https://github.com/BiomaAI/veoveo/blob/main/docs/TECH_DESIGN.md" target="_blank" rel="noopener">Technical design ↗</a><a class="button" href="#results">Flight results</a></div>
                 
             </div>
-            <figure class="figure"><img src="../../media/work/veoveo-uav-new-york.webp" alt="Simulated multirotor above Midtown Manhattan" width="1600" height="900" loading="eager" decoding="async"><figcaption>A multirotor under PX4 control above Midtown Manhattan, rendered by a headless Isaac Sim instance.</figcaption></figure>
+            <figure class="figure"><video autoplay muted loop playsinline preload="auto" poster="../../media/work/veoveo-alerts.webp" width="960" height="632" aria-label="An incident alert spreading across operations panels"><source src="../../media/work/veoveo-alerts.mp4" type="video/mp4"></video><figcaption>From the Veoveo launch trailer: an incident alert spreads across the operator’s panels.</figcaption></figure>
             <dl class="facts"><div><dt>Role</dt><dd>Author (2,529 commits)</dd></div><div><dt>Language</dt><dd>Rust</dd></div><div><dt>Simulators</dt><dd>Isaac Sim with PX4, SUMO</dd></div><div><dt>Interface</dt><dd>Model Context Protocol</dd></div></dl>
             
             <section class="detail">
@@ -82,7 +82,7 @@
                 <div class="prose">
                     <p>An operator sent one message to a pilot agent: fly <code>uav-1</code> to Times Square. The message contained no coordinates and granted no vehicle authority. The agent resolved the destination through the map server and flew under its existing grant for <code>uav-1</code>.</p>
                     <p>The first accepted run covered 9.227 km in 13 minutes 10 seconds. It completed all four waypoints, arrived at 40.7580° N, 73.9855° W with zero collisions, and released its command lease. The recording hub archived the camera, pose, telemetry and mission lifecycle for the whole run.</p>
-                    <figure class="figure"><video controls muted playsinline preload="none" poster="../../media/work/veoveo-flight.webp" width="640" height="480"><source src="../../media/work/veoveo-flight.mp4" type="video/mp4"></video><figcaption>Downward camera recording from the run, sped up 30×.</figcaption></figure>
+                    <figure class="figure"><img src="../../media/work/veoveo-uav-new-york.webp" alt="Simulated multirotor above Midtown Manhattan" width="1600" height="900" loading="lazy" decoding="async"><figcaption>A multirotor under PX4 control above Midtown Manhattan, rendered by a headless Isaac Sim instance.</figcaption></figure>
                     <p><a class="ext" href="https://github.com/BiomaAI/veoveo/blob/main/showcase/uav-sim/ACCEPTANCE.md" target="_blank" rel="noopener">UAV-E2E-001 acceptance test</a> describes how to repeat the run.</p>
                 </div>
             </section>
