@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlienWars Gym · Alex Rozgo</title>
+    <meta name="description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta name="author" content="Alex Rozgo">
+    <link rel="canonical" href="https://rozgo.github.io/work/alienwars-gym/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
+    <meta name="theme-color" content="#101012">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Rozgo">
+    <meta property="og:url" content="https://rozgo.github.io/work/alienwars-gym/">
+    <meta property="og:title" content="AlienWars Gym · Alex Rozgo">
+    <meta property="og:description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta property="og:image" content="https://rozgo.github.io/media/work/alienwars-frozen.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="AlienWars Gym · Alex Rozgo">
+    <meta name="twitter:description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/work/alienwars-frozen.webp">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AlienWars Gym","description":"AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.","url":"https://rozgo.github.io/work/alienwars-gym/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../../">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="../../#work" aria-current="page">Work</a>
+                <a href="../../#lab">Lab</a>
+                <a href="../../#writing">Writing</a>
+                <a href="../../#about">About</a>
+                <a href="../../archive/">Archive</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <div class="page-head">
+                <div class="crumbs label"><a href="../../#work">Work</a> / AlienWars Gym</div>
+                <span class="label label--accent">Reinforcement learning · C, CUDA, WebAssembly · 2026</span>
+                <h1>AlienWars Gym</h1>
+                <p class="page-lede">AlienWars Gym trains vehicle agents in procedurally generated 3D worlds. PufferLib 5 trains PPO controllers on CUDA. The same C simulation, sensors and trained policies also run in the browser through WebAssembly.</p>
+                <div class="hero-actions"><a class="button button--primary" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener">Open Map Lab ↗</a><a class="button" href="https://github.com/rozgo/alienwars-gym" target="_blank" rel="noopener">Code on GitHub ↗</a><a class="button" href="https://rozgo.github.io/alienwars-gym/learn/" target="_blank" rel="noopener">Sensor lesson ↗</a><a class="button" href="https://rozgo.github.io/alienwars-gym/training/" target="_blank" rel="noopener">Training observatory ↗</a></div>
+                <p class="note">Map Lab runs the full simulation in the browser. It can take a while to start.</p>
+            </div>
+            <figure class="figure"><img src="../../media/work/alienwars-temperate.webp" alt="Temperate AlienWars map with bases, roads and lakes" width="1600" height="923" loading="eager" decoding="async"><figcaption>Temperate map with raised bases, roads, lakes and an extended ocean. Seed 73.</figcaption></figure>
+            <dl class="facts"><div><dt>Trainer</dt><dd>PufferLib 5, PPO on CUDA</dd></div><div><dt>Runtime</dt><dd>C, Flecs, Raylib</dd></div><div><dt>Browser</dt><dd>WebAssembly</dd></div><div><dt>Vehicles</dt><dd>12 across land, sea, air and underwater</dd></div></dl>
+            
+            <section class="detail">
+                <h2>Worlds</h2>
+                <div class="prose">
+                    <p>Wave Function Collapse connects terrain tiles, road grades and tunnel profiles. Each seed produces coastlines, hills, beaches, cliffs and lakes, with bridges and mountain passes fitted to the terrain. The ocean floor uses the same geometry that sonar and submarines navigate.</p>
+                    <p>Maps can be symmetric or asymmetric, with bases up to ten floors high, in Temperate, Desert or Frozen palettes.</p>
+                    <div class="gallery"><figure class="figure"><img src="../../media/work/alienwars-desert.webp" alt="Asymmetric desert map" width="1600" height="923" loading="lazy" decoding="async"><figcaption>Asymmetric desert with different base heights.</figcaption></figure><figure class="figure"><img src="../../media/work/alienwars-tunnels.webp" alt="Isolated tunnel network" width="1600" height="871" loading="lazy" decoding="async"><figcaption>The tunnel network shown without the terrain above it.</figcaption></figure></div>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Agents</h2>
+                <div class="prose">
+                    <p>There are twelve vehicles: three ground vehicles, three boats, three aircraft and three submarines. Each has its own hull, speed, turning limits and sensor range. Fixed-wing aircraft hold forward airspeed; the quadcopter can hover and strafe; boats respect draft; submarines travel below the surface.</p>
+                    <p>A* plans global routes and PPO controls local navigation. Five family policies train at the same time in shared worlds, and each vehicle has its own destination and recurrent memory. The browser loads the selected trained checkpoints.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Sensors</h2>
+                <div class="prose">
+                    <p>Units carry LiDAR, sonar, RF and depth cameras. Equipment changes the policy inputs; overlays only change the display. Generation, collision, navigation and sensing share one C model that does not depend on the renderer, and sensor sampling runs without graphics during training.</p>
+                    <figure class="figure"><img src="../../media/work/alienwars-sensors.webp" alt="Sensor overlays for all units" width="1600" height="871" loading="lazy" decoding="async"><figcaption>Range fans, camera fields and radio links for every unit on the map.</figcaption></figure>
+                </div>
+            </section>
+            <section class="detail" id="evaluation">
+                <h2>Evaluation</h2>
+                <div class="prose">
+                    <p>The September 18, 2026 reliability test added sensor-history anticipation, yielding, braking checks and recovery limits, and ran 49.5 million more steps across three seeds with frozen historical traffic. The candidate failed the reliability and endurance gates, so the public demo still uses the September 16 checkpoints.</p>
+                    <p><a class="ext" href="https://github.com/rozgo/alienwars-gym/blob/main/docs/runs/navigation-reliability-2026-09-18.md" target="_blank" rel="noopener">Run report</a> · <a class="ext" href="https://rozgo.github.io/alienwars-gym/training/reliability.html" target="_blank" rel="noopener">Reliability results</a></p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Scenes to open</h2>
+                <div class="prose">
+                    <p>Each link opens Map Lab at a specific seed and view. Map Lab downloads the simulation and trained policies, so the first load takes a while on a laptop.</p>
+                    <ul class="scenes"><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener"><img src="../../media/work/alienwars-tunnels-800.webp" alt="" width="800" height="436" loading="lazy" decoding="async"><span>Symmetric desert with tunnels ↗<small>Cutaway view, seed 73</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&biome=1" target="_blank" rel="noopener"><img src="../../media/work/alienwars-temperate-800.webp" alt="" width="800" height="462" loading="lazy" decoding="async"><span>Temperate battlefield ↗<small>Seed 73</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=175847449&sym=0&a=2&b=9&biome=2&sensors=0" target="_blank" rel="noopener"><img src="../../media/work/alienwars-desert-800.webp" alt="" width="800" height="462" loading="lazy" decoding="async"><span>Asymmetric desert ↗<small>Bases at different heights</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=2279248715&sym=1&a=6&b=6&biome=3&sensors=0" target="_blank" rel="noopener"><img src="../../media/work/alienwars-frozen-800.webp" alt="" width="800" height="462" loading="lazy" decoding="async"><span>Frozen frontier ↗<small>Symmetric, frozen palette</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&biome=1&unit=11&sensors=2" target="_blank" rel="noopener"><img src="../../media/work/alienwars-submarine-800.webp" alt="" width="800" height="436" loading="lazy" decoding="async"><span>Submarine sonar ↗<small>Heavy submarine with sonar range</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&biome=1&sensors=15&sensorsAll=1&unit=7" target="_blank" rel="noopener"><img src="../../media/work/alienwars-sensors-800.webp" alt="" width="800" height="436" loading="lazy" decoding="async"><span>All sensor overlays ↗<small>Every unit, every sensor</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&biome=1&unit=7&explorer=1" target="_blank" rel="noopener"><img src="../../media/work/alienwars-explorer-800.webp" alt="" width="800" height="436" loading="lazy" decoding="async"><span>Flecs Explorer ↗<small>Inspect a live unit’s state and PPO inputs</small></span></a></li><li><a class="scene" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&biome=1&view=play&sensors=0" target="_blank" rel="noopener"><img src="../../media/work/alienwars-biological-800.webp" alt="" width="800" height="436" loading="lazy" decoding="async"><span>Biological units ↗<small>Play view with grown vehicles</small></span></a></li></ul>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Video</h2>
+                <div class="prose">
+                    <div class="video-embed"><button type="button" data-youtube="2ecaXifPN2M" aria-label="Play video: AlienWars Game Dev Harness"><img src="../../media/thumbs/2ecaXifPN2M.webp" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></button></div><p>The game dev harness: a coding agent and reinforcement learning in one development loop.</p>
+                </div>
+            </section>
+            <nav class="next-work" aria-label="More projects">
+                <a href="../../work/veoveo/"><span class="label">Previous</span><strong>Veoveo</strong></a>
+                <a href="../../work/shield-ai-simulator/"><span class="label">Next</span><strong>Shield AI Hivemind simulator</strong></a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="../../feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
+        </div>
+    </footer>
+</body>
+</html>

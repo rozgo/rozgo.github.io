@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alex Rozgo: writing</title>
+    <link>https://rozgo.github.io/</link>
+    <atom:link href="https://rozgo.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Articles on simulation, AI agents and virtual worlds by Alex Rozgo.</description>
+    <language>en</language>
+    <item>
+      <title>Maquina: A Theory of Everything for Digital Twins</title>
+      <link>https://rozgo.github.io/writing/maquina-theory-of-everything-for-digital-twins/</link>
+      <guid>https://rozgo.github.io/writing/maquina-theory-of-everything-for-digital-twins/</guid>
+      <pubDate>Wed, 29 Oct 2025 12:00:00 +0000</pubDate>
+      <description>Proposes modeling digital twins with three primitives: objects, operations and machines. The idea became the Maquina project.</description>
+    </item>
+    <item>
+      <title>Making the Case for Nash Equilibrium as a Measurement Tool for Virtual Worlds</title>
+      <link>https://rozgo.github.io/writing/nash-equilibrium-as-a-measurement-tool/</link>
+      <guid>https://rozgo.github.io/writing/nash-equilibrium-as-a-measurement-tool/</guid>
+      <pubDate>Thu, 31 Jul 2025 12:00:00 +0000</pubDate>
+      <description>Argues for measuring how far a virtual world is from equilibrium instead of designing for perfect balance.</description>
+    </item>
+    <item>
+      <title>Situational Complexity in Massive Simulations</title>
+      <link>https://rozgo.github.io/writing/situational-complexity-in-massive-simulations/</link>
+      <guid>https://rozgo.github.io/writing/situational-complexity-in-massive-simulations/</guid>
+      <pubDate>Thu, 10 Apr 2025 12:00:00 +0000</pubDate>
+      <description>Describes Situation Design: areas of activity with a radius of influence, role slots and growth rules, placed above agents and encounters.</description>
+    </item>
+    <item>
+      <title>Meaning and Memory in Massive Simulations</title>
+      <link>https://rozgo.github.io/writing/meaning-and-memory-in-massive-simulations/</link>
+      <guid>https://rozgo.github.io/writing/meaning-and-memory-in-massive-simulations/</guid>
+      <pubDate>Fri, 07 Feb 2025 12:00:00 +0000</pubDate>
+      <description>Proposes designing worlds from meanings such as “resting place” and storing memory in places and objects as well as in NPCs.</description>
+    </item>
+    <item>
+      <title>ModernBERT in Game Development</title>
+      <link>https://rozgo.github.io/writing/modernbert-in-game-development/</link>
+      <guid>https://rozgo.github.io/writing/modernbert-in-game-development/</guid>
+      <pubDate>Fri, 20 Dec 2024 12:00:00 +0000</pubDate>
+      <description>Where a small encoder model fits in games: classifying player behavior, game state and procedural content.</description>
+    </item>
+    <item>
+      <title>Advanced AI Architectures for Immersive Virtual Worlds</title>
+      <link>https://rozgo.github.io/writing/ai-architectures-for-virtual-worlds/</link>
+      <guid>https://rozgo.github.io/writing/ai-architectures-for-virtual-worlds/</guid>
+      <pubDate>Mon, 16 Dec 2024 12:00:00 +0000</pubDate>
+      <description>Actor model, behavior trees, memory systems and language models for agents in virtual worlds.</description>
+    </item>
+  </channel>
+</rss>

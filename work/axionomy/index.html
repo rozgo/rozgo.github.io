@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Axionomy · Alex Rozgo</title>
+    <meta name="description" content="Axionomy is a Rust decision engine that models problems as accounts, assets and exchanges, validates every proposed change, and keeps replayable traces.">
+    <meta name="author" content="Alex Rozgo">
+    <link rel="canonical" href="https://rozgo.github.io/work/axionomy/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
+    <meta name="theme-color" content="#101012">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Rozgo">
+    <meta property="og:url" content="https://rozgo.github.io/work/axionomy/">
+    <meta property="og:title" content="Axionomy · Alex Rozgo">
+    <meta property="og:description" content="Axionomy is a Rust decision engine that models problems as accounts, assets and exchanges, validates every proposed change, and keeps replayable traces.">
+    <meta property="og:image" content="https://rozgo.github.io/media/work/axionomy-work-league.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="Axionomy · Alex Rozgo">
+    <meta name="twitter:description" content="Axionomy is a Rust decision engine that models problems as accounts, assets and exchanges, validates every proposed change, and keeps replayable traces.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/work/axionomy-work-league.webp">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Axionomy","description":"Axionomy is a Rust decision engine that models problems as accounts, assets and exchanges, validates every proposed change, and keeps replayable traces.","url":"https://rozgo.github.io/work/axionomy/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../../">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="../../#work" aria-current="page">Work</a>
+                <a href="../../#lab">Lab</a>
+                <a href="../../#writing">Writing</a>
+                <a href="../../#about">About</a>
+                <a href="../../archive/">Archive</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <div class="page-head">
+                <div class="crumbs label"><a href="../../#work">Work</a> / Axionomy</div>
+                <span class="label label--accent">Decision engine · Rust, WebAssembly · 2026</span>
+                <h1>Axionomy</h1>
+                <p class="page-lede">Axionomy models a problem as a closed economy. Assets are anything that can exist or matter; accounts say where assets are; rates define how they may change; exchanges are the only events that change them. Search algorithms, optimizers and learned policies propose exchanges, and the engine accepts or rejects each one and keeps a replayable trace.</p>
+                <div class="hero-actions"><a class="button button--primary" href="https://biomaai.github.io/axionomy/?problem=maze&instance=showcase&strategy=a_star&document=maze%3Aa_star&view=replay&step=0&seed=0&budget=128" target="_blank" rel="noopener">Open Studio ↗</a><a class="button" href="https://github.com/BiomaAI/axionomy" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
+                
+            </div>
+            <figure class="figure"><img src="../../media/work/axionomy-work-league.webp" alt="Axionomy Studio graph of agents, jobs and facilities" width="1600" height="1000" loading="eager" decoding="async"><figcaption>Autonomous Work League in Studio: agents, jobs, facilities and their economic state at one replay step.</figcaption></figure>
+            <dl class="facts"><div><dt>Language</dt><dd>Rust</dd></div><div><dt>Interfaces</dt><dd>CLI, HTTP, MCP, browser Studio</dd></div><div><dt>Problems</dt><dd>14</dd></div><div><dt>Search</dt><dd>BFS, A*, MCTS, ISMCTS, Pareto</dd></div></dl>
+            
+            <section class="detail">
+                <h2>Why</h2>
+                <div class="prose">
+                    <p>Each transition reports its preconditions, shortfalls, consumed resources and invariant violations. For reinforcement learning this provides valid-action masks, partial progress and failure reasons instead of a single success or failure signal. Graph search, optimization, Monte Carlo simulation and learned policies all use the same encoding, so domain logic is written once.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Model</h2>
+                <div class="prose">
+                    <ul>
+                        <li><strong>Asset</strong>: a resource, fact, capability, condition, memory item or state token</li>
+                        <li><strong>Account</strong>: an owner, actor, location, scope or namespace</li>
+                        <li><strong>Rate</strong>: a law for what may be consumed, produced and preserved</li>
+                        <li><strong>Exchange</strong>: one concrete firing of a rate</li>
+                    </ul>
+                    <p><code>State = Account × Asset → Quantity</code>. A solution is a replayable exchange trace that reaches the goal configuration.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Implemented</h2>
+                <div class="prose">
+                    <ul>
+                        <li>Kernel: atomic multi-account exchanges, declared invariants, isolated forks and deterministic replay</li>
+                        <li>Search: BFS, Dijkstra, A*, best-first, branch-and-bound, rollouts, Pareto search, Monte Carlo, MCTS and ISMCTS, with resumable sessions and work budgets</li>
+                        <li>Interfaces: one service contract shared by the CLI, HTTP with server-sent events, an MCP server, and the Studio running WebAssembly in the browser</li>
+                        <li>Fourteen problems, each with Micro, Showcase and Stress instances</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Scenes to open</h2>
+                <div class="prose">
+                    <ul class="scenes"><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=maze&instance=showcase&strategy=a_star&document=maze%3Aa_star&view=replay&step=8&seed=0&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-maze-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Key-door maze ↗<small>A* on the Vault District</small></span></a></li><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=work_league&instance=showcase&strategy=mixed_field&document=work_league%3Amixed_field&view=replay&step=0&leaderboard=contract_value&seed=17&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-work-league-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Autonomous Work League ↗<small>Agents compete for finite work</small></span></a></li><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=logistics&instance=showcase&strategy=reliable&document=logistics%3Areliable&view=replay&step=27&seed=0&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-logistics-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Stochastic logistics ↗<small>Reliable strategy</small></span></a></li><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=marketplace&instance=showcase&strategy=market_clearing&document=marketplace%3Amarket_clearing&view=replay&step=4&seed=17&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-marketplace-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Multi-party marketplace ↗<small>Market clearing</small></span></a></li><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=sokoban&instance=showcase&strategy=a_star&document=sokoban%3Aa_star&view=replay&step=8&seed=17&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-sokoban-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Sokoban ↗<small>A* search</small></span></a></li><li><a class="scene" href="https://biomaai.github.io/axionomy/?problem=mission&instance=showcase&view=replay&step=3&seed=17&budget=128" target="_blank" rel="noopener"><img src="../../media/work/axionomy-mission-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async"><span>Hidden-information mission ↗<small>Beliefs and shared sightings</small></span></a></li></ul>
+                </div>
+            </section>
+            <nav class="next-work" aria-label="More projects">
+                <a href="../../work/maquina/"><span class="label">Previous</span><strong>Maquina</strong></a>
+                <a href="../../work/simbotic/"><span class="label">Next</span><strong>Simbotic</strong></a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="../../feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
+        </div>
+    </footer>
+</body>
+</html>

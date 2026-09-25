@@ -1,0 +1,42 @@
+# Alex Rozgo
+
+> Simulation and AI engineer. Alex Rozgo builds simulators and tools for training and testing robots and AI agents. He worked on console games with LucasArts and partner studios from 2005 to 2015 (including Star Wars: The Force Unleashed), built simulation for robotics and defense from 2016, and developed the simulator shown in Shield AI's Hivemind fixed-wing demo.
+
+Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://rozgo.github.io/Alex-Rozgo-CV.pdf
+
+## Systems
+
+- [Veoveo](https://rozgo.github.io/work/veoveo/): A self-hosted platform for AI agents that work with physical systems. Agents read sensors and video, fly simulated UAVs in Isaac Sim with PX4, control SUMO traffic, and record every run for replay.
+- [AlienWars Gym](https://rozgo.github.io/work/alienwars-gym/): Procedural 3D worlds for training vehicle agents with PPO. Twelve vehicle types across ground, sea, air and underwater. The simulation, sensors and trained policies also run in the browser.
+- [Shield AI Hivemind simulator](https://rozgo.github.io/work/shield-ai-simulator/): I developed the simulator shown in Shield AI’s Hivemind fixed-wing demo. Hivemind is Shield AI’s autonomy software for military and commercial aircraft.
+- [Maquina](https://rozgo.github.io/work/maquina/): An execution model for simulated worlds. A Lean 4 kernel checks every state change, and each run can be replayed. Agents, people and planners propose actions; the kernel accepts or rejects each one.
+- [Axionomy](https://rozgo.github.io/work/axionomy/): A Rust engine that models a problem as accounts, assets and exchanges. Search, optimization and reinforcement learning propose exchanges; the engine validates each one and keeps a replayable trace.
+- [Simbotic](https://rozgo.github.io/work/simbotic/): An open-source simulation engine and AI platform for training perception models on synthetic data and testing robots in simulation.
+
+## Recent experiments
+
+- [Adaptive Locomotion: Full Film](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): One learned policy across every test scene, including missing limbs, slopes and moving platforms. Final evaluation: walking 36/36, static balance 136/144, moving supports 24/24.
+- [Rover Swarm over a Degraded LoRa Mesh](https://www.youtube.com/watch?v=sA_NDf96Dgo) (Sep 2026): Simulated rovers share data over a Reticulum mesh network with heavy packet loss.
+- [Fly Flight School](https://www.youtube.com/watch?v=iAzzoydLlEo) (Sep 2026): Flight control for a simulated fly, driven through the MaleCNS connectome.
+- [AlienWars Game Dev Harness](https://www.youtube.com/watch?v=2ecaXifPN2M) (Sep 2026): A coding agent and reinforcement learning in one development loop for the AlienWars game.
+- [ModernBERT Plays Doom](https://www.youtube.com/watch?v=hXq426rW8gQ) (Sep 2026): A small encoder model picks Doom actions at 43.7 decisions per second, 13.9 ms each, on an M3 Max.
+- [Adaptive Locomotion](https://www.youtube.com/watch?v=emeSmbveTcc) (Sep 2026): A quadruped policy trained across 4,096 parallel worlds with 400 hours of simulated experience.
+- [Amphibious Quadruped in MuJoCo](https://www.youtube.com/watch?v=NMeBjxofL8Y) (Sep 2026): A quadruped with leg-mounted floats walks into water, floats and walks out. Built in 40 minutes from a design posted on LinkedIn.
+- [Self-Improving Agent Trains a UAV with JEPA](https://www.youtube.com/watch?v=300rm4mPcYg) (Sep 2026): An agent implemented the SkyJEPA paper and trained a UAV controller with 26–34% lower worst-case trajectory error than a geometric controller.
+- [PINO Wind Forecasting for Drone Delivery](https://www.youtube.com/watch?v=W6TE1dscqE0) (Sep 2026): A physics-informed neural operator forecasts wind for package delivery in MuJoCo. It delivered in 5 of 6 held-out wind cases with 77% lower tracking error.
+- [Distributed Quadcopter Simulation](https://www.youtube.com/watch?v=xP0I3b8d3NI) (Sep 2025): Quadcopter dynamics and depth sensing split across processes and recorded in Rerun.
+- [Agentic Procedural Augmented Generation](https://www.youtube.com/watch?v=KAEwR96vhnA) (Nov 2024): Text and image prompts drive an agent that generates 3D characters procedurally.
+- [NPCs: Autonomous Agents](https://www.youtube.com/watch?v=H97_h5SBunA) (Oct 2024): NPC agents with individual goals that produce group behavior.
+
+## Writing
+
+- [Maquina: A Theory of Everything for Digital Twins](https://rozgo.github.io/writing/maquina-theory-of-everything-for-digital-twins/) (2025-10-29): Proposes modeling digital twins with three primitives: objects, operations and machines. The idea became the Maquina project.
+- [Making the Case for Nash Equilibrium as a Measurement Tool for Virtual Worlds](https://rozgo.github.io/writing/nash-equilibrium-as-a-measurement-tool/) (2025-07-31): Argues for measuring how far a virtual world is from equilibrium instead of designing for perfect balance.
+- [Situational Complexity in Massive Simulations](https://rozgo.github.io/writing/situational-complexity-in-massive-simulations/) (2025-04-10): Describes Situation Design: areas of activity with a radius of influence, role slots and growth rules, placed above agents and encounters.
+- [Meaning and Memory in Massive Simulations](https://rozgo.github.io/writing/meaning-and-memory-in-massive-simulations/) (2025-02-07): Proposes designing worlds from meanings such as “resting place” and storing memory in places and objects as well as in NPCs.
+- [ModernBERT in Game Development](https://rozgo.github.io/writing/modernbert-in-game-development/) (2024-12-20): Where a small encoder model fits in games: classifying player behavior, game state and procedural content.
+- [Advanced AI Architectures for Immersive Virtual Worlds](https://rozgo.github.io/writing/ai-architectures-for-virtual-worlds/) (2024-12-16): Actor model, behavior trees, memory systems and language models for agents in virtual worlds.
+
+## Optional
+
+- [Video archive](https://rozgo.github.io/archive/): all 86 videos from 2007 to 2026, grouped by period and topic.

@@ -1,1779 +1,492 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Alex Rozgo - AI Engineer specializing in Procedural Augmented Generation (PAG) systems, multi-agent frameworks, and synthetic data pipelines for games and simulations. Expert in Unreal Engine, Unity, TensorFlow, and real-time AI systems.">
+    <title>Alex Rozgo, simulation and AI engineer</title>
+    <meta name="description" content="Alex Rozgo builds simulators and tools for training and testing robots and AI agents: Veoveo, AlienWars Gym, Maquina, Axionomy, and the Shield AI Hivemind simulator.">
     <meta name="author" content="Alex Rozgo">
-    <meta name="keywords" content="AI Engineer, Procedural Augmented Generation, PAG, Machine Learning, Game AI, Simulation, Unreal Engine, Unity, TensorFlow, Multi-Agent Systems, Synthetic Data">
-    <link rel="icon" href="img/rozgo-black-profile-light.jpg" type="image/jpeg">
-
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://rozgo.github.io/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="feed.xml">
+    <meta name="theme-color" content="#101012">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Rozgo">
     <meta property="og:url" content="https://rozgo.github.io/">
-    <meta property="og:title" content="Alex Rozgo - AI Engineer for Games and Simulations">
-    <meta property="og:description" content="Pioneering Procedural Augmented Generation systems that bring AI to procedural content creation in games and simulations.">
-    <meta property="og:image" content="https://rozgo.github.io/img/rozgo-black-profile-light.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rozgo.github.io/">
-    <meta property="twitter:title" content="Alex Rozgo - AI Engineer for Games and Simulations">
-    <meta property="twitter:description" content="Pioneering Procedural Augmented Generation systems that bring AI to procedural content creation in games and simulations.">
-    <meta property="twitter:image" content="https://rozgo.github.io/img/rozgo-black-profile-light.jpg">
-
-    <title>Alex Rozgo - AI Engineer for Games and Simulations</title>
-
-    <link href="css/agency.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
-    <link href="css/site.css" rel="stylesheet">
-
-    <link href='https://fonts.googleapis.com/css?family=Proza+Libre' rel='stylesheet' type='text/css'>
-
+    <meta property="og:title" content="Alex Rozgo, simulation and AI engineer">
+    <meta property="og:description" content="Alex Rozgo builds simulators and tools for training and testing robots and AI agents: Veoveo, AlienWars Gym, Maquina, Axionomy, and the Shield AI Hivemind simulator.">
+    <meta property="og:image" content="https://rozgo.github.io/media/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="Alex Rozgo, simulation and AI engineer">
+    <meta name="twitter:description" content="Alex Rozgo builds simulators and tools for training and testing robots and AI agents: Veoveo, AlienWars Gym, Maquina, Axionomy, and the Shield AI Hivemind simulator.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/og.jpg">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/","image":"https://rozgo.github.io/media/rozgo-portrait.webp","jobTitle":"Simulation and AI Engineer","email":"mailto:alex.rozgo@gmail.com","sameAs":["https://github.com/rozgo","https://x.com/rozgo","https://www.linkedin.com/in/rozgo/","https://www.youtube.com/@rozgok"],"knowsAbout":["Simulation","Reinforcement learning","Robotics","Autonomy","Game development","Synthetic data","World models","Rust","Unreal Engine","Isaac Sim","MuJoCo"]}</script>
 </head>
 
-<body id="page-top" class="index">
-    <svg class="icon-sprite" aria-hidden="true" focusable="false">
-        <symbol id="icon-x" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
-        </symbol>
-        <symbol id="icon-github" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12 .297C5.373.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-        </symbol>
-        <symbol id="icon-linkedin" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"></path>
-        </symbol>
-        <symbol id="icon-up" viewBox="0 0 24 24">
-            <path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </symbol>
-    </svg>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <div class="container_logoskills">
-                        <div class="logo"><span class="Alex">Alex</span><span class="Rozgo">Rozgo</span></div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar-collapse" id="site-navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#page-top">Home</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#game-portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Reviews</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#articles">Articles</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">About Me</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Simulation and AI Engineer</div>
-                <!-- <div class="intro-heading">Alex Rozgo</div> -->
-                <p class="intro-subtitle">Games and simulations for humans, robots and AI agents.</p>
-                <p class="intro-description">
-                    Building world models where humans, robots and AI agents learn, play, and evolve together.
-                </p>
-                <div class="intro-buttons">
-                    <a href="#game-portfolio" class="page-scroll btn btn-xl">View Portfolio</a>
-                    <a href="Alex-Rozgo-CV.pdf" class="btn btn-xl btn-secondary" target="_blank" rel="noopener">Download CV</a>
-                </div>
-            </div>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="#top">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="#work">Work</a>
+                <a href="#lab">Lab</a>
+                <a href="#writing">Writing</a>
+                <a href="#about">About</a>
+                <a href="archive/">Archive</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
         </div>
     </header>
 
-    <!-- VIDEO GALLERY SECTION -->
-    <section id="game-portfolio" class="gray-section">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center redes">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/rozgo" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-x"></use></svg></a></li>
-                        <li><a href="https://github.com/rozgo" aria-label="GitHub"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg></a></li>
-                        <li><a href="https://www.linkedin.com/in/rozgo/" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg></a></li>
-                    </ul>
+    <main id="main">
+        <section class="hero">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <span class="label label--accent">Simulation and AI engineer</span>
+                        <h1>I build simulators and tools for training and testing robots and AI agents.</h1>
+                        <p class="hero-lede">I spent ten years on console games with LucasArts and partner studios, then moved to simulation for robotics and defense, including the simulator in Shield AI’s Hivemind fixed-wing demo. My current projects train control policies, check agent decisions against explicit rules, and run agent missions on infrastructure the operator owns.</p>
+                        <div class="hero-actions">
+                            <a class="button button--primary" href="#work">Selected work</a>
+                            <a class="button" href="mailto:alex.rozgo@gmail.com">Email me</a>
+                            <a class="button" href="Alex-Rozgo-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+                        </div>
+                    </div>
+                    <figure class="monitor" data-monitor>
+                        <div class="monitor-screen">
+                            <video muted playsinline preload="metadata" poster="media/clips/loco-film.webp" aria-label="Clips from recent projects"></video>
+                        </div>
+                        <figcaption class="monitor-bar">
+                            <button type="button" class="icon-button monitor-pause" aria-label="Pause clips"><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z" fill="currentColor"/></svg><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></button>
+                            <span class="monitor-title"></span>
+                            <span class="monitor-progress"></span>
+                        </figcaption>
+                        <ol hidden>
+                    <li data-clip data-src="media/clips/loco-film.mp4" data-poster="media/clips/loco-film.webp" data-title="Adaptive Locomotion" data-href="https://www.youtube.com/watch?v=yv_uwpPm9KQ"></li>
+                    <li data-clip data-src="media/clips/alienwars.mp4" data-poster="media/clips/alienwars.webp" data-title="AlienWars Gym" data-href="work/alienwars-gym/"></li>
+                    <li data-clip data-src="media/clips/veoveo-flight.mp4" data-poster="media/clips/veoveo-flight.webp" data-title="Veoveo: agent-flown UAV mission over Manhattan" data-href="work/veoveo/"></li>
+                    <li data-clip data-src="media/clips/fly.mp4" data-poster="media/clips/fly.webp" data-title="Fly Flight School" data-href="https://www.youtube.com/watch?v=iAzzoydLlEo"></li>
+                    <li data-clip data-src="media/clips/pino.mp4" data-poster="media/clips/pino.webp" data-title="PINO wind forecasting for drone delivery" data-href="https://www.youtube.com/watch?v=W6TE1dscqE0"></li>
+                    <li data-clip data-src="media/clips/doom.mp4" data-poster="media/clips/doom.webp" data-title="ModernBERT plays Doom" data-href="https://www.youtube.com/watch?v=hXq426rW8gQ"></li>
+                    <li data-clip data-src="media/clips/amphibious.mp4" data-poster="media/clips/amphibious.webp" data-title="Amphibious quadruped in MuJoCo" data-href="https://www.youtube.com/watch?v=NMeBjxofL8Y"></li>
+                        </ol>
+                    </figure>
                 </div>
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted near">From autonomous agents to synthetic data generation, my work spans the full spectrum of game and simulation engineering.</h3>
-                </div>
-            </div>
-        </div>
-
-        <div id="js-filters-masonry" class="cbp-l-filters-alignRight">
-            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                All <div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".unreal" class="cbp-filter-item">
-                Unreal <div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".unity" class="cbp-filter-item">
-                Unity<div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".games" class="cbp-filter-item">
-                Games <div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".simulations" class="cbp-filter-item">
-                Simulations <div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".ai" class="cbp-filter-item">
-                AI <div class="cbp-filter-counter"></div>
-            </div>
-            <div data-filter=".experiments" class="cbp-filter-item">
-                Experiments <div class="cbp-filter-counter"></div>
-            </div>
-        </div>
-
-        <div id="js-grid-masonry" class="cbp">
-
-            <!-- === FILA 1 : DEL VIDEO 1 AL 5 =============================================================  -->
-
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 1 -->
-                <a href="https://www.youtube.com/watch?v=IENWIoVnhRk" class="cbp-caption cbp-lightbox" data-title="Simbotic Engine">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video60.jpg" alt="Simbotic Engine" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Simbotic: Simulation Engine</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Adaptive Locomotion: Full Film -->
-                <a href="https://www.youtube.com/watch?v=yv_uwpPm9KQ" class="cbp-caption cbp-lightbox" data-title="Adaptive Locomotion: Full Film">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_adaptive_dog_full.jpg" alt="Adaptive Locomotion: Full Film" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Adaptive Locomotion: Full Film</div>
-                                <div class="cbp-l-caption-desc">One learned policy, walking and holding across every scene</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Rover Swarm over a Degraded LoRa Mesh -->
-                <a href="https://www.youtube.com/watch?v=sA_NDf96Dgo" class="cbp-caption cbp-lightbox" data-title="Rover Swarm over a Degraded LoRa Mesh">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_reticulum_rovers.jpg" alt="Rover Swarm over a Degraded LoRa Mesh" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Rover Swarm over a Degraded LoRa Mesh</div>
-                                <div class="cbp-l-caption-desc">Reticulum mesh networking for simulated rovers</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Fly Flight School -->
-                <a href="https://www.youtube.com/watch?v=iAzzoydLlEo" class="cbp-caption cbp-lightbox" data-title="Fly Flight School">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_fly_flight_school.jpg" alt="Fly Flight School" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Fly Flight School</div>
-                                <div class="cbp-l-caption-desc">Motor control through the MaleCNS connectome</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai games simulations">
-                <!-- VIDEO AlienWars Game Dev Harness -->
-                <a href="https://www.youtube.com/watch?v=2ecaXifPN2M" class="cbp-caption cbp-lightbox" data-title="AlienWars Game Dev Harness">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_alienwars_harness.jpg" alt="AlienWars Game Dev Harness" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">AlienWars Game Dev Harness</div>
-                                <div class="cbp-l-caption-desc">RL in the loop for coding and NPC agents</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai games">
-                <!-- VIDEO ModernBERT Plays Doom -->
-                <a href="https://www.youtube.com/watch?v=hXq426rW8gQ" class="cbp-caption cbp-lightbox" data-title="ModernBERT Plays Doom">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_modernbert_doom.jpg" alt="ModernBERT Plays Doom" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">ModernBERT Plays Doom</div>
-                                <div class="cbp-l-caption-desc">44 decisions per second from a small encoder</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Adaptive Locomotion -->
-                <a href="https://www.youtube.com/watch?v=emeSmbveTcc" class="cbp-caption cbp-lightbox" data-title="Adaptive Locomotion">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_adaptive_dog.jpg" alt="Adaptive Locomotion" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Adaptive Locomotion</div>
-                                <div class="cbp-l-caption-desc">4096 parallel worlds, 400 hours of sim experience</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Amphibious Quadruped in MuJoCo -->
-                <a href="https://www.youtube.com/watch?v=NMeBjxofL8Y" class="cbp-caption cbp-lightbox" data-title="Amphibious Quadruped in MuJoCo">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_amphibious_quadruped.jpg" alt="Amphibious Quadruped in MuJoCo" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Amphibious Quadruped in MuJoCo</div>
-                                <div class="cbp-l-caption-desc">From a LinkedIn post to a working sim in 40 minutes</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO Self-Improving Agent Trains a UAV with JEPA -->
-                <a href="https://www.youtube.com/watch?v=300rm4mPcYg" class="cbp-caption cbp-lightbox" data-title="Self-Improving Agent Trains a UAV with JEPA">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_lewm_jepa.jpg" alt="Self-Improving Agent Trains a UAV with JEPA" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Self-Improving Agent Trains a UAV with JEPA</div>
-                                <div class="cbp-l-caption-desc">LeWM / SkyJEPA world model for flight control</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO PINO Wind Forecasting for Drone Delivery -->
-                <a href="https://www.youtube.com/watch?v=W6TE1dscqE0" class="cbp-caption cbp-lightbox" data-title="PINO Wind Forecasting for Drone Delivery">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_pino_drone.jpg" alt="PINO Wind Forecasting for Drone Delivery" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">PINO Wind Forecasting for Drone Delivery</div>
-                                <div class="cbp-l-caption-desc">Physics-informed neural operator in MuJoCo</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO PAG -->
-                <a href="https://www.youtube.com/watch?v=KAEwR96vhnA" class="cbp-caption cbp-lightbox" data-title="Agentic Procedural Augmented Generation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_pag.jpg" alt="Agentic Procedural Augmented Generation" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Agentic Procedural Augmented Generation</div>
-                                <div class="cbp-l-caption-desc">Pioneering PAG systems for AI-driven content</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item simulations">
-                <!-- VIDEO Distributed Quadcopter Simulation -->
-                <a href="https://www.youtube.com/watch?v=xP0I3b8d3NI" class="cbp-caption cbp-lightbox" data-title="Distributed Quadcopter Simulation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/DoraQuadDist.webp" alt="Distributed Quadcopter Simulation" width="3456" height="2158" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Distributed Quadcopter Simulation</div>
-                                <div class="cbp-l-caption-desc">Real-time drone dynamics and control framework</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai simulations">
-                <!-- VIDEO NPCs -->
-                <a href="https://www.youtube.com/watch?v=H97_h5SBunA" class="cbp-caption cbp-lightbox" data-title="NPCs - AI-Driven Autonomous Agents">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_npcs.webp" alt="NPCs" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">NPCs - AI-Driven Autonomous Agents</div>
-                                <div class="cbp-l-caption-desc">Multi-agent systems and emergent behaviors</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO DL CCTV -->
-                <a href="https://www.youtube.com/watch?v=1Nkb2Ler3RI" class="cbp-caption cbp-lightbox" data-title="DeepLearning CCTV">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_dlcctv.webp" alt="DeepLearning CCTV" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">DeepLearning CCTV</div>
-                                <div class="cbp-l-caption-desc">Real-time object detection and tracking</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Synthetic Data -->
-                <a href="https://www.youtube.com/watch?v=odvfQ4E82oY" class="cbp-caption cbp-lightbox" data-title="Photorealistic-trained Dataset on Synthetic Data">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_synthetic.webp" alt="Synthetic Data" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Photorealistic-trained Dataset on Synthetic Data</div>
-                                <div class="cbp-l-caption-desc">Synthetic data generation for ML training</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item simulations ai">
-                <!-- VIDEO Simbotic -->
-                <a href="https://www.youtube.com/watch?v=-ryn17OpqKw" class="cbp-caption cbp-lightbox" data-title="Simbotic - Under Development">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_simbotic.webp" alt="Simbotic" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Simbotic - Under Development</div>
-                                <div class="cbp-l-caption-desc">Advanced simulation platform</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item simulations ai">
-                <!-- VIDEO Robot Dog -->
-                <a href="https://www.youtube.com/watch?v=ZLwd0lIdq1g" class="cbp-caption cbp-lightbox" data-title="Construction Site Sim World for Robot Dog">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_robotdog.webp" alt="Robot Dog Simulation" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Construction Site Sim World for Robot Dog</div>
-                                <div class="cbp-l-caption-desc">Robotics simulation environment</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item simulations ai">
-                <!-- VIDEO Autonomous Train -->
-                <a href="https://www.youtube.com/watch?v=1tSi5Mo-eg4" class="cbp-caption cbp-lightbox" data-title="Autonomous Train Control">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_train.webp" alt="Autonomous Train" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Autonomous Train Control</div>
-                                <div class="cbp-l-caption-desc">AI-driven autonomous vehicle control</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Motion Transfer -->
-                <a href="https://www.youtube.com/watch?v=LREMuWTd9Uw" class="cbp-caption cbp-lightbox" data-title="Real-time Motion Transfer">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_motion1.jpg" alt="Motion Transfer" width="640" height="480" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Real-time Motion Transfer</div>
-                                <div class="cbp-l-caption-desc">AI-powered motion capture</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO OpenPose -->
-                <a href="https://www.youtube.com/watch?v=rkNDVcT1bXM" class="cbp-caption cbp-lightbox" data-title="OpenPoseGStreamerUE4">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_openpose.webp" alt="OpenPose UE4" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">OpenPose GStreamer UE4</div>
-                                <div class="cbp-l-caption-desc">Pose estimation pipeline integration</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO LiDAR CV -->
-                <a href="https://www.youtube.com/watch?v=_0ycXmtRX7M" class="cbp-caption cbp-lightbox" data-title="VLS-128 LiDAR Augmented for Computer Vision">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_lidar128.jpg" alt="LiDAR Computer Vision" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">VLS-128 LiDAR Augmented for Computer Vision</div>
-                                <div class="cbp-l-caption-desc">Advanced sensor fusion</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Synthetic Datasets -->
-                <a href="https://www.youtube.com/watch?v=8f-a1so-m9o" class="cbp-caption cbp-lightbox" data-title="Synthetic Datasets">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_syndatasets.webp" alt="Synthetic Datasets" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Synthetic Datasets</div>
-                                <div class="cbp-l-caption-desc">AI training data generation</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Depth Prediction -->
-                <a href="https://www.youtube.com/watch?v=66yT8JO3pyQ" class="cbp-caption cbp-lightbox" data-title="Monocular Depth Prediction and Semantic Segmentation Fusion">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_depth.jpg" alt="Depth Prediction" width="640" height="480" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Monocular Depth Prediction and Semantic Segmentation</div>
-                                <div class="cbp-l-caption-desc">Computer vision fusion techniques</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO CV Agents -->
-                <a href="https://www.youtube.com/watch?v=39Kb8YVYgMM" class="cbp-caption cbp-lightbox" data-title="Autonomous Agents with Computer Vision Pipeline Simulation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_cvagents.webp" alt="CV Agents" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Autonomous Agents with Computer Vision Pipeline</div>
-                                <div class="cbp-l-caption-desc">AI agent perception systems</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO 360 CV -->
-                <a href="https://www.youtube.com/watch?v=JtG2sGy9cKs" class="cbp-caption cbp-lightbox" data-title="Computer Vision AI looking around 360 Video Capture">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_360cv.jpg" alt="360 Computer Vision" width="480" height="360" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Computer Vision AI - 360 Video Capture</div>
-                                <div class="cbp-l-caption-desc">Omnidirectional vision processing</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Salient Detection -->
-                <a href="https://www.youtube.com/watch?v=TJTn5dcb4nE" class="cbp-caption cbp-lightbox" data-title="Salient Object Detection">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_salient.jpg" alt="Salient Object Detection" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Salient Object Detection</div>
-                                <div class="cbp-l-caption-desc">AI-driven visual attention modeling</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item ai">
-                <!-- VIDEO Video Analytics -->
-                <a href="https://www.youtube.com/watch?v=jC-2PbZ42w0" class="cbp-caption cbp-lightbox" data-title="Intelligent Video Analytics">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video_analytics.webp" alt="Video Analytics" width="1280" height="720" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Intelligent Video Analytics</div>
-                                <div class="cbp-l-caption-desc">Real-time AI video processing</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 1 -->
-                <a href="https://www.youtube.com/watch?v=735aedKBwY4" class="cbp-caption cbp-lightbox" data-title="Superformula Particles">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video1.jpg" alt="Superformula Particles" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Superformula Particles</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 2 -->
-                <a href="https://www.youtube.com/watch?v=ARK4xeIR2BM" class="cbp-caption cbp-lightbox" data-title="Superformula driven by Signal Generators">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video2.jpg" alt="Superformula driven by Signal Generators" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Superformula driven by Signal Generators</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 3 -->
-                <a href="https://www.youtube.com/watch?v=3iOi2vYeWjo" class="cbp-caption cbp-lightbox" data-title="SuperShapes using SuperFormula in Unreal Engine">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video3.jpg" alt="SuperShapes using SuperFormula in Unreal Engine" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">SuperShapes using SuperFormula in Unreal Engine</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 4 -->
-                <a href="https://www.youtube.com/watch?v=hnYrq4Qkfyc" class="cbp-caption cbp-lightbox" data-title="GPU Particles - Unreal Engine">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video4.jpg" alt="GPU Particles - Unreal Engine" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">GPU Particles - Unreal Engine</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 5 -->
-                <a href="https://www.youtube.com/watch?v=0SMB3IvMI1Y" class="cbp-caption cbp-lightbox" data-title="Particles VectorFields - Unreal Engine 4">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video5.jpg" alt="Particles VectorFields - Unreal Engine 4" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Particles VectorFields - Unreal Engine 4</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************** FILA 2 : DEL VIDEO 6 AL 10 *****************************************************************  -->
-
-            <div class="cbp-item unreal">
-                <!-- VIDEO 6 -->
-                <a href="https://www.youtube.com/watch?v=ob4G_mD639s" class="cbp-caption cbp-lightbox" data-title="Signals for Unreal Engine 4">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video6.jpg" alt="Signals for Unreal Engine 4" width="360" height="200" loading="eager" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Signals for Unreal Engine 4 </div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal ai">
-                <!-- VIDEO 7 -->
-                <a href="https://www.youtube.com/watch?v=MmrLJpW2c4g" class="cbp-caption cbp-lightbox" data-title="Tentacle Inverse Kinematics - VR - Unreal Engine 4">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video7.jpg" alt="Tentacle Inverse Kinematics - VR - Unreal Engine 4" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Tentacle Inverse Kinematics - VR - Unreal Engine 4</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal experiments">
-                <!-- VIDEO 8 -->
-                <a href="https://www.youtube.com/watch?v=3nNGf1DVOkM" class="cbp-caption cbp-lightbox" data-title="Fractal RenderTexture - Unreal Engine">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video8.jpg" alt="Fractal RenderTexture - Unreal Engine" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Fractal RenderTexture - Unreal Engine</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 9 -->
-                <a href="https://www.youtube.com/watch?v=x28CmFgx1Bc" class="cbp-caption cbp-lightbox" data-title="Feedback Loop Controlled Motion for VR">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video9.jpg" alt="Feedback Loop Controlled Motion for VR" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Feedback Loop Controlled Motion for VR</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 10 -->
-                <a href="https://www.youtube.com/watch?v=Sv3FWTfFNc4" class="cbp-caption cbp-lightbox" data-title="PIDController - Physics - Unreal Engine">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video10.jpg" alt="PIDController - Physics - Unreal Engine" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">PIDController - Physics - Unreal Engine</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ********************** FILA 3 : DEL VIDEO 11 AL 15 *****************************************************************  -->
-
-            <div class="cbp-item unreal">
-                <!-- VIDEO 11-->
-                <a href="https://www.youtube.com/watch?v=cDKqvrfIu3M" class="cbp-caption cbp-lightbox" data-title="Vector Displacement Map">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video11.jpg" alt="Vector Displacement Map" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Vector Displacement Map</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 12 -->
-                <a href="https://www.youtube.com/watch?v=PR5JiRGRXo4" class="cbp-caption cbp-lightbox" data-title="3D Digital Production - Product Shot Demo">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video12.jpg" alt="3D Digital Production - Product Shot Demo" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">3D Digital Production - Product Shot Demo</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 13 -->
-                <a href="https://www.youtube.com/watch?v=bK5l5kUPDL4" class="cbp-caption cbp-lightbox" data-title="3D Animated - Tech Demo">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video13.jpg" alt="3D Animated - Tech Demo" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">3D Animated - Tech Demo</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 14 -->
-                <a href="https://www.youtube.com/watch?v=Nd6nemhE8N0" class="cbp-caption cbp-lightbox" data-title="3D Post Production Test">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video14.jpg" alt="3D Post Production Test" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">3D Post Production Test</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 15 -->
-                <a href="https://www.youtube.com/watch?v=bktNzHAwwYQ" class="cbp-caption cbp-lightbox" data-title="NVidia Cataclysm">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video15.jpg" alt="NVidia Cataclysm" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">NVidia Cataclysm</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- *************************** FILA 4 : DEL VIDEO 16 AL 20 *****************************************************************  -->
-
-            <div class="cbp-item unreal experiments">
-                <!-- VIDEO 16 -->
-                <a href="https://www.youtube.com/watch?v=i5gS6ipWRJo" class="cbp-caption cbp-lightbox" data-title="Wine - Liquid Physics Experiment">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video16.jpg" alt="Wine - Liquid Physics Experiment" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Wine - Liquid Physics Experiment</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 17 -->
-                <a href="https://www.youtube.com/watch?v=J-Hqxx9S6tE" class="cbp-caption cbp-lightbox" data-title="Buffalo - Nvidia HairWorks">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video17.jpg" alt="Buffalo - Nvidia HairWorks" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Buffalo - Nvidia HairWorks</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 18 -->
-                <a href="https://www.youtube.com/watch?v=laE7BB4ZAh8" class="cbp-caption cbp-lightbox" data-title="Particles Lead">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video18.jpg" alt="Particles Lead" width="361" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Particles Lead</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 19 -->
-                <a href="https://www.youtube.com/watch?v=JilA_-inePk" class="cbp-caption cbp-lightbox" data-title="Force Directed Nodes">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video19.jpg" alt="Force Directed Nodes" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Force Directed Nodes</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 20 -->
-                <a href="https://www.youtube.com/watch?v=8dxVQeRzfeU" class="cbp-caption cbp-lightbox" data-title="Depth Cloud">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video20.jpg" alt="Depth Cloud" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Depth Cloud</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************ FILA 5 : DEL VIDEO 21 AL 25 ******************************************************************  -->
-
-            <div class="cbp-item unreal">
-                <!-- VIDEO 21 -->
-                <a href="https://www.youtube.com/watch?v=0b1emlg5x2c" class="cbp-caption cbp-lightbox" data-title="VR Fullbody IK - 3 Tracking Points">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video57.jpg" alt="VR Fullbody IK - 3 Tracking Points" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">VR Fullbody IK - 3 Tracking Points</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 22 -->
-                <a href="https://www.youtube.com/watch?v=onbuz5Xq-mA" class="cbp-caption cbp-lightbox" data-title="Internal">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video22.jpg" alt="Internal" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Internal</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal experiments">
-                <!-- VIDEO 23 -->
-                <a href="https://www.youtube.com/watch?v=kVCqk4EAytI" class="cbp-caption cbp-lightbox" data-title="Reaction Diffuse">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video23.jpg" alt="Reaction Diffuse" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Reaction Diffuse</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal">
-                <!-- VIDEO 24 -->
-                <a href="https://www.youtube.com/watch?v=wKVUG04qhC0" class="cbp-caption cbp-lightbox" data-title="Musical VR World">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video24.jpg" alt="Musical VR World" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Musical VR World</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity experiments">
-                <!-- VIDEO 25-->
-                <a href="https://www.youtube.com/watch?v=M4YXZSy0cts" class="cbp-caption cbp-lightbox" data-title="BumbleBee with experimental mobile shader">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video25.jpg" alt="BumbleBee with experimental mobile shader" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">BumbleBee with experimental mobile shader</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************ FILA 6 : DEL VIDEO 26 AL 30 ******************************************************************  -->
-
-            <div class="cbp-item unity">
-                <!-- VIDEO 26 -->
-                <a href="https://www.youtube.com/watch?v=t04p4_IrkYU" class="cbp-caption cbp-lightbox" data-title="Pixar style lighting realtime render">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video26.jpg" alt="Pixar style lighting realtime render" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Pixar style lighting realtime render - initial
-                                    experiments</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity">
-                <!-- VIDEO 27 -->
-                <a href="https://www.youtube.com/watch?v=7uXZWniMz9U" class="cbp-caption cbp-lightbox" data-title="Rawbots - Technical Preview">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video27.jpg" alt="Rawbots - Technical Preview" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Rawbots - Technical Preview</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity experiments">
-                <!-- VIDEO 28 -->
-                <a href="https://www.youtube.com/watch?v=uxVujZwqbnE" class="cbp-caption cbp-lightbox" data-title="Verlet Integration and Signal Generated Gait">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video28.jpg" alt="Verlet Integration and Signal Generated Gait" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Verlet Integration and Signal Generated Gait</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity ai">
-                <!-- VIDEO 29 -->
-                <a href="https://www.youtube.com/watch?v=8hfKs02QHR4" class="cbp-caption cbp-lightbox" data-title="Snake PID">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video29.jpg" alt="Snake PID" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Snake PID</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity ai">
-                <!-- VIDEO 30 -->
-                <a href="https://www.youtube.com/watch?v=DYtIbzNz_hU" class="cbp-caption cbp-lightbox" data-title="Creatures First Steps">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video30.jpg" alt="Creatures First Steps" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Creatures First Steps</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************ FILA 7 : DEL VIDEO 31 AL 35 ******************************************************************  -->
-
-            <div class="cbp-item unity ai">
-                <!-- VIDEO 31 -->
-                <a href="https://www.youtube.com/watch?v=3WOSKPjf0bQ" class="cbp-caption cbp-lightbox" data-title="Robo Biped Keeping Balance">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video31.jpg" alt="Robo Biped Keeping Balance" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Robo Biped Keeping Balance</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity ai">
-                <!-- VIDEO 32 -->
-                <a href="https://www.youtube.com/watch?v=xT8ToOVrWnk" class="cbp-caption cbp-lightbox" data-title="Tiny Battle">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video32.jpg" alt="Tiny Battle" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Tiny Battle</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity ai">
-                <!-- VIDEO 33 -->
-                <a href="https://www.youtube.com/watch?v=YpjMm7DzYXU" class="cbp-caption cbp-lightbox" data-title="PID Robots">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video33.jpg" alt="PID Robots" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">PID Robots</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity experiments">
-                <!-- VIDEO 34 -->
-                <a href="https://www.youtube.com/watch?v=RTOVZrg2k8s" class="cbp-caption cbp-lightbox" data-title="Experimental World Building">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video34.jpg" alt="Experimental World Building" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Experimental World Building</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity games">
-                <!-- VIDEO 35 -->
-                <a href="https://www.youtube.com/watch?v=ml_4jj_SFnw" class="cbp-caption cbp-lightbox" data-title="Kitty Toy - iPhone & iPad">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video35.jpg" alt="Kitty Toy - iPhone & iPad" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Kitty Toy - iPhone & iPad</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************ FILA 8 : DEL VIDEO 36 AL 40 ******************************************************************  -->
-
-            <div class="cbp-item unity games">
-                <!-- VIDEO 36 -->
-                <a href="https://www.youtube.com/watch?v=F3yLaQeqw7w" class="cbp-caption cbp-lightbox" data-title="Bubblelicious">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video36.jpg" alt="Bubblelicious" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Bubblelicious</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity games">
-                <!-- VIDEO 37 -->
-                <a href="https://www.youtube.com/watch?v=xrNNogedy9o" class="cbp-caption cbp-lightbox" data-title="MasterDealer - Teaser II">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video37.jpg" alt="MasterDealer - Teaser II" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">MasterDealer - Teaser II</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity games">
-                <!-- VIDEO 38 -->
-                <a href="https://www.youtube.com/watch?v=ENOMqPVl5Ms" class="cbp-caption cbp-lightbox" data-title="Grokion developed with Unity 3D">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video38.jpg" alt="Grokion developed with Unity 3D" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Grokion developed with Unity 3D</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item simulations ai">
-                <!-- VIDEO 39 -->
-                <a href="https://www.youtube.com/watch?v=WTiKMW5CrM4" class="cbp-caption cbp-lightbox" data-title="Airport Simulation Game">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video39.jpg" alt="Airport Simulation Game" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Airport Simulation Game</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unity games">
-                <!-- VIDEO 40 -->
-                <a href="https://www.youtube.com/watch?v=Xa0atrR26dg" class="cbp-caption cbp-lightbox" data-title="Cards Battle MMO Game - iPad">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video40.jpg" alt="Cards Battle MMO Game - iPad" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Cards Battle MMO Game - iPad</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- ************************ FILA 9 : DEL VIDEO 41 AL 45 ******************************************************************  -->
-
-            <div class="cbp-item unity">
-                <!-- VIDEO 41 -->
-                <a href="https://www.youtube.com/watch?v=Ob8icqlv7Ns" class="cbp-caption cbp-lightbox" data-title="Infinite Terrain">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video41.jpg" alt="Infinite Terrain" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Infinite Terrain</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item games">
-                <!-- VIDEO 42 -->
-                <a href="https://www.youtube.com/watch?v=RkBiYpD3SDc" class="cbp-caption cbp-lightbox" data-title="Star Wars: The Force Unleashed Trailer">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video42.jpg" alt="Star Wars: The Force Unleashed Trailer" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Star Wars: The Force Unleashed Trailer</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item games">
-                <!-- VIDEO 43 -->
-                <a href="https://www.youtube.com/watch?v=XPIS_aA4lrc" class="cbp-caption cbp-lightbox" data-title="Rawbots - Official Teaser Trailer">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video43.jpg" alt="Rawbots - Official Teaser Trailer" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Rawbots - Official Teaser Trailer</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item games">
-                <!-- VIDEO 44 -->
-                <a href="https://www.youtube.com/watch?v=GYT0u0skyb0" class="cbp-caption cbp-lightbox" data-title="Ghost Pirates of Vooju Island Trailer">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video44.jpg" alt="Ghost Pirates of Vooju Island Trailer" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Ghost Pirates of Vooju Island Trailer</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item games">
-                <!-- VIDEO 45 -->
-                <a href="https://www.youtube.com/watch?v=F8K7Uj_gmF4" class="cbp-caption cbp-lightbox" data-title="A Vampyre Story - Trailer - PC">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video45.jpg" alt="A Vampyre Story - Trailer - PC" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">A Vampyre Story - Trailer - PC</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- *********************** FILA 10 : DEL VIDEO 46 AL 50 ******************************************************************  -->
-
-            <div class="cbp-item games">
-                <!-- VIDEO 46 -->
-                <a href="https://www.youtube.com/watch?v=MCHliCG8kZY" class="cbp-caption cbp-lightbox" data-title="STP Video--Briscas">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video46.jpg" alt="STP Video--Briscas" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">STP Video--Briscas</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item games experiments">
-                <!-- VIDEO 47 -->
-                <a href="https://www.youtube.com/watch?v=ExgrBFXMvPc" class="cbp-caption cbp-lightbox" data-title="Retro Game for first iPhone">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video47.jpg" alt="Retro Game for first iPhone" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Retro Game for first iPhone</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item simulations ai">
-                <!-- VIDEO 48 -->
-                <a href="https://www.youtube.com/watch?v=r-0xqr8tvK0" class="cbp-caption cbp-lightbox" data-title="Vehicle Lidar Simulation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video48.jpg" alt="Vehicle Lidar Simulation" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Vehicle Lidar Simulation</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO 49 -->
-                <a href="https://www.youtube.com/watch?v=x7-aAJ7uc5o" class="cbp-caption cbp-lightbox" data-title="PID Turret">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video49.jpg" alt="PID Turret" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">PID Turret</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item experiments">
-                <!-- VIDEO 50 -->
-                <a href="https://www.youtube.com/watch?v=av6XyfeHr-g" class="cbp-caption cbp-lightbox" data-title="Mobile AR NFT Test">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video50.jpg" alt="Mobile AR NFT Test" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Mobile AR NFT Test</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- *********************** FILA 11 : DEL VIDEO 51 AL 55 ******************************************************************  -->
-
-            <div class="cbp-item experiments">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=BHfVtFZEkM0" class="cbp-caption cbp-lightbox" data-title="Input Experiments">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video51.jpg" alt="Input Experiments" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Input Experiments</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item experiments">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=xEsJVL8hUyg" class="cbp-caption cbp-lightbox" data-title="Tracking">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video52.jpg" alt="Tracking" width="721" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Tracking</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item experiments">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=THnYD5_382k" class="cbp-caption cbp-lightbox" data-title="Custom Web Browser for iPad">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video53.jpg" alt="Custom Web Browser for iPad" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Custom Web Browser for iPad</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item experiments">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=WevwzLbWjD8" class="cbp-caption cbp-lightbox" data-title="Realtime Character Pipeline">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video54.jpg" alt="Realtime IK, Dynamic animation" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Realtime IK, Dynamic animation</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=bEmZMk1VmhQ" class="cbp-caption cbp-lightbox" data-title="Real-time Hand Pose Estimation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video55.jpg" alt="Real-time Hand Pose Estimation" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Real-time Hand Pose Estimation</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=PfPeppiGceI" class="cbp-caption cbp-lightbox" data-title="Real-time Multi-Person Pose Estimation">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video56.jpg" alt="Real-time Multi-Person Pose Estimation" width="720" height="400" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Real-time Multi-Person Pose Estimation</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=JBJCrtaNgIc" class="cbp-caption cbp-lightbox" data-title="AI-powered aerial robot">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video59.jpg" alt="AI-powered aerial robot" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">AI-powered aerial robot</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item ai">
-                <!-- VIDEO x -->
-                <a href="https://www.youtube.com/watch?v=TISMgOG-GD8" class="cbp-caption cbp-lightbox" data-title="Augmented Reality AI">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video58.jpg" alt="Augmented Reality AI" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Augmented Reality AI</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item unreal simulations">
-                <!-- VIDEO 1 -->
-                <a href="https://www.youtube.com/watch?v=RdIpDA9sxlU" class="cbp-caption cbp-lightbox" data-title="NVidia Robotics">
-                    <div class="cbp-caption-defaultWrap"><img src="img/video61.jpg" alt="NVidia Robotics" width="360" height="200" loading="lazy" decoding="async"></div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">NVidia Isaac Robotics</div>
-                                <div class="cbp-l-caption-desc"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <!-- ******************** FIN DE LAS FILAS *******************************************************************  -->
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="bg-light-white height ConceptBkgReviews">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Reviews</h2>
-                    <h3 class="section-subheading text-muted">A few good things said about my work.</h3>
-
-                    <ul class="timeline">
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <a href="https://medium.com/@shield_ai/a-conversation-with-alex-rozgo-dynamical-systems-engineer-ac76e7c39592"><img
-                                        class="img-circle img-responsive" src="img/reviews/shieldai.jpg" alt="Shield AI" width="200" height="200" loading="lazy" decoding="async"></a>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>The Intersection Between Gaming and AI</h4>
-                                    <h4 class="subheading">A conversation with Alex Rozgo</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Shield AI is a combination of awesome hardware, future tech
-                                        and personal responsibility. And I can’t imagine anything harder and more
-                                        compelling than protecting people with intelligent systems.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <a href="https://www.theverge.com/2013/5/9/4311742/rawbots-build-and-program-a-virtual-robot"><img
-                                        class="img-circle img-responsive" src="img/reviews/theverge.jpg" alt="The Verge" width="200" height="200" loading="lazy" decoding="async"></a>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>'Rawbots' lets you build the Wall-E of your dreams</h4>
-                                    <h4 class="subheading">Lego Mindstorms in video game form</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Managing complexity by carefully designing simple axiomatic
-                                        building blocks. Then you can let your robot loose in an open world where
-                                        you're encouraged to experiment.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <a href="https://toucharcade.com/2009/10/27/untitled-metroid-and-megaman-inspired-game-shows-promise/"><img
-                                        class="img-circle img-responsive" src="img/reviews/toucharcade.jpg" alt="Touch Arcade" width="200" height="200" loading="lazy" decoding="async"></a>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Touch Arcade on Grokion</h4>
-                                    <h4 class="subheading">This game looked impressive in screenshots, but seeing it in
-                                        motion is something else.</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">In the two videos he has posted we see multiple weapons,
-                                        using missiles to break things, a grappling hook to solve physics puzzles, and
-                                        many other amazing things that have come out of this one-man wolfpack of iPhone
-                                        development.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <a href="https://www.slidetoplay.com/briscas-review/"><img class="img-circle img-responsive"
-                                        src="img/reviews/slidetoplay.jpg" alt="Slide to Play" width="200" height="200" loading="lazy" decoding="async"></a>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Slide to Play</h4>
-                                    <h4 class="subheading">There’s a good reason for Briscas’s longevity, and this
-                                        classy iPhone game definitely does it justice.</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">For a casual card game, Briscas looks fantastic. The game is
-                                        fully animated, and includes special effects like lightning bolts and
-                                        earthquakes for winning big tricks.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>And<br>yet<br>it moves!</h4>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="stats">
+                <a class="stat" href="https://www.youtube.com/watch?v=emeSmbveTcc" data-video data-title="parallel simulated worlds in one locomotion training run"><span class="stat-value">4,096</span><span class="stat-label">parallel simulated worlds in one locomotion training run</span></a>
+                <a class="stat" href="work/veoveo/#results"><span class="stat-value">9.2 km</span><span class="stat-label">UAV mission flown by an agent in Isaac Sim with PX4, zero collisions</span></a>
+                <a class="stat" href="https://www.youtube.com/watch?v=hXq426rW8gQ" data-video data-title="Doom actions chosen by a ModernBERT classifier on an Apple M3 Max"><span class="stat-value">43.7/s</span><span class="stat-label">Doom actions chosen by a ModernBERT classifier on an Apple M3 Max</span></a>
+                <a class="stat" href="work/alienwars-gym/#evaluation"><span class="stat-value">49.5M</span><span class="stat-label">steps in the AlienWars reliability test; the failing candidate was not deployed</span></a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Articles Section -->
-    <section id="articles" class="bg-light-white height">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Articles & Insights</h2>
-                    <h3 class="section-subheading text-muted">Thoughts on AI, simulations, and the future of virtual worlds</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="article-list">
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1983597308093567405" target="_blank" rel="noopener">
-                                    <img src="img/article_maquina.webp" alt="A Theory of Everything for Digital Twins" width="1024" height="1024" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1983597308093567405" target="_blank" rel="noopener">A Theory of Everything for Digital Twins</a></h4>
-                                <p class="article-date">October 2025</p>
-                                <p class="text-muted">Maquina is a framework for rapidly building digital twins using three simple primitives (Objects, Operations, Machines), enabling LLMs to create personalized simulations while providing structured world models for AI agents.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1950992080005636475" target="_blank" rel="noopener">
-                                    <img src="img/article_nash.webp" alt="Nash Equilibrium as a Measurement Tool" width="1200" height="480" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1950992080005636475" target="_blank" rel="noopener">Nash Equilibrium as a Measurement Tool for Virtual Worlds</a></h4>
-                                <p class="article-date">July 2025</p>
-                                <p class="text-muted">What if the secret to creating vibrant virtual worlds isn't achieving perfect balance, but measuring how far we are from it? A new perspective on using game theory in virtual world design.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1910468262783062256" target="_blank" rel="noopener">
-                                    <img src="img/article_situational.webp" alt="Situational Complexity in Massive Simulations" width="1200" height="480" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1910468262783062256" target="_blank" rel="noopener">Situational Complexity in Massive Simulations</a></h4>
-                                <p class="article-date">April 2025</p>
-                                <p class="text-muted">Introducing Situation Design: a higher-level framework for managing the exponential complexity of dynamic interactions in massive games through organic, scalable "bubbles" of activity.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1887877299149607007" target="_blank" rel="noopener">
-                                    <img src="img/article_meaning.jpg" alt="Meaning and Memory in Massive Simulations" width="720" height="288" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1887877299149607007" target="_blank" rel="noopener">Meaning and Memory in Massive Simulations</a></h4>
-                                <p class="article-date">February 2025</p>
-                                <p class="text-muted">Revolutionizing virtual worlds by starting with meaning instead of objects, and implementing distributed environmental memory that creates truly persistent, organic worlds.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1870200396142047364" target="_blank" rel="noopener">
-                                    <img src="img/article_modernbert.jpg" alt="ModernBERT in Game Development" width="1200" height="480" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1870200396142047364" target="_blank" rel="noopener">ModernBERT in Game Development</a></h4>
-                                <p class="article-date">December 2024</p>
-                                <p class="text-muted">Exploring how ModernBERT's efficient architecture and strong classification capabilities can enhance NPC behavior, dynamic difficulty, and procedural content validation in games.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="article-item">
-                            <div class="article-thumbnail">
-                                <a href="https://x.com/rozgo/status/1868827283655471235" target="_blank" rel="noopener">
-                                    <img src="img/article_ai_architectures.webp" alt="Advanced AI Architectures" width="1200" height="480" loading="lazy" decoding="async">
-                                </a>
-                            </div>
-                            <div class="article-content">
-                                <h4><a href="https://x.com/rozgo/status/1868827283655471235" target="_blank" rel="noopener">Advanced AI Architectures for Immersive Virtual Worlds</a></h4>
-                                <p class="article-date">December 2024</p>
-                                <p class="text-muted">From Actor Models to Behavior Trees, explore the cutting-edge AI architectures that enable virtual worlds with entities that learn, adapt, and create emergent behaviors.</p>
-                            </div>
-                        </div>
+        <section class="section" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="label label--accent">Selected work</span>
+                        <h2>Systems</h2>
+                        <p>Six projects with public code, live demos or video. Each project page covers the problem, the design and the results.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="bg-light-white height ConceptBkgDark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted">With four parameters I can fit an elephant, and with five
-                        I can make him wiggle his trunk.</h3>
-                    <!-- <h3 class="section-subheading text-muted"></h3> -->
+                <div class="systems" data-video-group>
+                <article class="system">
+                    <a class="system-media" href="work/veoveo/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/veoveo-uav-new-york-800.webp" alt="Simulated multirotor over Midtown Manhattan in Isaac Sim" width="800" height="450" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Operations platform · Rust · 2026</span>
+                        <h3><a href="work/veoveo/">Veoveo</a></h3>
+                        <p class="system-desc">A self-hosted platform for AI agents that work with physical systems. Agents read sensors and video, fly simulated UAVs in Isaac Sim with PX4, control SUMO traffic, and record every run for replay.</p>
+                        <p class="proof">An agent flew 9.227 km over Manhattan in 13 min 10 s: four waypoints, zero collisions.</p>
+                        <ul class="link-row">
+                            <li><a href="work/veoveo/">Project page</a></li><li><a class="ext" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="work/alienwars-gym/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/alienwars-frozen-800.webp" alt="Procedurally generated frozen map in AlienWars Map Lab" width="800" height="462" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Reinforcement learning · C, CUDA, WebAssembly · 2026</span>
+                        <h3><a href="work/alienwars-gym/">AlienWars Gym</a></h3>
+                        <p class="system-desc">Procedural 3D worlds for training vehicle agents with PPO. Twelve vehicle types across ground, sea, air and underwater. The simulation, sensors and trained policies also run in the browser.</p>
+                        <p class="proof">A 49.5-million-step reliability test kept a candidate policy that failed its gates out of the public demo.</p>
+                        <ul class="link-row">
+                            <li><a href="work/alienwars-gym/">Project page</a></li><li><a class="ext" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener">Map Lab</a></li><li><a class="ext" href="https://github.com/rozgo/alienwars-gym" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="work/shield-ai-simulator/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/shield-hivemind-800.webp" alt="Fixed-wing aircraft over snowy mountains in the Hivemind demo" width="480" height="270" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Autonomy simulation · Shield AI</span>
+                        <h3><a href="work/shield-ai-simulator/">Shield AI Hivemind simulator</a></h3>
+                        <p class="system-desc">I developed the simulator shown in Shield AI’s Hivemind fixed-wing demo. Hivemind is Shield AI’s autonomy software for military and commercial aircraft.</p>
+                        <p class="proof">The demo video is from 2021. Shield AI interviewed me as a dynamical systems engineer in 2018.</p>
+                        <ul class="link-row">
+                            <li><a href="work/shield-ai-simulator/">Project page</a></li><li><a href="https://www.youtube.com/watch?v=JBJCrtaNgIc" data-video data-title="Shield AI Hivemind Fixed-Wing Demo">Watch video</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="work/maquina/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/maquina-og-800.webp" alt="Maquina Playground cover showing a machine with resource queues" width="800" height="420" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Formal methods · Lean 4, Three.js · 2026</span>
+                        <h3><a href="work/maquina/">Maquina</a></h3>
+                        <p class="system-desc">An execution model for simulated worlds. A Lean 4 kernel checks every state change, and each run can be replayed. Agents, people and planners propose actions; the kernel accepts or rejects each one.</p>
+                        <p class="proof">Seven interactive showcases. Foundry: Night Shift steps through 95 checked snapshots.</p>
+                        <ul class="link-row">
+                            <li><a href="work/maquina/">Project page</a></li><li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=veiled-accord" target="_blank" rel="noopener">Playground</a></li><li><a class="ext" href="https://github.com/BiomaAI/maquina" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="work/axionomy/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/axionomy-work-league-800.webp" alt="Axionomy Studio graph of agents, jobs and facilities" width="800" height="500" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Decision engine · Rust, WebAssembly · 2026</span>
+                        <h3><a href="work/axionomy/">Axionomy</a></h3>
+                        <p class="system-desc">A Rust engine that models a problem as accounts, assets and exchanges. Search, optimization and reinforcement learning propose exchanges; the engine validates each one and keeps a replayable trace.</p>
+                        <p class="proof">Fourteen problems share one service contract across the CLI, HTTP, MCP and the browser Studio.</p>
+                        <ul class="link-row">
+                            <li><a href="work/axionomy/">Project page</a></li><li><a class="ext" href="https://biomaai.github.io/axionomy/?problem=maze&instance=showcase&strategy=a_star&document=maze%3Aa_star&view=replay&step=0&seed=0&budget=128" target="_blank" rel="noopener">Studio</a></li><li><a class="ext" href="https://github.com/BiomaAI/axionomy" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="work/simbotic/" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/simbotic-800.webp" alt="Simbotic Engine title card" width="800" height="450" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Open source · Unreal Engine, Rust, GStreamer · 2019–2021</span>
+                        <h3><a href="work/simbotic/">Simbotic</a></h3>
+                        <p class="system-desc">An open-source simulation engine and AI platform for training perception models on synthetic data and testing robots in simulation.</p>
+                        <p class="proof">Unreal Engine 4.24 with NVIDIA PhysX 4.0, plus plugins for synthetic data, GStreamer pipelines and dynamical systems.</p>
+                        <ul class="link-row">
+                            <li><a href="work/simbotic/">Project page</a></li><li><a href="https://www.youtube.com/watch?v=IENWIoVnhRk" data-video data-title="Simbotic Engine Teaser">Watch video</a></li><li><a class="ext" href="https://github.com/Simbotic" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="team-member">
-                        <img src="img/rozgo-black-profile-light.jpg" class="img-responsive img-circle" alt="Alex Rozgo" width="320" height="320" loading="lazy" decoding="async">
-                        <h4>Alex Rozgo</h4>
-                        <p class="text-muted">AI Engineer for Games and Simulations</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/rozgo" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-x"></use></svg></a>
-                            </li>
-                            <li><a href="https://github.com/rozgo" aria-label="GitHub"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg></a>
-                            </li>
-                            <li><a href="https://www.linkedin.com/in/rozgo/" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg></a>
-                            </li>
+        </section>
+
+        <section class="section" id="lab">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="label label--accent">Research lab</span>
+                        <h2>Experiments, 2024–2026</h2>
+                        <p>Short videos of current experiments. Hover over a card to preview it; select it to watch.</p>
+                    </div>
+                    <a class="button" href="archive/">Full video archive (86)</a>
+                </div>
+                <div class="clips" data-video-group>
+                <a class="clip" href="https://www.youtube.com/watch?v=yv_uwpPm9KQ" data-video data-title="Adaptive Locomotion: Full Film" data-sub="Sep 2026" data-preview="media/clips/loco-film.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/yv_uwpPm9KQ.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Robot learning</span></div>
+                        <h3>Adaptive Locomotion: Full Film</h3>
+                        <p class="clip-desc">One learned policy across every test scene, including missing limbs, slopes and moving platforms. Final evaluation: walking 36/36, static balance 136/144, moving supports 24/24.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=sA_NDf96Dgo" data-video data-title="Rover Swarm over a Degraded LoRa Mesh" data-sub="Sep 2026" data-preview="media/clips/rovers.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/sA_NDf96Dgo.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Multi-robot</span></div>
+                        <h3>Rover Swarm over a Degraded LoRa Mesh</h3>
+                        <p class="clip-desc">Simulated rovers share data over a Reticulum mesh network with heavy packet loss.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=iAzzoydLlEo" data-video data-title="Fly Flight School" data-sub="Sep 2026" data-preview="media/clips/fly.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/iAzzoydLlEo.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neuro-control</span></div>
+                        <h3>Fly Flight School</h3>
+                        <p class="clip-desc">Flight control for a simulated fly, driven through the MaleCNS connectome.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=2ecaXifPN2M" data-video data-title="AlienWars Game Dev Harness" data-sub="Sep 2026" data-preview="media/clips/alienwars.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/2ecaXifPN2M.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Agents</span></div>
+                        <h3>AlienWars Game Dev Harness</h3>
+                        <p class="clip-desc">A coding agent and reinforcement learning in one development loop for the AlienWars game.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=hXq426rW8gQ" data-video data-title="ModernBERT Plays Doom" data-sub="Sep 2026" data-preview="media/clips/doom.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/hXq426rW8gQ.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Language models</span></div>
+                        <h3>ModernBERT Plays Doom</h3>
+                        <p class="clip-desc">A small encoder model picks Doom actions at 43.7 decisions per second, 13.9 ms each, on an M3 Max.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=emeSmbveTcc" data-video data-title="Adaptive Locomotion" data-sub="Sep 2026" data-preview="media/clips/loco.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/emeSmbveTcc.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Robot learning</span></div>
+                        <h3>Adaptive Locomotion</h3>
+                        <p class="clip-desc">A quadruped policy trained across 4,096 parallel worlds with 400 hours of simulated experience.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=NMeBjxofL8Y" data-video data-title="Amphibious Quadruped in MuJoCo" data-sub="Sep 2026" data-preview="media/clips/amphibious.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/NMeBjxofL8Y.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">MuJoCo</span></div>
+                        <h3>Amphibious Quadruped in MuJoCo</h3>
+                        <p class="clip-desc">A quadruped with leg-mounted floats walks into water, floats and walks out. Built in 40 minutes from a design posted on LinkedIn.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=300rm4mPcYg" data-video data-title="Self-Improving Agent Trains a UAV with JEPA" data-sub="Sep 2026" data-preview="media/clips/jepa.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/300rm4mPcYg.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">World models</span></div>
+                        <h3>Self-Improving Agent Trains a UAV with JEPA</h3>
+                        <p class="clip-desc">An agent implemented the SkyJEPA paper and trained a UAV controller with 26–34% lower worst-case trajectory error than a geometric controller.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=W6TE1dscqE0" data-video data-title="PINO Wind Forecasting for Drone Delivery" data-sub="Sep 2026" data-preview="media/clips/pino.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/W6TE1dscqE0.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neural operators</span></div>
+                        <h3>PINO Wind Forecasting for Drone Delivery</h3>
+                        <p class="clip-desc">A physics-informed neural operator forecasts wind for package delivery in MuJoCo. It delivered in 5 of 6 held-out wind cases with 77% lower tracking error.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=xP0I3b8d3NI" data-video data-title="Distributed Quadcopter Simulation" data-sub="Sep 2025" data-preview="media/clips/quadcopter.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/xP0I3b8d3NI.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Sep 2025</span><span class="label">Simulation</span></div>
+                        <h3>Distributed Quadcopter Simulation</h3>
+                        <p class="clip-desc">Quadcopter dynamics and depth sensing split across processes and recorded in Rerun.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=KAEwR96vhnA" data-video data-title="Agentic Procedural Augmented Generation" data-sub="Nov 2024" data-preview="media/clips/pag.mp4">
+                    <div class="clip-media">
+                        <img src="media/thumbs/KAEwR96vhnA.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Nov 2024</span><span class="label">Generative</span></div>
+                        <h3>Agentic Procedural Augmented Generation</h3>
+                        <p class="clip-desc">Text and image prompts drive an agent that generates 3D characters procedurally.</p>
+                    </div>
+                </a>
+                <a class="clip" href="https://www.youtube.com/watch?v=H97_h5SBunA" data-video data-title="NPCs: Autonomous Agents" data-sub="Oct 2024">
+                    <div class="clip-media">
+                        <img src="media/thumbs/H97_h5SBunA.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+                        <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
+                    </div>
+                    <div class="clip-body">
+                        <div class="clip-meta"><span class="label">Oct 2024</span><span class="label">Agents</span></div>
+                        <h3>NPCs: Autonomous Agents</h3>
+                        <p class="clip-desc">NPC agents with individual goals that produce group behavior.</p>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="career">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="label label--accent">Track record</span>
+                        <h2>Career</h2>
+                    </div>
+                </div>
+                <div class="career">
+                    <ol class="timeline">
+                    <li><span class="years">2025–</span><div><h3>Open-source projects</h3><p>Veoveo, AlienWars Gym, Maquina and Axionomy, plus the experiments in the lab above.</p></div></li>
+                    <li><span class="years">2019–</span><div><h3>Simbotic</h3><p>Led an open-source simulation engine and AI platform: synthetic data pipelines, physics-based sensor simulation, and GStreamer and PyTorch integration in game engines.</p></div></li>
+                    <li><span class="years">2018–</span><div><h3>Defense, including Shield AI</h3><p>AI simulation engineer. Built the simulator shown in Shield AI’s Hivemind fixed-wing demo. Synthetic datasets for model training, robot-swarm simulation with Unreal Engine, PX4 and ROS, and autonomous agents for mission planning and scenario generation.</p></div></li>
+                    <li><span class="years">2017–2019</span><div><h3>Civil Maps, Velodyne, Galois</h3><p>Consulting: sensor characterization and visualization tools, Unreal Engine in development operations, and autonomous swarm simulation architecture for DARPA and DoD programs.</p></div></li>
+                    <li><span class="years">2016–2017</span><div><h3>Red Pill VR</h3><p>Real-time deep learning inference in a VR music MMO using TensorFlow, GStreamer and Unreal Engine 4; physics-based VR gameplay and full-body VR networking.</p></div></li>
+                    <li><span class="years">2015–2016</span><div><h3>Rawbots</h3><p>Designed and built a robot-crafting sandbox game with physics-simulated robots (Bullet Physics).</p></div></li>
+                    <li><span class="years">2005–2015</span><div><h3>LucasArts &amp; ILM, MunkyFun, Beyond Games</h3><p>Gameplay, physics and networking on console titles, including Star Wars: The Force Unleashed. Simulation tools for real-time effects and previsualization on several films.</p></div></li>
+                    </ol>
+                    <div>
+                        <span class="label">Press and interviews</span>
+                        <ul class="press">
+                    <li><span class="label">The Verge · 2013</span><a class="ext" href="https://www.theverge.com/2013/5/9/4311742/rawbots-build-and-program-a-virtual-robot" target="_blank" rel="noopener">‘Rawbots’ lets you build the Wall-E of your dreams</a></li>
+                    <li><span class="label">Shield AI · 2018</span><a class="ext" href="https://medium.com/@shield_ai/a-conversation-with-alex-rozgo-dynamical-systems-engineer-ac76e7c39592" target="_blank" rel="noopener">A conversation with Alex Rozgo, dynamical systems engineer</a></li>
+                    <li><span class="label">Touch Arcade · 2009</span><a class="ext" href="https://toucharcade.com/2009/10/27/untitled-metroid-and-megaman-inspired-game-shows-promise/" target="_blank" rel="noopener">Untitled Metroid and Megaman-inspired game shows promise (Grokion)</a></li>
+                    <li><span class="label">Slide to Play</span><a class="ext" href="https://www.slidetoplay.com/briscas-review/" target="_blank" rel="noopener">Briscas review</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p class="large text-muted">
-                        I'm interested in crazy ideas, body tech upgrades, life extension, curing cancer; or creating virtual worlds where none of this matters.
-                    </p>
+        </section>
 
-                    <p class="large text-muted">
-                        Unreal Engine is my engine of choice. Using physics, AI and control systems for building immersive experiences for eXtended Realities.
-                    </p>
+        <section class="section" id="writing">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="label label--accent">Writing</span>
+                        <h2>Articles</h2>
+                        <p>The “Simulated Worlds” series, first published on X. <a href="feed.xml">RSS feed</a>.</p>
+                    </div>
+                </div>
+                <ul class="writing">
+                    <li>
+                        <time datetime="2025-10-29">Oct 2025</time>
+                        <div>
+                            <h3><a href="writing/maquina-theory-of-everything-for-digital-twins/">Maquina: A Theory of Everything for Digital Twins</a></h3>
+                            <p>Proposes modeling digital twins with three primitives: objects, operations and machines. The idea became the Maquina project.</p>
+                        </div>
+                        <img src="media/writing/maquina-theory-of-everything-for-digital-twins-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                    <li>
+                        <time datetime="2025-07-31">Jul 2025</time>
+                        <div>
+                            <h3><a href="writing/nash-equilibrium-as-a-measurement-tool/">Making the Case for Nash Equilibrium as a Measurement Tool for Virtual Worlds</a></h3>
+                            <p>Argues for measuring how far a virtual world is from equilibrium instead of designing for perfect balance.</p>
+                        </div>
+                        <img src="media/writing/nash-equilibrium-as-a-measurement-tool-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                    <li>
+                        <time datetime="2025-04-10">Apr 2025</time>
+                        <div>
+                            <h3><a href="writing/situational-complexity-in-massive-simulations/">Situational Complexity in Massive Simulations</a></h3>
+                            <p>Describes Situation Design: areas of activity with a radius of influence, role slots and growth rules, placed above agents and encounters.</p>
+                        </div>
+                        <img src="media/writing/situational-complexity-in-massive-simulations-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                    <li>
+                        <time datetime="2025-02-07">Feb 2025</time>
+                        <div>
+                            <h3><a href="writing/meaning-and-memory-in-massive-simulations/">Meaning and Memory in Massive Simulations</a></h3>
+                            <p>Proposes designing worlds from meanings such as “resting place” and storing memory in places and objects as well as in NPCs.</p>
+                        </div>
+                        <img src="media/writing/meaning-and-memory-in-massive-simulations-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                    <li>
+                        <time datetime="2024-12-20">Dec 2024</time>
+                        <div>
+                            <h3><a href="writing/modernbert-in-game-development/">ModernBERT in Game Development</a></h3>
+                            <p>Where a small encoder model fits in games: classifying player behavior, game state and procedural content.</p>
+                        </div>
+                        <img src="media/writing/modernbert-in-game-development-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                    <li>
+                        <time datetime="2024-12-16">Dec 2024</time>
+                        <div>
+                            <h3><a href="writing/ai-architectures-for-virtual-worlds/">Advanced AI Architectures for Immersive Virtual Worlds</a></h3>
+                            <p>Actor model, behavior trees, memory systems and language models for agents in virtual worlds.</p>
+                        </div>
+                        <img src="media/writing/ai-architectures-for-virtual-worlds-thumb.webp" alt="" width="240" height="160" loading="lazy" decoding="async">
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                    <p class="large text-muted">
-                        Over 20 years building games, simulations, and real-time interactive systems across Unreal Engine, Unity, and custom pipelines. My current focus is simulation-first AI: agentic systems, synthetic data, digital twins, robotics perception, and sim-to-real workflows for worlds where humans, robots, and AI agents can train, test, and interact.
-                    </p>
-
-                    <p class="large text-muted">
-                        I work across simulation, AI, and systems programming: Unreal and Unity for real-time worlds, Python and PyTorch for AI workflows, and Rust with Candle where reliability, performance, and strong abstractions matter.
-                    </p>
-
+        <section class="section" id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="label label--accent">About</span>
+                        <h2>Alex Rozgo</h2>
+                    </div>
+                </div>
+                <div class="about">
+                    <img src="media/rozgo-portrait.webp" alt="Portrait of Alex Rozgo" width="320" height="320" loading="lazy" decoding="async" class="portrait">
+                    <div class="about-text">
+                        <p>I started in console games, writing gameplay, physics and networking code for LucasArts titles and partner studios. Since 2016 I have worked on simulation for robotics, autonomy and defense, and on the perception and learning systems trained in those simulations.</p>
+                        <p>I prefer small sets of well-defined parts: typed state, explicit rules, and runs that can be replayed. I write Rust by choice, C and CUDA where performance requires it, and Python for training and tooling.</p>
+                        <blockquote class="quote">
+                            <p>“With four parameters I can fit an elephant, and with five I can make him wiggle his trunk.”</p>
+                            <footer>John von Neumann, as quoted by Enrico Fermi</footer>
+                        </blockquote>
+                    </div>
+                    <table class="tools">
+                        <caption class="label">Tools, and where to see them</caption>
+                        <tbody>
+                        <tr><th scope="row">Rust</th><td><a href="work/veoveo/">Veoveo</a>, <a href="work/axionomy/">Axionomy</a></td></tr>
+                        <tr><th scope="row">C, CUDA</th><td><a href="work/alienwars-gym/">AlienWars Gym</a></td></tr>
+                        <tr><th scope="row">Lean 4</th><td><a href="work/maquina/">Maquina</a></td></tr>
+                        <tr><th scope="row">PPO, PufferLib</th><td><a href="work/alienwars-gym/">AlienWars Gym</a></td></tr>
+                        <tr><th scope="row">MuJoCo</th><td><a href="#lab">lab experiments</a></td></tr>
+                        <tr><th scope="row">Isaac Sim, PX4</th><td><a href="work/veoveo/">Veoveo</a></td></tr>
+                        <tr><th scope="row">Unreal Engine</th><td><a href="work/simbotic/">Simbotic</a>, <a href="work/shield-ai-simulator/">Shield AI</a></td></tr>
+                        <tr><th scope="row">Unity</th><td><a href="archive/?topic=games">games archive</a></td></tr>
+                        <tr><th scope="row">GStreamer, LibTorch</th><td><a href="work/simbotic/">Simbotic</a></td></tr>
+                        <tr><th scope="row">WebAssembly</th><td><a href="work/alienwars-gym/">AlienWars Gym</a>, <a href="work/axionomy/">Axionomy</a></td></tr>
+                        <tr><th scope="row">Model Context Protocol</th><td><a href="work/veoveo/">Veoveo</a>, <a href="work/axionomy/">Axionomy</a></td></tr>
+                        <tr><th scope="row">Rerun</th><td><a href="work/veoveo/">Veoveo</a></td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Clients Aside -->
-    <section class="clients height gray-section">
-
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Simulation, AI & Robotics Stack</h2>
-                    <p class="section-subheading text-muted">Tools and systems I use to build interactive worlds where agents perceive, learn, act, and adapt.</p>
-                </div>
+        <section class="contact" id="contact">
+            <div class="wrap">
+                <span class="label label--accent">Contact</span>
+                <h2>Get in touch</h2>
+                <a class="contact-email" href="mailto:alex.rozgo@gmail.com">alex.rozgo@gmail.com</a>
+                <ul class="link-row">
+                    <li><a class="ext" href="https://github.com/rozgo" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a class="ext" href="https://x.com/rozgo" target="_blank" rel="noopener">X</a></li>
+                    <li><a class="ext" href="https://www.linkedin.com/in/rozgo/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a class="ext" href="https://www.youtube.com/@rozgok" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="Alex-Rozgo-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+                </ul>
             </div>
+        </section>
+    </main>
 
-            <div class="row">
-                <p><br></p>
-            </div>
-
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading">Languages & Systems</h3>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-xs-12">
-                    <p class="tech-description">Python • C++ • Rust • C# • CUDA • GLSL/HLSL • TypeScript • Lua</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading">AI, Agents & Inference</h3>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-xs-12">
-                    <p class="tech-description">PyTorch • Candle • Hugging Face • Transformers • LLM tool use • Function calling • RAG • Embeddings • Vector search • Multimodal AI • Agent orchestration • Evaluation pipelines</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading">Simulation, Robotics & World Models</h3>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-xs-12">
-                    <p class="tech-description">Unreal Engine • Unity • NVIDIA Isaac Sim • Isaac Lab • ROS 2 • OpenUSD / Omniverse • Gazebo • MuJoCo • Reinforcement learning • Imitation learning • Domain randomization • Sim-to-real transfer • Digital twins • Synthetic data</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading">Perception & Realtime AI</h3>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-xs-12">
-                    <p class="tech-description">OpenCV • GStreamer • TensorRT / ONNX Runtime • Sensor fusion • LiDAR • RGB-D • Pose estimation • Segmentation • Video analytics</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-subheading">XR & Interactive Worlds</h3>
-                </div>
-            </div>
-
-            <div class="row text-center separateTop">
-                <div class="col-xs-12">
-                    <p class="tech-description">OpenXR • Meta Quest • SteamVR • WebGPU • WebRTC • Multiplayer simulation • Procedural generation • Autonomous NPCs • Human-in-the-loop tools</p>
-                </div>
-            </div>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="height gray-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Me</h2>
-                    <h3 class="section-subheading text-muted">Let's talk about creating unique
-                        experiences.</h3>
-                    <a class="emailme" href="mailto:alex.rozgo@gmail.com" target="_top">alex.rozgo@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <a id="back-to-top" href="#page-top" class="btn btn-primary btn-lg scrollToTop" role="button" title="Return to top" aria-label="Return to top"><svg class="back-to-top-icon"><use href="#icon-up"></use></svg></a>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center redes">
-                    <span class="copyright">Copyright &copy; Rozgo 2026</span>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/rozgo" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-x"></use></svg></a></li>
-                        <li><a href="https://github.com/rozgo" aria-label="GitHub"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg></a></li>
-                        <li><a href="https://www.linkedin.com/in/rozgo/" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg></a></li>
-                    </ul>
-                </div>
-            </div>
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
         </div>
     </footer>
-    <script src="js/site.js" defer></script>
-
 </body>
-
 </html>

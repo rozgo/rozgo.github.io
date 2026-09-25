@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veoveo · Alex Rozgo</title>
+    <meta name="description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta name="author" content="Alex Rozgo">
+    <link rel="canonical" href="https://rozgo.github.io/work/veoveo/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
+    <meta name="theme-color" content="#101012">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Rozgo">
+    <meta property="og:url" content="https://rozgo.github.io/work/veoveo/">
+    <meta property="og:title" content="Veoveo · Alex Rozgo">
+    <meta property="og:description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta property="og:image" content="https://rozgo.github.io/media/work/veoveo-uav-new-york.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="Veoveo · Alex Rozgo">
+    <meta name="twitter:description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/work/veoveo-uav-new-york.webp">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Veoveo","description":"Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.","url":"https://rozgo.github.io/work/veoveo/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../../">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="../../#work" aria-current="page">Work</a>
+                <a href="../../#lab">Lab</a>
+                <a href="../../#writing">Writing</a>
+                <a href="../../#about">About</a>
+                <a href="../../archive/">Archive</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <div class="page-head">
+                <div class="crumbs label"><a href="../../#work">Work</a> / Veoveo</div>
+                <span class="label label--accent">Operations platform · Rust · 2026</span>
+                <h1>Veoveo</h1>
+                <p class="page-lede">Veoveo is a self-hosted platform for AI agents that work with physical systems. Agents read sensors and camera streams, fly simulated UAVs, control simulated traffic, and record each run so people can query it later. The organization that deploys Veoveo runs it on its own cluster, identity provider, storage and models.</p>
+                <div class="hero-actions"><a class="button button--primary" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code on GitHub ↗</a><a class="button" href="https://github.com/BiomaAI/veoveo/blob/main/docs/TECH_DESIGN.md" target="_blank" rel="noopener">Technical design ↗</a><a class="button" href="#results">Flight results</a></div>
+                
+            </div>
+            <figure class="figure"><img src="../../media/work/veoveo-uav-new-york.webp" alt="Simulated multirotor above Midtown Manhattan" width="1600" height="900" loading="eager" decoding="async"><figcaption>A multirotor under PX4 control above Midtown Manhattan, rendered by a headless Isaac Sim instance.</figcaption></figure>
+            <dl class="facts"><div><dt>Role</dt><dd>Author (2,529 commits)</dd></div><div><dt>Language</dt><dd>Rust</dd></div><div><dt>Simulators</dt><dd>Isaac Sim with PX4, SUMO</dd></div><div><dt>Interface</dt><dd>Model Context Protocol</dd></div></dl>
+            
+            <section class="detail">
+                <h2>Problem</h2>
+                <div class="prose">
+                    <p>Teams that operate drones, vehicles or cameras want AI agents to help run them. Most cannot send their credentials, video or mission data to a vendor, and afterwards they need a record of what each agent was allowed to do and what it did.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Design</h2>
+                <div class="prose">
+                    <p>Every request goes through one gateway, whether an operator types it or an agent issues it. The gateway authenticates the caller, checks the policy for that profile, and writes the decision to an audit log. The agent harness holds no credentials, so any MCP host can drive an installation.</p>
+                    <p>Capabilities are MCP servers behind the gateway: maps and routing, UAV simulation, traffic simulation, video detection and tracking, forecasting, optimization and SQL. Long-running work runs as MCP tasks that continue after a client disconnects. Each output is stored as an artifact with an owner, provenance and release state.</p>
+                    <p>A vehicle command requires an exclusive command lease for that vehicle. The current vehicle adapters are simulators: Isaac Sim with PX4 for UAVs and SUMO for road traffic. A real-vehicle adapter would use the same grants and leases.</p>
+                    <figure class="figure"><img src="../../media/work/veoveo-harness.webp" alt="Diagram of streams, recordings, reasoning and agents around a world model" width="1600" height="1067" loading="lazy" decoding="async"><figcaption>The operational loop: live streams, recordings, reasoning, and agents acting through the gateway.</figcaption></figure>
+                </div>
+            </section>
+            <section class="detail" id="results">
+                <h2>Results</h2>
+                <div class="prose">
+                    <p>An operator sent one message to a pilot agent: fly <code>uav-1</code> to Times Square. The message contained no coordinates and granted no vehicle authority. The agent resolved the destination through the map server and flew under its existing grant for <code>uav-1</code>.</p>
+                    <p>The first accepted run covered 9.227 km in 13 minutes 10 seconds. It completed all four waypoints, arrived at 40.7580° N, 73.9855° W with zero collisions, and released its command lease. The recording hub archived the camera, pose, telemetry and mission lifecycle for the whole run.</p>
+                    <figure class="figure"><video controls muted playsinline preload="none" poster="../../media/work/veoveo-flight.webp" width="640" height="480"><source src="../../media/work/veoveo-flight.mp4" type="video/mp4"></video><figcaption>Downward camera recording from the run, sped up 30×.</figcaption></figure>
+                    <p><a class="ext" href="https://github.com/BiomaAI/veoveo/blob/main/showcase/uav-sim/ACCEPTANCE.md" target="_blank" rel="noopener">UAV-E2E-001 acceptance test</a> describes how to repeat the run.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Screens</h2>
+                <div class="prose">
+                    <div class="gallery"><figure class="figure"><img src="../../media/work/veoveo-rerun-uav.webp" alt="Rerun view of a UAV recording" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Camera, pose, telemetry, detections and reasoning results in one Rerun recording.</figcaption></figure><figure class="figure"><img src="../../media/work/veoveo-rerun-sumo.webp" alt="Rerun view of SUMO traffic" width="1600" height="900" loading="lazy" decoding="async"><figcaption>SUMO traffic for Luxembourg (LuST scenario), recorded in Rerun.</figcaption></figure><figure class="figure"><img src="../../media/work/veoveo-3d-view.webp" alt="3D view of photorealistic tiles in the Console" width="1600" height="848" loading="lazy" decoding="async"><figcaption>The 3D View app over Google Photorealistic 3D Tiles, rendered on cluster GPUs.</figcaption></figure><figure class="figure"><img src="../../media/work/veoveo-uav-san-salvador.webp" alt="Simulated multirotor above San Salvador" width="1600" height="900" loading="lazy" decoding="async"><figcaption>A PX4-controlled multirotor above the stadium district in San Salvador.</figcaption></figure></div>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Stack</h2>
+                <div class="prose">
+                    <ul>
+                        <li>Rust gateway, servers and web clients</li>
+                        <li>Model Context Protocol: tools, resources, tasks, subscriptions and MCP Apps</li>
+                        <li>Isaac Sim, PX4 and SUMO for simulated vehicles and traffic</li>
+                        <li>Rerun for synchronized recordings</li>
+                        <li>Kubernetes, Helm charts, OCI images and GitOps deployment; OIDC and OAuth sign-in</li>
+                    </ul>
+                </div>
+            </section>
+            <nav class="next-work" aria-label="More projects">
+                <a href="../../work/simbotic/"><span class="label">Previous</span><strong>Simbotic</strong></a>
+                <a href="../../work/alienwars-gym/"><span class="label">Next</span><strong>AlienWars Gym</strong></a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="../../feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
+        </div>
+    </footer>
+</body>
+</html>

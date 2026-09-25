@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ModernBERT in Game Development · Alex Rozgo</title>
+    <meta name="description" content="Where a small encoder model fits in games: classifying player behavior, game state and procedural content.">
+    <meta name="author" content="Alex Rozgo">
+    <link rel="canonical" href="https://rozgo.github.io/writing/modernbert-in-game-development/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
+    <meta name="theme-color" content="#101012">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alex Rozgo">
+    <meta property="og:url" content="https://rozgo.github.io/writing/modernbert-in-game-development/">
+    <meta property="og:title" content="ModernBERT in Game Development · Alex Rozgo">
+    <meta property="og:description" content="Where a small encoder model fits in games: classifying player behavior, game state and procedural content.">
+    <meta property="og:image" content="https://rozgo.github.io/media/writing/modernbert-in-game-development.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="ModernBERT in Game Development · Alex Rozgo">
+    <meta name="twitter:description" content="Where a small encoder model fits in games: classifying player behavior, game state and procedural content.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/writing/modernbert-in-game-development.webp">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ModernBERT in Game Development","datePublished":"2024-12-20","author":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"},"image":"https://rozgo.github.io/media/writing/modernbert-in-game-development.webp","url":"https://rozgo.github.io/writing/modernbert-in-game-development/","description":"Where a small encoder model fits in games: classifying player behavior, game state and procedural content."}</script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../../">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="../../#work">Work</a>
+                <a href="../../#lab">Lab</a>
+                <a href="../../#writing" aria-current="page">Writing</a>
+                <a href="../../#about">About</a>
+                <a href="../../archive/">Archive</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+    </header>
+
+    <main id="main" class="article">
+        <div class="wrap">
+            <header class="article-head">
+                <div class="crumbs label"><a href="../../#writing">Writing</a></div>
+                <h1>ModernBERT in Game Development</h1>
+                <span class="label"><time datetime="2024-12-20">December 20, 2024</time> · Simulated Worlds series</span>
+            </header>
+            <div class="article-cover figure"><img src="../../media/writing/modernbert-in-game-development.webp" alt="" width="1200" height="480" loading="eager" decoding="async"></div>
+            <div class="prose">
+                <p>Game developers have a growing toolkit of AI models at their disposal. While large language models capture much attention, encoder models like ModernBERT offer practical advantages for specific gaming applications. Let’s explore how ModernBERT’s efficient architecture and strong classification capabilities can enhance different aspects of game development.</p>
+                <h2>Why Consider ModernBERT?</h2>
+                <p>ModernBERT shines in tasks that benefit from semantic understanding without requiring generation. Its 8k token context window, optimized performance on consumer GPUs, and strong classification abilities make it particularly suitable for real-time gaming applications.</p>
+                <h2>Practical Applications in Games</h2>
+                <h3>Enhanced NPC Interactions</h3>
+                <p>Consider a medieval RPG where NPCs need to respond appropriately to player actions. Rather than generating responses from scratch, ModernBERT can help classify player behavior and select from carefully crafted responses. For example, in “The Elder Scrolls” series, NPCs could use Modern BERT to better distinguish between threatening and friendly player approaches, leading to more contextually appropriate reactions from the pre-written dialogue pool.</p>
+                <h3>Smarter Enemy AI</h3>
+                <p>In strategy games like “Civilization” or “Age of Empires”, ModernBERT can help classify game states and player strategies. Instead of relying solely on numerical values, the AI can consider the semantic meaning of player actions. An aggressive early expansion might be classified differently from defensive building patterns, allowing AI opponents to select more appropriate counter-strategies from their existing behavior trees.</p>
+                <h3>Dynamic Tutorial Systems</h3>
+                <p>Games like “Portal” or “Baba Is You” could use ModernBERT to classify player behavior patterns and identify when they’re stuck or experimenting with mechanics in interesting ways. This allows for more nuanced hint timing and selection without needing to generate new tutorial text.</p>
+                <h3>Procedural Content Enhancement</h3>
+                <p>Rather than generating content from scratch, ModernBERT can help validate and customize procedurally generated content. In a game like “No Man’s Sky”, it could help ensure that generated planet descriptions and creature behaviors align with the intended biome themes and gameplay balance.</p>
+                <h3>Content Classification Example</h3>
+                <p>Imagine a roguelike dungeon crawler where rooms are procedurally assembled. ModernBERT can help:</p>
+                <ul><li>Classify room layouts based on intended difficulty</li><li>Ensure enemy combinations create coherent challenges</li><li>Match environmental storytelling elements with level themes</li></ul>
+                <h2>Technical Benefits</h2>
+                <h3>Performance Considerations</h3>
+                <ul><li>Predictable resource usage</li><li>Efficient batch processing</li><li>Lower latency compared to larger models</li><li>Easier integration with existing game engines</li></ul>
+                <h3>Practical Integration</h3>
+                <p>ModernBERT works well alongside traditional game systems:</p>
+                <ul><li>Enhancing existing behavior trees</li><li>Improving animation selection logic</li><li>Refining physics-based character controllers</li><li>Supporting level design tools</li></ul>
+                <h2>Conclusion</h2>
+                <p>ModernBERT offers game developers a powerful tool for enhancing existing systems without the complexity of larger models. Its focused capabilities in classification and semantic understanding make it particularly valuable for real-time gaming applications where performance and predictability matter.</p>
+                <p>By understanding where ModernBERT excels — classification, similarity matching, and contextual understanding — developers can make informed decisions about where and how to integrate it into their projects. The result? More responsive games that better understand player intent while maintaining the performance and reliability that gaming demands.</p>
+            </div>
+            <p class="article-foot">First published on X on December 20, 2024. <a class="ext" href="https://x.com/rozgo/status/1870200396142047364" target="_blank" rel="noopener">Read the original</a>.</p>
+            <nav class="next-work" aria-label="More articles"><a href="../../writing/meaning-and-memory-in-massive-simulations/"><span class="label">Newer</span><strong>Meaning and Memory in Massive Simulations</strong></a><a href="../../writing/ai-architectures-for-virtual-worlds/"><span class="label">Older</span><strong>Advanced AI Architectures for Immersive Virtual Worlds</strong></a></nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="../../feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
+        </div>
+    </footer>
+</body>
+</html>

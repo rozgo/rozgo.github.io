@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquina · Alex Rozgo</title>
+    <meta name="description" content="Maquina is an execution model for simulated worlds with a Lean 4 kernel that checks every state change and a Three.js playground for replaying runs.">
+    <meta name="author" content="Alex Rozgo">
+    <link rel="canonical" href="https://rozgo.github.io/work/maquina/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
+    <meta name="theme-color" content="#101012">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Rozgo">
+    <meta property="og:url" content="https://rozgo.github.io/work/maquina/">
+    <meta property="og:title" content="Maquina · Alex Rozgo">
+    <meta property="og:description" content="Maquina is an execution model for simulated worlds with a Lean 4 kernel that checks every state change and a Three.js playground for replaying runs.">
+    <meta property="og:image" content="https://rozgo.github.io/media/work/maquina-og.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rozgo">
+    <meta name="twitter:title" content="Maquina · Alex Rozgo">
+    <meta name="twitter:description" content="Maquina is an execution model for simulated worlds with a Lean 4 kernel that checks every state change and a Three.js playground for replaying runs.">
+    <meta name="twitter:image" content="https://rozgo.github.io/media/work/maquina-og.webp">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/main.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Maquina","description":"Maquina is an execution model for simulated worlds with a Lean 4 kernel that checks every state change and a Three.js playground for replaying runs.","url":"https://rozgo.github.io/work/maquina/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="../../">Alex Rozgo</a>
+            <nav class="nav" id="site-nav" aria-label="Main">
+                <a href="../../#work" aria-current="page">Work</a>
+                <a href="../../#lab">Lab</a>
+                <a href="../../#writing">Writing</a>
+                <a href="../../#about">About</a>
+                <a href="../../archive/">Archive</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+            <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <div class="page-head">
+                <div class="crumbs label"><a href="../../#work">Work</a> / Maquina</div>
+                <span class="label label--accent">Formal methods · Lean 4, Three.js · 2026</span>
+                <h1>Maquina</h1>
+                <p class="page-lede">Maquina is an execution model for simulated worlds. It defines what exists, which changes are allowed, and what each accepted change produces. A Lean 4 kernel checks every step, so any run can be replayed and verified. Agents, people, planners and solvers propose actions; Maquina decides whether each one is valid and what follows from it.</p>
+                <div class="hero-actions"><a class="button button--primary" href="https://biomaai.github.io/maquina/?showcase=veiled-accord" target="_blank" rel="noopener">Open the Playground ↗</a><a class="button" href="https://github.com/BiomaAI/maquina" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
+                
+            </div>
+            <figure class="figure"><img src="../../media/work/maquina-overview.webp" alt="Maquina Playground showing a refuel lifecycle" width="1600" height="900" loading="eager" decoding="async"><figcaption>The refuel lifecycle in the Playground. Lean generates every snapshot, receipt and rejection shown.</figcaption></figure>
+            <dl class="facts"><div><dt>Kernel</dt><dd>Lean 4</dd></div><div><dt>Viewer</dt><dd>Three.js</dd></div><div><dt>Showcases</dt><dd>7</dd></div><div><dt>Started</dt><dd>October 2025 article</dd></div></dl>
+            
+            <section class="detail">
+                <h2>Problem</h2>
+                <div class="prose">
+                    <p>When agents act in a simulated world, the rules are often spread across the agent, the game code and the renderer. Then nothing records why an action was allowed, and a run cannot be checked or reproduced. Maquina puts the rules in one kernel that every participant calls.</p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Design</h2>
+                <div class="prose">
+                    <p>State maps accounts and resources to quantities. An account is a person, agent, machine, location or scope. A resource is anything that can be held: a material, a unique artifact, a fact, a capability or a permission.</p>
+                    <p>Rules declare required and preserved conditions, consumed inputs, produced outputs, actor bindings, capacity and timing constraints, and invariants. Operations change the condition of a machine or actor; processes turn inputs into outputs. Both are rules of this kind.</p>
+                    <p>The Lean exporter writes state snapshots, accepted effects, structured rejections and replay provenance to a versioned trace. The Three.js Playground only draws that trace and contains no game rules.</p>
+                    <p><code>Lean simulation → versioned trace → shared scene document → Three.js</code></p>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Showcases</h2>
+                <div class="prose">
+                    <p>In command mode you pick orders, see why each candidate is accepted or rejected, rewind to any snapshot and compare outcomes.</p>
+                    <ul>
+                        <li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=veiled-accord" target="_blank" rel="noopener"><strong>Operation Veiled Accord</strong></a>: imperfect-information strategy with public claims, verified evidence, escrow, hidden commitments and sealed simultaneous orders. The browser only sees what the commander can observe.</li>
+                        <li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=foundry-control-room" target="_blank" rel="noopener"><strong>Foundry: Night Shift</strong></a>: one operator runs two production orders across 95 checked snapshots. The shift ends with 0, 10 or 20 liters delivered; full production takes nine or ten decisions.</li>
+                        <li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=nightglass-extraction" target="_blank" rel="noopener"><strong>Operation Nightglass</strong></a>: targeting-channel contention, convoy damage, repair and extraction, with mission command forks.</li>
+                        <li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=foundry-refuel-lifecycle" target="_blank" rel="noopener"><strong>Refuel lifecycle</strong></a>: custody, queue progression, completion and collection of fuel.</li>
+                    </ul>
+                    <div class="gallery"><figure class="figure"><img src="../../media/work/maquina-reserve-fuel.webp" alt="Fuel reservation in the Playground" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Fuel reserved and the refuel process queued.</figcaption></figure><figure class="figure"><img src="../../media/work/maquina-dispatch-refuel.webp" alt="Refuel dispatch in the Playground" width="1600" height="900" loading="lazy" decoding="async"><figcaption>The refuel process moves into processing.</figcaption></figure></div>
+                </div>
+            </section>
+            <section class="detail">
+                <h2>Background</h2>
+                <div class="prose">
+                    <p>The project started with my October 2025 article, <a href="../../writing/maquina-theory-of-everything-for-digital-twins/">Maquina: A Theory of Everything for Digital Twins</a>, which proposed objects, operations and machines as primitives. Maquina now calls them resources, operations and processes, and machines with inventories and queues. It also draws on two earlier repositories, rozgo/maquina and rozgo/maquina-bevy, and on Axionomy.</p>
+                </div>
+            </section>
+            <nav class="next-work" aria-label="More projects">
+                <a href="../../work/shield-ai-simulator/"><span class="label">Previous</span><strong>Shield AI Hivemind simulator</strong></a>
+                <a href="../../work/axionomy/"><span class="label">Next</span><strong>Axionomy</strong></a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 Alex Rozgo</span>
+            <span><a href="../../feed.xml">RSS</a> · <a href="https://github.com/rozgo/rozgo.github.io" target="_blank" rel="noopener">Site source</a></span>
+        </div>
+    </footer>
+</body>
+</html>
