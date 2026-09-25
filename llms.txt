@@ -1,6 +1,6 @@
 # Alex Rozgo
 
-> Simulation and AI engineer. Games and simulations for humans, robots and AI agents: building world models where humans, robots and AI agents learn, play, and evolve together. He worked on console games with LucasArts and partner studios from 2005 to 2015 (including Star Wars: The Force Unleashed), built simulation for robotics and defense from 2016, and developed the simulator shown in Shield AI's Hivemind fixed-wing demo.
+> Simulation and AI engineer. Games and simulations for humans, robots and AI agents: building world models where humans, robots and AI agents learn, play, and evolve together. He worked on AAA console games at LucasArts and across the industry from 2005 to 2015 (including Star Wars: The Force Unleashed), built simulation for robotics and defense from 2016, and developed the simulator shown in Shield AI's Hivemind fixed-wing demo.
 
 Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://rozgo.github.io/Alex-Rozgo-CV.pdf
 
