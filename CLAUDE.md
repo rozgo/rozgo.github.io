@@ -43,6 +43,7 @@ This is a static personal portfolio website hosted on GitHub Pages. It is plain 
 Plain, specific sentences. Name who does what. Tie every number or comparison to something a reader can check (a video, a repo, a run report). Avoid slogans, "X, not Y" reversals, verbless fragments, and filler words such as "governed", "durable" or "seamless".
 
 ## Important Notes
+- Git commits: do not add `Co-Authored-By` trailers or any Claude attribution
 - No build process - edit files directly
 - The header and footer are repeated in every page; change them in all pages
 - Contact uses a mailto link; there is no PHP contact form on GitHub Pages
