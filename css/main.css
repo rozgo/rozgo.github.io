@@ -1946,3 +1946,35 @@ body::after {
     border: 2px solid #060607;
     box-shadow: 0 0 0 1px var(--line-strong);
 }
+
+.hero-byline {
+    gap: 16px;
+}
+
+.hero-byline img {
+    width: 64px;
+    height: 64px;
+}
+
+.hero-byline-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hero-name {
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.hero-byline-text .label {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4.8vw, 4.3rem);
+}
