@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="feed.xml">
-    <meta name="theme-color" content="#101012">
+    <meta name="theme-color" content="#060607">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alex Rozgo">
     <meta property="og:url" content="https://rozgo.github.io/">
@@ -22,13 +22,17 @@
     <meta name="twitter:title" content="Alex Rozgo, simulation and AI engineer">
     <meta name="twitter:description" content="Games and simulations for humans, robots and AI agents. Building world models where humans, robots and AI agents learn, play, and evolve together. Work includes Veoveo, AlienWars Gym, Maquina, Axionomy, and the Shield AI Hivemind simulator.">
     <meta name="twitter:image" content="https://rozgo.github.io/media/og.jpg">
-    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/scene.js"></script>
     <script src="js/main.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/","image":"https://rozgo.github.io/media/rozgo-portrait.webp","jobTitle":"Simulation and AI Engineer","email":"mailto:alex.rozgo@gmail.com","sameAs":["https://github.com/rozgo","https://x.com/rozgo","https://www.linkedin.com/in/rozgo/","https://www.youtube.com/@rozgok"],"knowsAbout":["Simulation","Reinforcement learning","Robotics","Autonomy","Game development","Synthetic data","World models","Rust","Unreal Engine","Isaac Sim","MuJoCo"]}</script>
 </head>
 
-<body id="top">
+<body id="top" data-scene="hero">
+    <canvas id="world" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="wrap">
@@ -41,7 +45,6 @@
                 <a href="archive/">Archive</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
             <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
         </div>
     </header>
@@ -81,6 +84,13 @@
                         </ol>
                     </figure>
                 </div>
+                <div class="hud" aria-hidden="true">
+                    <span class="live">Live simulation</span>
+                    <span>t <b data-hud="time">00:00.0</b></span>
+                    <span>agents <b data-hud="agents">–</b></span>
+                    <span>lidar points <b data-hud="points">–</b></span>
+                    <span><b data-hud="rate">–</b></span>
+                </div>
                 <div class="stats">
                 <a class="stat" href="#career"><span class="stat-value">20+ years</span><span class="stat-label">building games and real-time simulations</span></a>
                 <a class="stat" href="#career"><span class="stat-value">10+ years</span><span class="stat-label">AAA console games at LucasArts and across the industry, including Star Wars: The Force Unleashed</span></a>
@@ -94,7 +104,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <div>
-                        <span class="label label--accent">Selected work</span>
+                        <span class="label label--accent">01 · Selected work</span>
                         <h2>Systems</h2>
                         <p>Six projects with public code, live demos or video. Each project page covers the problem, the design and the results.</p>
                     </div>
@@ -192,7 +202,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <div>
-                        <span class="label label--accent">Research lab</span>
+                        <span class="label label--accent">02 · Research lab</span>
                         <h2>Experiments, 2024–2026</h2>
                         <p>Short videos of current experiments. Hover over a card to preview it; select it to watch.</p>
                     </div>
@@ -339,7 +349,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <div>
-                        <span class="label label--accent">Track record</span>
+                        <span class="label label--accent">03 · Track record</span>
                         <h2>Career</h2>
                     </div>
                 </div>
@@ -371,7 +381,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <div>
-                        <span class="label label--accent">Writing</span>
+                        <span class="label label--accent">04 · Writing</span>
                         <h2>Articles</h2>
                         <p>The “Simulated Worlds” series, first published on X. <a href="feed.xml">RSS feed</a>.</p>
                     </div>
@@ -433,7 +443,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <div>
-                        <span class="label label--accent">About</span>
+                        <span class="label label--accent">05 · About</span>
                         <h2>Alex Rozgo</h2>
                     </div>
                 </div>
@@ -470,7 +480,7 @@
 
         <section class="contact" id="contact">
             <div class="wrap">
-                <span class="label label--accent">Contact</span>
+                <span class="label label--accent">06 · Contact</span>
                 <h2>Get in touch</h2>
                 <a class="contact-email" href="mailto:alex.rozgo@gmail.com">alex.rozgo@gmail.com</a>
                 <ul class="link-row">

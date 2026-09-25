@@ -1,32 +1,23 @@
 (function () {
     'use strict';
 
-    const root = document.documentElement;
     const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-    function store(key, value) {
-        try {
-            if (value === undefined) return window.localStorage.getItem(key);
-            window.localStorage.setItem(key, value);
-        } catch (error) {
-            return null;
-        }
-        return null;
-    }
-
-    function initTheme() {
-        const button = document.querySelector('[data-theme-toggle]');
-        if (!button) return;
-        const sync = () => {
-            const light = root.dataset.theme === 'light';
-            button.setAttribute('aria-pressed', String(light));
-            button.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
-        };
-        sync();
-        button.addEventListener('click', () => {
-            root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-            store('theme', root.dataset.theme);
-            sync();
+    /* Cards lean toward the pointer. */
+    function initTilt() {
+        if (!canHover.matches) return;
+        document.querySelectorAll('.system, .clip, .scene').forEach((card) => {
+            card.addEventListener('pointermove', (event) => {
+                const rect = card.getBoundingClientRect();
+                const x = (event.clientX - rect.left) / rect.width - 0.5;
+                const y = (event.clientY - rect.top) / rect.height - 0.5;
+                card.style.setProperty('--ry', `${(x * 7).toFixed(2)}deg`);
+                card.style.setProperty('--rx', `${(-y * 6).toFixed(2)}deg`);
+            });
+            card.addEventListener('pointerleave', () => {
+                card.style.removeProperty('--ry');
+                card.style.removeProperty('--rx');
+            });
         });
     }
 
@@ -346,7 +337,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        initTheme();
+        initTilt();
         initMenu();
         initActiveNav();
         initMonitor();

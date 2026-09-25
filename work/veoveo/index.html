@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Alex Rozgo: writing" href="../../feed.xml">
-    <meta name="theme-color" content="#101012">
+    <meta name="theme-color" content="#060607">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alex Rozgo">
     <meta property="og:url" content="https://rozgo.github.io/work/veoveo/">
@@ -22,13 +22,17 @@
     <meta name="twitter:title" content="Veoveo · Alex Rozgo">
     <meta name="twitter:description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
     <meta name="twitter:image" content="https://rozgo.github.io/media/work/veoveo-uav-new-york.webp">
-    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="../../css/main.css">
+    <script type="module" src="../../js/scene.js"></script>
     <script src="../../js/main.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Veoveo","description":"Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.","url":"https://rozgo.github.io/work/veoveo/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
 </head>
 
-<body id="top">
+<body id="top" data-scene="ambient">
+    <canvas id="world" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <div class="wrap">
@@ -41,7 +45,6 @@
                 <a href="../../archive/">Archive</a>
                 <a href="../../#contact">Contact</a>
             </nav>
-            <button type="button" class="icon-button" data-theme-toggle aria-label="Switch to light theme"><svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
             <button type="button" class="icon-button menu-button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
         </div>
     </header>

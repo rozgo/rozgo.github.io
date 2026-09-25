@@ -1,48 +1,31 @@
-/* Alex Rozgo — site styles. Dark theme by default; light theme via [data-theme="light"]. */
+/* Alex Rozgo — site styles. Dark only: pages sit over a live WebGL simulation (js/scene.js). */
 
 :root {
-    --bg: #101012;
-    --surface: #161618;
-    --surface-2: #1b1b1e;
-    --line: #2b2a2d;
-    --line-strong: #3e3c38;
-    --muted: #918c82;
-    --text: #eae6dc;
-    --text-soft: #c9c4b8;
-    --accent: #c2a15c;
-    --accent-soft: rgba(194, 161, 92, 0.14);
-    --green: #74a184;
-    --overlay: rgba(8, 8, 10, 0.88);
-    --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 12px 32px rgba(0, 0, 0, 0.35);
+    --bg: #060607;
+    --surface: rgba(15, 15, 18, 0.74);
+    --surface-2: rgba(30, 30, 34, 0.82);
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.17);
+    --muted: #8e8e95;
+    --text: #f4f4f5;
+    --text-soft: #c8c8cd;
+    --accent: #ff5a1f;
+    --accent-soft: rgba(255, 90, 31, 0.1);
+    --green: #6fcf8e;
+    --overlay: rgba(4, 4, 5, 0.9);
+    --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    --glass: saturate(125%) blur(16px);
 
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, ui-serif, serif;
-    --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --serif: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-    --wrap: 1180px;
-    --gutter: 24px;
-    --radius: 10px;
-    --header-h: 60px;
+    --wrap: 1240px;
+    --gutter: 28px;
+    --radius: 14px;
+    --header-h: 64px;
 
     color-scheme: dark;
-}
-
-:root[data-theme="light"] {
-    --bg: #f4f1ea;
-    --surface: #fbfaf6;
-    --surface-2: #efebe2;
-    --line: #dcd6ca;
-    --line-strong: #c4bcad;
-    --muted: #6b665d;
-    --text: #1c1b19;
-    --text-soft: #3a3833;
-    --accent: #8a6a25;
-    --accent-soft: rgba(138, 106, 37, 0.12);
-    --green: #3f7153;
-    --overlay: rgba(20, 19, 17, 0.86);
-    --shadow: 0 10px 28px rgba(40, 32, 20, 0.12);
-
-    color-scheme: light;
 }
 
 *,
@@ -234,18 +217,6 @@ p {
     display: none;
 }
 
-.theme-icon-light {
-    display: none;
-}
-
-:root[data-theme="light"] .theme-icon-light {
-    display: block;
-}
-
-:root[data-theme="light"] .theme-icon-dark {
-    display: none;
-}
-
 @media (max-width: 760px) {
     :root {
         --gutter: 16px;
@@ -314,10 +285,6 @@ p {
 
 .button--primary:hover {
     background: color-mix(in srgb, var(--accent) 86%, white);
-}
-
-:root[data-theme="light"] .button--primary {
-    color: #fbfaf6;
 }
 
 .link-row {
@@ -1600,4 +1567,311 @@ body.has-lightbox {
     color: var(--text);
     max-width: 30em;
     margin-bottom: 18px;
+}
+
+/* World: the WebGL simulation sits behind every page; content floats over it in glass panels. */
+
+#world {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(6, 6, 7, 0.82) 0%, rgba(6, 6, 7, 0.45) 45%, rgba(6, 6, 7, 0.1) 100%),
+        linear-gradient(180deg, rgba(6, 6, 7, 0) 60%, rgba(6, 6, 7, 0.7) 100%);
+}
+
+body[data-scene="ambient"]::after {
+    background: rgba(6, 6, 7, 0.62);
+}
+
+.site-header {
+    background: rgba(6, 6, 7, 0.55);
+}
+
+.section {
+    border-bottom: 0;
+}
+
+.stats,
+.facts {
+    background: var(--line-strong);
+    -webkit-backdrop-filter: var(--glass);
+    backdrop-filter: var(--glass);
+}
+
+.stat,
+.facts div {
+    background: rgba(11, 11, 13, 0.86);
+}
+
+a.stat:hover {
+    background: rgba(24, 24, 28, 0.9);
+}
+
+.system,
+.clip,
+.monitor,
+.scene,
+.next-work a,
+.video-embed,
+.figure img,
+.figure video {
+    -webkit-backdrop-filter: var(--glass);
+    backdrop-filter: var(--glass);
+}
+
+.system,
+.clip,
+.scene,
+.next-work a {
+    border-color: var(--line-strong);
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+    transition: transform 0.25s ease, border-color 0.2s, box-shadow 0.25s;
+    will-change: transform;
+}
+
+.system:hover,
+.clip:hover,
+.scene:hover {
+    border-color: rgba(255, 90, 31, 0.55);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 90, 31, 0.15);
+}
+
+.timeline,
+.press,
+.writing,
+.about,
+.contact .wrap > *:not(h2):not(.label) {
+    position: relative;
+}
+
+.career > *,
+.writing,
+.about {
+    padding: 8px 28px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    -webkit-backdrop-filter: var(--glass);
+    backdrop-filter: var(--glass);
+}
+
+.about {
+    padding: 28px;
+}
+
+.timeline,
+.writing {
+    border-top: 0;
+}
+
+.timeline li:last-child,
+.writing li:last-child,
+.press li:last-child {
+    border-bottom: 0;
+}
+
+.press li:first-child {
+    border-top: 0;
+}
+
+.career > div > .label {
+    display: block;
+    padding-top: 18px;
+}
+
+/* Type */
+
+h1,
+h2,
+h3,
+h4,
+.brand {
+    font-weight: 600;
+    letter-spacing: -0.035em;
+}
+
+.clip h3,
+.timeline h3 {
+    letter-spacing: -0.01em;
+}
+
+.brand {
+    font-size: 1.1rem;
+}
+
+.label {
+    letter-spacing: 0.12em;
+}
+
+.section-head h2,
+.contact h2 {
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+}
+
+.contact-email {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+
+.quote p,
+.press a {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+/* Hero over the simulation */
+
+.hero {
+    position: relative;
+    min-height: calc(100svh - var(--header-h));
+    display: flex;
+    align-items: center;
+    padding: 56px 0 40px;
+    border-bottom: 0;
+}
+
+.hero > .wrap {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 5.4vw, 4.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    margin: 20px 0 22px;
+}
+
+.hero .hero-mission {
+    font-family: var(--sans);
+    font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--text);
+}
+
+.hero-lede {
+    color: var(--text-soft);
+}
+
+@media (min-width: 961px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    }
+}
+
+.monitor {
+    background: rgba(12, 12, 14, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transform: perspective(1400px) rotateY(-16deg) rotateX(5deg) translateZ(0);
+    transform-origin: 70% 50%;
+    box-shadow: -30px 40px 90px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 90, 31, 0.08);
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.monitor:hover {
+    transform: perspective(1400px) rotateY(-4deg) rotateX(1deg) translateZ(0);
+}
+
+.hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+    margin-top: 44px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.hud b {
+    font-weight: 500;
+    color: var(--text-soft);
+}
+
+.hud .live::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    50% { opacity: 0.35; }
+}
+
+.stats {
+    margin-top: 18px;
+}
+
+.stat-value {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: -0.04em;
+}
+
+@media (max-width: 960px) {
+    .monitor,
+    .monitor:hover {
+        transform: none;
+    }
+
+    body::after {
+        background: linear-gradient(180deg, rgba(6, 6, 7, 0.55) 0%, rgba(6, 6, 7, 0.75) 100%);
+    }
+}
+
+.page-head,
+.article-head {
+    position: relative;
+}
+
+.prose,
+.article-head,
+.page-lede {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+
+.article .prose,
+.detail .prose {
+    background: rgba(8, 8, 10, 0.55);
+    border-radius: var(--radius);
+}
+
+.article .prose {
+    padding: 28px 32px;
+    -webkit-backdrop-filter: var(--glass);
+    backdrop-filter: var(--glass);
+}
+
+@media (min-width: 961px) {
+    .hero .monitor {
+        justify-self: end;
+        width: min(100%, 520px);
+    }
+}
+
+body::after {
+    background:
+        linear-gradient(90deg, rgba(6, 6, 7, 0.78) 0%, rgba(6, 6, 7, 0.35) 42%, rgba(6, 6, 7, 0) 70%),
+        linear-gradient(180deg, rgba(6, 6, 7, 0) 65%, rgba(6, 6, 7, 0.65) 100%);
 }

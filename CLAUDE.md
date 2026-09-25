@@ -21,8 +21,9 @@ This is a static personal portfolio website hosted on GitHub Pages. It is plain 
 | `work/<slug>/index.html` | One page per system: veoveo, alienwars-gym, shield-ai-simulator, maquina, axionomy, simbotic |
 | `writing/<slug>/index.html` | Articles from the "Simulated Worlds" series, copied from X |
 | `archive/index.html` | All portfolio videos, grouped by era, with topic filters |
-| `css/main.css` | All styles. Color tokens on `:root` (dark default) and `:root[data-theme="light"]` |
-| `js/main.js` | Theme toggle, mobile menu, hero reel, hover previews, video lightbox, archive filters |
+| `css/main.css` | All styles. Dark only; color and font tokens on `:root` (Geist, Geist Mono) |
+| `js/main.js` | Mobile menu, hero reel, hover previews, card tilt, video lightbox, archive filters |
+| `js/scene.js` | Live WebGL background (Three.js, vendored in `js/vendor/`): LiDAR-style terrain, drones and rovers with sensor footprints, scan pulse. `body[data-scene="hero"]` on the home page (camera follows scroll), `ambient` elsewhere |
 | `media/clips/` | 4-5 s muted MP4 loops (640x360, H.264) with WebP posters, used by the hero reel and lab hover previews |
 | `media/thumbs/<youtube-id>.webp` | 640x360 video thumbnails |
 | `media/work/` | Project images, each at 1600 px (`name.webp`) and 800 px (`name-800.webp`) |
