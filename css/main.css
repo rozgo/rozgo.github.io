@@ -1592,3 +1592,12 @@ body.has-lightbox {
         animation: none !important;
     }
 }
+
+.hero-mission {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+    line-height: 1.45;
+    color: var(--text);
+    max-width: 30em;
+    margin-bottom: 18px;
+}
