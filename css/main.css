@@ -1904,3 +1904,45 @@ body::after {
     border: 2px solid #060607;
     box-shadow: 0 0 0 1.5px var(--accent), 0 8px 24px rgba(0, 0, 0, 0.5);
 }
+
+.press li {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+}
+
+.press-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #060607;
+    box-shadow: 0 0 0 1px var(--line-strong);
+}
+
+.press li:hover .press-thumb {
+    box-shadow: 0 0 0 1.5px var(--accent);
+}
+
+.press-coda {
+    display: flex;
+    justify-content: center;
+    margin: 28px 0 12px;
+}
+
+.press-coda span {
+    display: grid;
+    place-items: center;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--text);
+    background: rgba(30, 30, 34, 0.9);
+    border: 2px solid #060607;
+    box-shadow: 0 0 0 1px var(--line-strong);
+}
