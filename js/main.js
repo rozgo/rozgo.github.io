@@ -2,7 +2,6 @@
     'use strict';
 
     const root = document.documentElement;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
     function store(key, value) {
@@ -84,7 +83,7 @@
         if (!video || !clips.length) return;
 
         let index = 0;
-        let paused = reducedMotion.matches;
+        let paused = false;
         let visible = true;
 
         const dots = clips.map((clip, i) => {
@@ -144,7 +143,7 @@
 
     /* Clip cards preview their loop on hover or keyboard focus. */
     function initPreviews() {
-        if (!canHover.matches || reducedMotion.matches) return;
+        if (!canHover.matches) return;
         document.querySelectorAll('.clip[data-preview]').forEach((card) => {
             const media = card.querySelector('.clip-media');
             let video = null;
