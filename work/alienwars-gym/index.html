@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AlienWars Gym · Alex Rozgo</title>
-    <meta name="description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta name="description" content="AlienWars Gym is a game development harness where coding, design and NPC agents explore a world model in simulation and run reinforcement learning with PufferLib 5 inside the development loop.">
     <meta name="author" content="Alex Rozgo">
     <link rel="canonical" href="https://rozgo.github.io/work/alienwars-gym/">
     <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -15,12 +15,12 @@
     <meta property="og:site_name" content="Alex Rozgo">
     <meta property="og:url" content="https://rozgo.github.io/work/alienwars-gym/">
     <meta property="og:title" content="AlienWars Gym · Alex Rozgo">
-    <meta property="og:description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta property="og:description" content="AlienWars Gym is a game development harness where coding, design and NPC agents explore a world model in simulation and run reinforcement learning with PufferLib 5 inside the development loop.">
     <meta property="og:image" content="https://rozgo.github.io/media/work/alienwars-frozen.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rozgo">
     <meta name="twitter:title" content="AlienWars Gym · Alex Rozgo">
-    <meta name="twitter:description" content="AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.">
+    <meta name="twitter:description" content="AlienWars Gym is a game development harness where coding, design and NPC agents explore a world model in simulation and run reinforcement learning with PufferLib 5 inside the development loop.">
     <meta name="twitter:image" content="https://rozgo.github.io/media/work/alienwars-frozen.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="../../css/main.css">
     <script type="module" src="../../js/scene.js"></script>
     <script src="../../js/main.js" defer></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AlienWars Gym","description":"AlienWars Gym trains PPO vehicle agents in procedurally generated 3D worlds with PufferLib 5, and runs the simulation and trained policies in the browser.","url":"https://rozgo.github.io/work/alienwars-gym/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AlienWars Gym","description":"AlienWars Gym is a game development harness where coding, design and NPC agents explore a world model in simulation and run reinforcement learning with PufferLib 5 inside the development loop.","url":"https://rozgo.github.io/work/alienwars-gym/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
 </head>
 
 <body id="top" data-scene="ambient">
@@ -53,9 +53,9 @@
         <div class="wrap">
             <div class="page-head">
                 <div class="crumbs label"><a href="../../#work">Work</a> / AlienWars Gym</div>
-                <span class="label label--accent">Reinforcement learning · C, CUDA, WebAssembly · 2026</span>
+                <span class="label label--accent">Game dev harness · C, CUDA, WebAssembly · 2026</span>
                 <h1>AlienWars Gym</h1>
-                <p class="page-lede">AlienWars Gym trains vehicle agents in procedurally generated 3D worlds. PufferLib 5 trains PPO controllers on CUDA. The same C simulation, sensors and trained policies also run in the browser through WebAssembly.</p>
+                <p class="page-lede">AlienWars Gym is a proof of concept for a game development harness. Coding, design and NPC agents use it as a world model: they explore procedurally generated 3D worlds in simulation and run reinforcement learning inside the development loop. PufferLib 5 trains the policies on CUDA, and the same C simulation, sensors and trained policies run in the browser through WebAssembly.</p>
                 <div class="hero-actions"><a class="button button--primary" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener">Open Map Lab ↗</a><a class="button" href="https://github.com/rozgo/alienwars-gym" target="_blank" rel="noopener">Code on GitHub ↗</a><a class="button" href="https://rozgo.github.io/alienwars-gym/learn/" target="_blank" rel="noopener">Sensor lesson ↗</a><a class="button" href="https://rozgo.github.io/alienwars-gym/training/" target="_blank" rel="noopener">Training observatory ↗</a></div>
                 <p class="note">Map Lab runs the full simulation in the browser. It can take a while to start.</p>
             </div>
@@ -84,11 +84,23 @@
                     <figure class="figure"><img src="../../media/work/alienwars-sensors.webp" alt="Sensor overlays for all units" width="1600" height="871" loading="lazy" decoding="async"><figcaption>Range fans, camera fields and radio links for every unit on the map.</figcaption></figure>
                 </div>
             </section>
-            <section class="detail" id="evaluation">
-                <h2>Evaluation</h2>
+            <section class="detail" id="results">
+                <h2>Training and results</h2>
                 <div class="prose">
-                    <p>The September 18, 2026 reliability test added sensor-history anticipation, yielding, braking checks and recovery limits, and ran 49.5 million more steps across three seeds with frozen historical traffic. The candidate failed the reliability and endurance gates, so the public demo still uses the September 16 checkpoints.</p>
-                    <p><a class="ext" href="https://github.com/rozgo/alienwars-gym/blob/main/docs/runs/navigation-reliability-2026-09-18.md" target="_blank" rel="noopener">Run report</a> · <a class="ext" href="https://rozgo.github.io/alienwars-gym/training/reliability.html" target="_blank" rel="noopener">Reliability results</a></p>
+                    <p>Twelve vehicles act in the same worlds while five PPO policies learn at once, one per vehicle family. Training ran 49.5 million agent steps across three seeds in 18.5 minutes on a single RTX 4090, using PufferLib 5's native C and CUDA path.</p>
+                    <p>The deployed policies were tested on eight maps they never saw in training, three missions per map. Every controller follows the same A* route; the comparison measures what the learned policy adds on top of a plain route tracker.</p>
+                    <table class="tools">
+                        <thead><tr><th scope="col">Vehicle family</th><td>PPO policy</td><td>Route tracker</td></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Ground vehicles</th><td>56/72 (78%)</td><td>49/72</td></tr>
+                            <tr><th scope="row">Surface boats</th><td>61/72 (85%)</td><td>57/72</td></tr>
+                            <tr><th scope="row">Quadcopters</th><td>19/24 (79%)</td><td>24/24</td></tr>
+                            <tr><th scope="row">Fixed wings</th><td>43/48 (90%)</td><td>44/48</td></tr>
+                            <tr><th scope="row">Submarines</th><td>56/72 (78%)</td><td>60/72</td></tr>
+                        </tbody>
+                    </table>
+                    <p>The policies beat the route tracker for ground vehicles and boats and fall short for the other families; the 95% arrival target is not met yet. A later candidate with new safety behaviors, tested for another 49.5 million steps, did not pass the reliability bar, so the demo keeps the September 16 policies.</p>
+                    <p><a class="ext" href="https://github.com/rozgo/alienwars-gym/blob/main/docs/runs/shared-navigation-2026-09-16.md" target="_blank" rel="noopener">Training run report</a> · <a class="ext" href="https://github.com/rozgo/alienwars-gym/blob/main/docs/runs/navigation-reliability-2026-09-18.md" target="_blank" rel="noopener">Reliability test</a> · <a class="ext" href="https://rozgo.github.io/alienwars-gym/training/reliability.html" target="_blank" rel="noopener">Reliability dashboard</a></p>
                 </div>
             </section>
             <section class="detail">
@@ -101,7 +113,7 @@
             <section class="detail">
                 <h2>Video</h2>
                 <div class="prose">
-                    <div class="video-embed"><button type="button" data-youtube="2ecaXifPN2M" aria-label="Play video: AlienWars Game Dev Harness"><img src="../../media/thumbs/2ecaXifPN2M.webp" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></button></div><p>The game dev harness: a coding agent and reinforcement learning in one development loop.</p>
+                    <div class="video-embed"><button type="button" data-youtube="2ecaXifPN2M" aria-label="Play video: AlienWars Game Dev Harness"><img src="../../media/thumbs/2ecaXifPN2M.webp" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></button></div><p>The harness in use: a coding agent explores the world model and runs reinforcement learning in the loop.</p>
                 </div>
             </section>
             <nav class="next-work" aria-label="More projects">
