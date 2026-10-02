@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Veoveo · Alex Rozgo</title>
-    <meta name="description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta name="description" content="Veoveo is a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds.">
     <meta name="author" content="Alex Rozgo">
     <link rel="canonical" href="https://rozgo.github.io/work/veoveo/">
     <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -15,12 +15,12 @@
     <meta property="og:site_name" content="Alex Rozgo">
     <meta property="og:url" content="https://rozgo.github.io/work/veoveo/">
     <meta property="og:title" content="Veoveo · Alex Rozgo">
-    <meta property="og:description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta property="og:description" content="Veoveo is a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds.">
     <meta property="og:image" content="https://rozgo.github.io/media/work/veoveo-uav-new-york.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rozgo">
     <meta name="twitter:title" content="Veoveo · Alex Rozgo">
-    <meta name="twitter:description" content="Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.">
+    <meta name="twitter:description" content="Veoveo is a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds.">
     <meta name="twitter:image" content="https://rozgo.github.io/media/work/veoveo-uav-new-york.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="../../css/main.css">
     <script type="module" src="../../js/scene.js"></script>
     <script src="../../js/main.js" defer></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Veoveo","description":"Veoveo is a self-hosted platform where AI agents fly simulated UAVs, control traffic simulations and analyze video, with every request checked by a policy gateway and every run recorded.","url":"https://rozgo.github.io/work/veoveo/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Veoveo","description":"Veoveo is a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds.","url":"https://rozgo.github.io/work/veoveo/","creator":{"@type":"Person","name":"Alex Rozgo","url":"https://rozgo.github.io/"}}</script>
 </head>
 
 <body id="top" data-scene="ambient">
@@ -53,19 +53,26 @@
         <div class="wrap">
             <div class="page-head">
                 <div class="crumbs label"><a href="../../#work">Work</a> / Veoveo</div>
-                <span class="label label--accent">Operations platform · Rust · 2026</span>
+                <span class="label label--accent">Autonomy harness · Rust · 2026</span>
                 <h1>Veoveo</h1>
-                <p class="page-lede">Veoveo is a self-hosted platform for AI agents that work with physical systems. Agents read sensors and camera streams, fly simulated UAVs, control simulated traffic, and record each run so people can query it later. The organization that deploys Veoveo runs it on its own cluster, identity provider, storage and models.</p>
-                <div class="hero-actions"><a class="button button--primary" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code on GitHub ↗</a><a class="button" href="https://github.com/BiomaAI/veoveo/blob/main/docs/TECH_DESIGN.md" target="_blank" rel="noopener">Technical design ↗</a><a class="button" href="#results">Flight results</a></div>
+                <p class="page-lede">Veoveo is a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds. Agents rehearse in simulation and command robots in the field through the same controls, and identity, policy and audit checks run outside the AI model on every action. The organization that deploys it owns and runs every installation.</p>
+                <div class="hero-actions"><a class="button button--primary" href="https://veoveo.ai/" target="_blank" rel="noopener">veoveo.ai ↗</a><a class="button" href="https://veoveo.ai/whitepaper/" target="_blank" rel="noopener">Read the whitepaper ↗</a><a class="button" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code on GitHub ↗</a></div>
                 
             </div>
             <figure class="figure"><video autoplay muted loop playsinline preload="auto" poster="../../media/work/veoveo-alerts.webp" width="960" height="632" aria-label="An incident alert spreading across operations panels"><source src="../../media/work/veoveo-alerts.mp4" type="video/mp4"></video><figcaption>From the Veoveo launch trailer: an incident alert spreads across the operator’s panels.</figcaption></figure>
-            <dl class="facts"><div><dt>Role</dt><dd>Author (2,529 commits)</dd></div><div><dt>Language</dt><dd>Rust</dd></div><div><dt>Simulators</dt><dd>Isaac Sim with PX4, SUMO</dd></div><div><dt>Interface</dt><dd>Model Context Protocol</dd></div></dl>
+            <dl class="facts"><div><dt>Role</dt><dd>Founder and author</dd></div><div><dt>Language</dt><dd>Rust</dd></div><div><dt>Runs on</dt><dd>The owner’s own cluster</dd></div><div><dt>Connects over</dt><dd>The open MCP standard</dd></div></dl>
             
             <section class="detail">
-                <h2>Problem</h2>
+                <h2>What it does</h2>
                 <div class="prose">
-                    <p>Teams that operate drones, vehicles or cameras want AI agents to help run them. Most cannot send their credentials, video or mission data to a vendor, and afterwards they need a record of what each agent was allowed to do and what it did.</p>
+                    <ul>
+                        <li><strong>Always-on agents.</strong> They wake when a watched condition changes, act, and pick up long-running tasks again after a restart.</li>
+                        <li><strong>Robots and simulators on one platform.</strong> Agents rehearse in simulation and command robots in the field through the same controls.</li>
+                        <li><strong>Onboard intelligence.</strong> Agents run on the robot itself and keep working when the network drops.</li>
+                        <li><strong>Multi-modal perception.</strong> Agents fuse every sensor stream an operation produces into one model of the world and reason across all of it at once.</li>
+                        <li><strong>One replayable record.</strong> Sensor streams, video, decisions and actions share one timeline that humans and agents replay and query.</li>
+                        <li><strong>Policy outside the model.</strong> Identity, policy and audit checks run outside the AI model on every action.</li>
+                    </ul>
                 </div>
             </section>
             <section class="detail">
@@ -78,10 +85,10 @@
                 </div>
             </section>
             <section class="detail" id="results">
-                <h2>Results</h2>
+                <h2>A mission from one message</h2>
                 <div class="prose">
-                    <p>An operator sent one message to a pilot agent: fly <code>uav-1</code> to Times Square. The message contained no coordinates and granted no vehicle authority. The agent resolved the destination through the map server and flew under its existing grant for <code>uav-1</code>.</p>
-                    <p>The first accepted run covered 9.227 km in 13 minutes 10 seconds. It completed all four waypoints, arrived at 40.7580° N, 73.9855° W with zero collisions, and released its command lease. The recording hub archived the camera, pose, telemetry and mission lifecycle for the whole run.</p>
+                    <p>An operator typed one message to a pilot agent: fly to Times Square. The message contained no coordinates and gave the agent no new authority.</p>
+                    <p>The agent looked up the destination on the map server, planned the route and flew it in Isaac Sim with PX4 autopilot firmware, using only the vehicle it was allowed to command. It reached every waypoint without a collision across Manhattan, then released the vehicle. The recording hub kept the camera, pose and telemetry for the whole flight, so anyone can replay it.</p>
                     <figure class="figure"><img src="../../media/work/veoveo-uav-new-york.webp" alt="Simulated multirotor above Midtown Manhattan" width="1600" height="900" loading="lazy" decoding="async"><figcaption>A multirotor under PX4 control above Midtown Manhattan, rendered by a headless Isaac Sim instance.</figcaption></figure>
                     <p><a class="ext" href="https://github.com/BiomaAI/veoveo/blob/main/showcase/uav-sim/ACCEPTANCE.md" target="_blank" rel="noopener">UAV-E2E-001 acceptance test</a> describes how to repeat the run.</p>
                 </div>

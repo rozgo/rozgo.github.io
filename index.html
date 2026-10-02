@@ -121,12 +121,12 @@
                         <img src="media/work/veoveo-uav-new-york-800.webp" alt="Simulated multirotor over Midtown Manhattan in Isaac Sim" width="800" height="450" loading="lazy" decoding="async">
                     </a>
                     <div class="system-body">
-                        <span class="label">Operations platform · Rust · 2026</span>
+                        <span class="label">Autonomy harness · Rust · 2026</span>
                         <h3><a href="work/veoveo/">Veoveo</a></h3>
-                        <p class="system-desc">A self-hosted platform for AI agents that work with physical systems. Agents read sensors and video, fly simulated UAVs in Isaac Sim with PX4, control SUMO traffic, and record every run for replay.</p>
-                        <p class="proof">An agent flew 9.227 km over Manhattan in 13 min 10 s: four waypoints, zero collisions.</p>
+                        <p class="system-desc">A self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds. Agents rehearse in simulation and command robots in the field through the same controls.</p>
+                        <p class="proof">An operator typed “fly to Times Square”, and the pilot agent planned the route and flew it, using only the vehicle it was allowed to command.</p>
                         <ul class="link-row">
-                            <li><a href="work/veoveo/">Project page</a></li><li><a class="ext" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code</a></li>
+                            <li><a href="work/veoveo/">Project page</a></li><li><a class="ext" href="https://veoveo.ai/" target="_blank" rel="noopener">veoveo.ai</a></li><li><a class="ext" href="https://veoveo.ai/whitepaper/" target="_blank" rel="noopener">Whitepaper</a></li><li><a class="ext" href="https://github.com/BiomaAI/veoveo" target="_blank" rel="noopener">Code</a></li>
                         </ul>
                     </div>
                 </article>
@@ -135,10 +135,10 @@
                         <img src="media/work/alienwars-frozen-800.webp" alt="Procedurally generated frozen map in AlienWars Map Lab" width="800" height="462" loading="lazy" decoding="async">
                     </a>
                     <div class="system-body">
-                        <span class="label">Game dev harness · C, CUDA, WebAssembly · 2026</span>
+                        <span class="label">RL and game dev harness · C, CUDA, WebAssembly · 2026</span>
                         <h3><a href="work/alienwars-gym/">AlienWars Gym</a></h3>
-                        <p class="system-desc">A proof of concept for a game development harness. Coding, design and NPC agents use it as a world model: they explore procedurally generated 3D worlds in simulation, with reinforcement learning inside the development loop.</p>
-                        <p class="proof">Twelve vehicles and five PPO policies trained for 49.5 million steps in 18.5 minutes on one RTX 4090, fast enough to run inside the development loop.</p>
+                        <p class="system-desc">A reinforcement learning and game development harness. Coding, design and NPC agents use it as a world model: they explore procedurally generated 3D worlds in simulation and train policies inside the development loop.</p>
+                        <p class="proof">A whole fleet retrains in under 20 minutes on one GPU, so agents can test a design change in the same session.</p>
                         <ul class="link-row">
                             <li><a href="work/alienwars-gym/">Project page</a></li><li><a class="ext" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener">Map Lab</a></li><li><a class="ext" href="https://github.com/rozgo/alienwars-gym" target="_blank" rel="noopener">Code</a></li>
                         </ul>
@@ -152,7 +152,7 @@
                         <span class="label">Autonomy simulation · Shield AI</span>
                         <h3><a href="work/shield-ai-simulator/">Shield AI Hivemind simulator</a></h3>
                         <p class="system-desc">I developed the simulator shown in Shield AI’s Hivemind fixed-wing demo. Hivemind is Shield AI’s autonomy software for military and commercial aircraft.</p>
-                        <p class="proof">The demo video is from 2021. Shield AI interviewed me as a dynamical systems engineer in 2018.</p>
+                        <p class="proof">Hivemind flies the aircraft. The world it flies in is my simulator.</p>
                         <ul class="link-row">
                             <li><a href="work/shield-ai-simulator/">Project page</a></li><li><a href="https://www.youtube.com/watch?v=JBJCrtaNgIc" data-video data-title="Shield AI Hivemind Fixed-Wing Demo">Watch video</a></li>
                         </ul>
@@ -166,7 +166,7 @@
                         <span class="label">Formal methods · Lean 4, Three.js · 2026</span>
                         <h3><a href="work/maquina/">Maquina</a></h3>
                         <p class="system-desc">An execution model for simulated worlds. A Lean 4 kernel checks every state change, and each run can be replayed. Agents, people and planners propose actions; the kernel accepts or rejects each one.</p>
-                        <p class="proof">Seven interactive showcases. Foundry: Night Shift steps through 95 checked snapshots.</p>
+                        <p class="proof">Play a mission in the browser and see why every order is accepted or refused, then rewind and try another path.</p>
                         <ul class="link-row">
                             <li><a href="work/maquina/">Project page</a></li><li><a class="ext" href="https://biomaai.github.io/maquina/?showcase=veiled-accord" target="_blank" rel="noopener">Playground</a></li><li><a class="ext" href="https://github.com/BiomaAI/maquina" target="_blank" rel="noopener">Code</a></li>
                         </ul>
@@ -180,7 +180,7 @@
                         <span class="label">Decision engine · Rust, WebAssembly · 2026</span>
                         <h3><a href="work/axionomy/">Axionomy</a></h3>
                         <p class="system-desc">A Rust engine that models a problem as accounts, assets and exchanges. Search, optimization and reinforcement learning propose exchanges; the engine validates each one and keeps a replayable trace.</p>
-                        <p class="proof">Fourteen problems share one service contract across the CLI, HTTP, MCP and the browser Studio.</p>
+                        <p class="proof">The same engine solves a maze, runs a market and schedules a league of agents, and shows the reason behind every decision.</p>
                         <ul class="link-row">
                             <li><a href="work/axionomy/">Project page</a></li><li><a class="ext" href="https://biomaai.github.io/axionomy/?problem=maze&instance=showcase&strategy=a_star&document=maze%3Aa_star&view=replay&step=0&seed=0&budget=128" target="_blank" rel="noopener">Studio</a></li><li><a class="ext" href="https://github.com/BiomaAI/axionomy" target="_blank" rel="noopener">Code</a></li>
                         </ul>
@@ -194,7 +194,7 @@
                         <span class="label">Open source · Unreal Engine, Rust, GStreamer · 2018–2022</span>
                         <h3><a href="work/simbotic/">Simbotic</a></h3>
                         <p class="system-desc">An open-source simulation engine and AI platform for training perception models on synthetic data and testing robots in simulation.</p>
-                        <p class="proof">Unreal Engine 4.24 with NVIDIA PhysX 4.0, plus plugins for synthetic data, GStreamer pipelines and dynamical systems.</p>
+                        <p class="proof">Robots and perception models learned from synthetic worlds before they met the real one.</p>
                         <ul class="link-row">
                             <li><a href="work/simbotic/">Project page</a></li><li><a href="https://www.youtube.com/watch?v=IENWIoVnhRk" data-video data-title="Simbotic Engine Teaser">Watch video</a></li><li><a class="ext" href="https://github.com/Simbotic" target="_blank" rel="noopener">Code</a></li>
                         </ul>
@@ -223,7 +223,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Robot learning</span></div>
                         <h3>Adaptive Locomotion: Full Film</h3>
-                        <p class="clip-desc">One learned policy across every test scene, including missing limbs, slopes and moving platforms. Final evaluation: walking 36/36, static balance 136/144, moving supports 24/24.</p>
+                        <p class="clip-desc">One learned policy keeps a quadruped walking and standing through lost limbs, slopes and moving ground.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=sA_NDf96Dgo" data-video data-title="Rover Swarm over a Degraded LoRa Mesh" data-sub="Sep 2026" data-preview="media/clips/rovers.mp4">
@@ -245,7 +245,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neuro-control</span></div>
                         <h3>Fly Flight School</h3>
-                        <p class="clip-desc">Flight control for a simulated fly, driven through the MaleCNS connectome.</p>
+                        <p class="clip-desc">A simulated fly learns to fly through the wiring map of a real fly’s brain.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=2ecaXifPN2M" data-video data-title="AlienWars Game Dev Harness" data-sub="Sep 2026" data-preview="media/clips/alienwars.mp4">
@@ -256,7 +256,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Agents</span></div>
                         <h3>AlienWars Game Dev Harness</h3>
-                        <p class="clip-desc">A game dev harness proof of concept: coding agents explore a world model in simulation and run reinforcement learning in the loop.</p>
+                        <p class="clip-desc">A reinforcement learning and game dev harness: coding agents explore a world model in simulation and run reinforcement learning in the loop.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=hXq426rW8gQ" data-video data-title="ModernBERT Plays Doom" data-sub="Sep 2026" data-preview="media/clips/doom.mp4">
@@ -267,7 +267,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Language models</span></div>
                         <h3>ModernBERT Plays Doom</h3>
-                        <p class="clip-desc">A small encoder model picks Doom actions at 43.7 decisions per second, 13.9 ms each, on an M3 Max.</p>
+                        <p class="clip-desc">A small language model plays Doom in real time, more than twice as fast as the game needs.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=emeSmbveTcc" data-video data-title="Adaptive Locomotion" data-sub="Sep 2026" data-preview="media/clips/loco.mp4">
@@ -278,7 +278,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Robot learning</span></div>
                         <h3>Adaptive Locomotion</h3>
-                        <p class="clip-desc">A quadruped policy trained across 4,096 parallel worlds with 400 hours of simulated experience.</p>
+                        <p class="clip-desc">A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=NMeBjxofL8Y" data-video data-title="Amphibious Quadruped in MuJoCo" data-sub="Sep 2026" data-preview="media/clips/amphibious.mp4">
@@ -300,7 +300,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">World models</span></div>
                         <h3>Self-Improving Agent Trains a UAV with JEPA</h3>
-                        <p class="clip-desc">An agent implemented the SkyJEPA paper and trained a UAV controller with 26–34% lower worst-case trajectory error than a geometric controller.</p>
+                        <p class="clip-desc">An AI agent read a research paper, wrote the code, and trained a drone controller that flies more accurately than the hand-written one.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=W6TE1dscqE0" data-video data-title="PINO Wind Forecasting for Drone Delivery" data-sub="Sep 2026" data-preview="media/clips/pino.mp4">
@@ -311,7 +311,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neural operators</span></div>
                         <h3>PINO Wind Forecasting for Drone Delivery</h3>
-                        <p class="clip-desc">A physics-informed neural operator forecasts wind for package delivery in MuJoCo. It delivered in 5 of 6 held-out wind cases with 77% lower tracking error.</p>
+                        <p class="clip-desc">A drone learns to predict the wind and keeps its package on target in gusts it never trained on.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=xP0I3b8d3NI" data-video data-title="Distributed Quadcopter Simulation" data-sub="Sep 2025" data-preview="media/clips/quadcopter.mp4">
@@ -322,7 +322,7 @@
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2025</span><span class="label">Simulation</span></div>
                         <h3>Distributed Quadcopter Simulation</h3>
-                        <p class="clip-desc">Quadcopter dynamics and depth sensing split across processes and recorded in Rerun.</p>
+                        <p class="clip-desc">A drone simulation split into separate programs that talk to each other, the way software runs on a real robot.</p>
                     </div>
                 </a>
                 <a class="clip" href="https://www.youtube.com/watch?v=KAEwR96vhnA" data-video data-title="Agentic Procedural Augmented Generation" data-sub="Nov 2024" data-preview="media/clips/pag.mp4">
@@ -361,7 +361,8 @@
                 </div>
                 <div class="career">
                     <ol class="timeline">
-                    <li><span class="years">2025–</span><div><h3>Open-source projects</h3><p>Veoveo, AlienWars Gym, Maquina and Axionomy, plus the experiments in the lab above.</p></div></li>
+                    <li><span class="years">2026–</span><div><h3>Bioma</h3><p>Founder, CEO and CTO. Building Veoveo, a self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds.</p></div></li>
+                    <li><span class="years">2025–</span><div><h3>Open-source projects</h3><p>AlienWars Gym, Maquina and Axionomy, plus the experiments in the lab above.</p></div></li>
                     <li><span class="years">2018–</span><div><h3>Shield AI</h3><p>Principal AI and Simulation Engineer (contract). AI and simulation infrastructure, harness, training, synthetics and building world models where humans, robots and AI agents learn, play and evolve together. Developed the simulator shown in the Hivemind fixed-wing demo.</p></div></li>
                     <li><span class="years">2016–2026</span><div><h3>Vertex Studio</h3><p>Founder &amp; CTO. Building scalable simulation infrastructure solutions and immersive experiences centered on human-robot-AI interaction. Designing and implementing multi-agent frameworks and behavior systems.</p></div></li>
                     <li><span class="years">2018–2022</span><div><h3>Simbotic AI</h3><p>Lead Simulation and AI Engineer. Leading development of an open source physical AI platform for sim-to-real transfer and digital twin applications, and real-time synthetic data pipelines for training embodied AI models.</p></div></li>

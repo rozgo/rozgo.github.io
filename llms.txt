@@ -6,8 +6,8 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Systems
 
-- [Veoveo](https://rozgo.github.io/work/veoveo/): A self-hosted platform for AI agents that work with physical systems. Agents read sensors and video, fly simulated UAVs in Isaac Sim with PX4, control SUMO traffic, and record every run for replay.
-- [AlienWars Gym](https://rozgo.github.io/work/alienwars-gym/): A proof of concept for a game development harness. Coding, design and NPC agents use it as a world model: they explore procedurally generated 3D worlds in simulation, with reinforcement learning inside the development loop.
+- [Veoveo](https://rozgo.github.io/work/veoveo/): A self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds. Agents rehearse in simulation and command robots in the field through the same controls.
+- [AlienWars Gym](https://rozgo.github.io/work/alienwars-gym/): A reinforcement learning and game development harness. Coding, design and NPC agents use it as a world model: they explore procedurally generated 3D worlds in simulation and train policies inside the development loop.
 - [Shield AI Hivemind simulator](https://rozgo.github.io/work/shield-ai-simulator/): I developed the simulator shown in Shield AI’s Hivemind fixed-wing demo. Hivemind is Shield AI’s autonomy software for military and commercial aircraft.
 - [Maquina](https://rozgo.github.io/work/maquina/): An execution model for simulated worlds. A Lean 4 kernel checks every state change, and each run can be replayed. Agents, people and planners propose actions; the kernel accepts or rejects each one.
 - [Axionomy](https://rozgo.github.io/work/axionomy/): A Rust engine that models a problem as accounts, assets and exchanges. Search, optimization and reinforcement learning propose exchanges; the engine validates each one and keeps a replayable trace.
@@ -15,16 +15,16 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Recent experiments
 
-- [Adaptive Locomotion: Full Film](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): One learned policy across every test scene, including missing limbs, slopes and moving platforms. Final evaluation: walking 36/36, static balance 136/144, moving supports 24/24.
+- [Adaptive Locomotion: Full Film](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): One learned policy keeps a quadruped walking and standing through lost limbs, slopes and moving ground.
 - [Rover Swarm over a Degraded LoRa Mesh](https://www.youtube.com/watch?v=sA_NDf96Dgo) (Sep 2026): Simulated rovers share data over a Reticulum mesh network with heavy packet loss.
-- [Fly Flight School](https://www.youtube.com/watch?v=iAzzoydLlEo) (Sep 2026): Flight control for a simulated fly, driven through the MaleCNS connectome.
-- [AlienWars Game Dev Harness](https://www.youtube.com/watch?v=2ecaXifPN2M) (Sep 2026): A game dev harness proof of concept: coding agents explore a world model in simulation and run reinforcement learning in the loop.
-- [ModernBERT Plays Doom](https://www.youtube.com/watch?v=hXq426rW8gQ) (Sep 2026): A small encoder model picks Doom actions at 43.7 decisions per second, 13.9 ms each, on an M3 Max.
-- [Adaptive Locomotion](https://www.youtube.com/watch?v=emeSmbveTcc) (Sep 2026): A quadruped policy trained across 4,096 parallel worlds with 400 hours of simulated experience.
+- [Fly Flight School](https://www.youtube.com/watch?v=iAzzoydLlEo) (Sep 2026): A simulated fly learns to fly through the wiring map of a real fly’s brain.
+- [AlienWars Game Dev Harness](https://www.youtube.com/watch?v=2ecaXifPN2M) (Sep 2026): A reinforcement learning and game dev harness: coding agents explore a world model in simulation and run reinforcement learning in the loop.
+- [ModernBERT Plays Doom](https://www.youtube.com/watch?v=hXq426rW8gQ) (Sep 2026): A small language model plays Doom in real time, more than twice as fast as the game needs.
+- [Adaptive Locomotion](https://www.youtube.com/watch?v=emeSmbveTcc) (Sep 2026): A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.
 - [Amphibious Quadruped in MuJoCo](https://www.youtube.com/watch?v=NMeBjxofL8Y) (Sep 2026): A quadruped with leg-mounted floats walks into water, floats and walks out. Built in 40 minutes from a design posted on LinkedIn.
-- [Self-Improving Agent Trains a UAV with JEPA](https://www.youtube.com/watch?v=300rm4mPcYg) (Sep 2026): An agent implemented the SkyJEPA paper and trained a UAV controller with 26–34% lower worst-case trajectory error than a geometric controller.
-- [PINO Wind Forecasting for Drone Delivery](https://www.youtube.com/watch?v=W6TE1dscqE0) (Sep 2026): A physics-informed neural operator forecasts wind for package delivery in MuJoCo. It delivered in 5 of 6 held-out wind cases with 77% lower tracking error.
-- [Distributed Quadcopter Simulation](https://www.youtube.com/watch?v=xP0I3b8d3NI) (Sep 2025): Quadcopter dynamics and depth sensing split across processes and recorded in Rerun.
+- [Self-Improving Agent Trains a UAV with JEPA](https://www.youtube.com/watch?v=300rm4mPcYg) (Sep 2026): An AI agent read a research paper, wrote the code, and trained a drone controller that flies more accurately than the hand-written one.
+- [PINO Wind Forecasting for Drone Delivery](https://www.youtube.com/watch?v=W6TE1dscqE0) (Sep 2026): A drone learns to predict the wind and keeps its package on target in gusts it never trained on.
+- [Distributed Quadcopter Simulation](https://www.youtube.com/watch?v=xP0I3b8d3NI) (Sep 2025): A drone simulation split into separate programs that talk to each other, the way software runs on a real robot.
 - [Agentic Procedural Augmented Generation](https://www.youtube.com/watch?v=KAEwR96vhnA) (Nov 2024): Text and image prompts drive an agent that generates 3D characters procedurally.
 - [NPCs: Autonomous Agents](https://www.youtube.com/watch?v=H97_h5SBunA) (Oct 2024): NPC agents with individual goals that produce group behavior.
 
