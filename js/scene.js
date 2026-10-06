@@ -58,10 +58,10 @@ function height(x, z) {
 function start() {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: 'high-performance' });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
-    renderer.setClearColor(0x060607, 1);
+    renderer.setClearColor(0x0d0d0f, 1);
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x060607, 0.0042);
+    scene.fog = new THREE.FogExp2(0x0d0d0f, 0.0042);
     const camera = new THREE.PerspectiveCamera(50, 1, 0.5, 900);
 
     const SIZE = 420;
@@ -102,7 +102,7 @@ function start() {
             uDim: { value: 1 },
             uPixel: { value: renderer.getPixelRatio() },
             uSensors: { value: sensorUniform },
-            uAccent: { value: new THREE.Color(0xff5a1f) },
+            uAccent: { value: new THREE.Color(0xf0f0f2) },
             uFogDensity: { value: scene.fog.density },
         },
         vertexShader: `
@@ -143,7 +143,7 @@ function start() {
                 vec2 c = gl_PointCoord - 0.5;
                 float a = smoothstep(0.5, 0.1, length(c));
                 vec3 base = vec3(0.86, 0.88, 0.92) * vBase;
-                vec3 color = mix(base, uAccent * 1.4, vHot * 0.85);
+                vec3 color = mix(base, uAccent * 1.25, vHot * 0.8);
                 float alpha = a * (0.75 + vHot * 0.25) * (1.0 - vFog * 0.85) * uDim;
                 gl_FragColor = vec4(color * alpha, alpha);
             }
@@ -157,7 +157,7 @@ function start() {
     const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.3, 9, 6), mastMaterial);
     mast.position.y = height(0, 0) + 4.5;
     station.add(mast);
-    const beacon = new THREE.Mesh(new THREE.SphereGeometry(0.55, 12, 8), new THREE.MeshBasicMaterial({ color: 0xff5a1f }));
+    const beacon = new THREE.Mesh(new THREE.SphereGeometry(0.55, 12, 8), new THREE.MeshBasicMaterial({ color: 0xf4f4f6 }));
     beacon.position.y = height(0, 0) + 9.4;
     station.add(beacon);
     scene.add(station);
@@ -167,7 +167,7 @@ function start() {
     const droneGeometry = new THREE.OctahedronGeometry(0.6, 0);
     const droneMaterial = new THREE.MeshBasicMaterial({ color: 0xf2f2f2 });
     const roverGeometry = new THREE.BoxGeometry(1.5, 0.6, 1.0);
-    const roverMaterial = new THREE.MeshBasicMaterial({ color: 0xff5a1f });
+    const roverMaterial = new THREE.MeshBasicMaterial({ color: 0xa9adb6 });
     const TRAIL = 70;
 
     function randomTarget() {
@@ -196,7 +196,7 @@ function start() {
         const fade = new Float32Array(TRAIL * 3);
         for (let k = 0; k < TRAIL; k++) {
             const f = 1 - k / TRAIL;
-            const c = drone ? [0.75 * f, 0.77 * f, 0.8 * f] : [1.0 * f, 0.35 * f, 0.12 * f];
+            const c = drone ? [0.75 * f, 0.77 * f, 0.8 * f] : [0.55 * f, 0.57 * f, 0.62 * f];
             fade.set(c, k * 3);
         }
         trailGeometry.setAttribute('color', new THREE.BufferAttribute(fade, 3));
@@ -207,7 +207,7 @@ function start() {
             const rayGeometry = new THREE.BufferGeometry();
             rayGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6), 3));
             agent.ray = new THREE.Line(rayGeometry, new THREE.LineBasicMaterial({
-                color: 0xff5a1f, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false,
+                color: 0xffffff, transparent: true, opacity: 0.18, blending: THREE.AdditiveBlending, depthWrite: false,
             }));
             scene.add(agent.ray);
         }
