@@ -15,12 +15,12 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Recent experiments
 
-- [Adaptive Locomotion: Full Film](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): One learned policy keeps a quadruped walking and standing through lost limbs, slopes and moving ground.
+- [Surgical Thread Robot in MuJoCo](https://www.youtube.com/watch?v=R3CkOR57v4E) (Oct 2026): A learned policy steers a surgical robot that places threads thinner than a human hair into tissue that moves with breathing and pulse, about three times closer to target than the scripted routine it replaced.
+- [Adaptive Locomotion](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.
 - [Rover Swarm over a Degraded LoRa Mesh](https://www.youtube.com/watch?v=sA_NDf96Dgo) (Sep 2026): Simulated rovers share data over a Reticulum mesh network with heavy packet loss.
 - [Fly Flight School](https://www.youtube.com/watch?v=iAzzoydLlEo) (Sep 2026): A simulated fly learns to fly through the wiring map of a real fly’s brain.
 - [AlienWars Game Dev Harness](https://www.youtube.com/watch?v=2ecaXifPN2M) (Sep 2026): A reinforcement learning and game dev harness: coding agents explore a world model in simulation and run reinforcement learning in the loop.
 - [ModernBERT Plays Doom](https://www.youtube.com/watch?v=hXq426rW8gQ) (Sep 2026): A small language model plays Doom in real time, more than twice as fast as the game needs.
-- [Adaptive Locomotion](https://www.youtube.com/watch?v=emeSmbveTcc) (Sep 2026): A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.
 - [Amphibious Quadruped in MuJoCo](https://www.youtube.com/watch?v=NMeBjxofL8Y) (Sep 2026): A quadruped with leg-mounted floats walks into water, floats and walks out. Built in 40 minutes from a design posted on LinkedIn.
 - [Self-Improving Agent Trains a UAV with JEPA](https://www.youtube.com/watch?v=300rm4mPcYg) (Sep 2026): An AI agent read a research paper, wrote the code, and trained a drone controller that flies more accurately than the hand-written one.
 - [PINO Wind Forecasting for Drone Delivery](https://www.youtube.com/watch?v=W6TE1dscqE0) (Sep 2026): A drone learns to predict the wind and keeps its package on target in gusts it never trained on.
