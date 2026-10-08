@@ -290,6 +290,42 @@
         });
     }
 
+    /* Profile photos open larger in an overlay. */
+    function initPhotoZoom() {
+        const buttons = Array.from(document.querySelectorAll('[data-photo]'));
+        if (!buttons.length) return;
+        const overlay = document.createElement('div');
+        overlay.className = 'photo-overlay';
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
+        overlay.setAttribute('aria-label', 'Photo of Alex Rozgo');
+        overlay.innerHTML = '<img alt="Alex Rozgo" width="320" height="320"><button type="button" class="icon-button photo-close" aria-label="Close photo">×</button>';
+        document.body.appendChild(overlay);
+        const img = overlay.querySelector('img');
+        const closeButton = overlay.querySelector('.photo-close');
+        let lastFocus = null;
+
+        function close() {
+            overlay.classList.remove('is-open');
+            document.body.classList.remove('has-lightbox');
+            if (lastFocus) lastFocus.focus();
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                lastFocus = button;
+                img.src = button.dataset.photo;
+                overlay.classList.add('is-open');
+                document.body.classList.add('has-lightbox');
+                closeButton.focus();
+            });
+        });
+        overlay.addEventListener('click', close);
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && overlay.classList.contains('is-open')) close();
+        });
+    }
+
     /* Inline players on detail pages load YouTube only after a click. */
     function initEmbeds() {
         document.querySelectorAll('.video-embed button[data-youtube]').forEach((button) => {
@@ -344,6 +380,7 @@
         initPreviews();
         initLightbox();
         initEmbeds();
+        initPhotoZoom();
         initFilters();
     });
 })();
