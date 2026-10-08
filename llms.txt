@@ -12,12 +12,14 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 - [JEPA world models](https://rozgo.github.io/le-wm-nv/): A Rust and CUDA runtime for JEPA world models. SkyJEPA, rebuilt from its paper, learns how a drone moves and plans its rotor commands, and the JEPA Gym compares model variants on the same drone in MuJoCo. Code: https://github.com/rozgo/le-wm-nv
 - [MuJoCo Sandbox](https://rozgo.github.io/mujoco-sandbox/): Robots built, broken and measured in simulation, each with an engineering journal. Code: https://github.com/rozgo/mujoco-sandbox
 - [Doom Sandbox](https://rozgo.github.io/doom-sandbox/): Language and embedding models playing Doom: a trained ModernBERT classifier, GLiNER2.5 zero-shot and fine-tuned, and EmbeddingGemma 2 reading the screen. Code: https://github.com/rozgo/doom-sandbox
+- [World Sandbox](https://rozgo.github.io/world-sandbox/): Experiments with world models and 3D reconstruction, each with an engineering journal and a replayable 3D viewer. Code: https://github.com/rozgo/world-sandbox
 - [Maquina](https://rozgo.github.io/work/maquina/): An execution model for simulated worlds. A Lean 4 kernel checks every state change, and each run can be replayed. Agents, people and planners propose actions; the kernel accepts or rejects each one.
 - [Axionomy](https://rozgo.github.io/work/axionomy/): A Rust engine that models a problem as accounts, assets and exchanges. Search, optimization and reinforcement learning propose exchanges; the engine validates each one and keeps a replayable trace.
 - [Simbotic](https://rozgo.github.io/work/simbotic/): An open-source simulation engine and AI platform for training perception models on synthetic data and testing robots in simulation.
 
 ## Recent experiments
 
+- [Synthetic SLAM: a Generated Junkyard Rebuilt in 3D](https://www.youtube.com/watch?v=TBjPg-n815U) (Oct 2026): Six seconds of AI-generated video from a robot rolling through a junkyard, turned into the camera’s path and a 3D map of the scene.
 - [Surgical Thread Robot in MuJoCo](https://www.youtube.com/watch?v=R3CkOR57v4E) (Oct 2026): A learned policy steers a surgical robot that places threads thinner than a human hair into tissue that moves with breathing and pulse, about three times closer to target than the scripted routine it replaced.
 - [Adaptive Locomotion](https://www.youtube.com/watch?v=yv_uwpPm9KQ) (Sep 2026): A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.
 - [Rover Swarm over a Degraded LoRa Mesh](https://www.youtube.com/watch?v=sA_NDf96Dgo) (Sep 2026): Simulated rovers share data over a Reticulum mesh network with heavy packet loss.
@@ -29,7 +31,6 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 - [PINO Wind Forecasting for Drone Delivery](https://www.youtube.com/watch?v=W6TE1dscqE0) (Sep 2026): A drone learns to predict the wind and keeps its package on target in gusts it never trained on.
 - [Distributed Quadcopter Simulation](https://www.youtube.com/watch?v=xP0I3b8d3NI) (Sep 2025): A drone simulation split into separate programs that talk to each other, the way software runs on a real robot.
 - [Agentic Procedural Augmented Generation](https://www.youtube.com/watch?v=KAEwR96vhnA) (Nov 2024): Text and image prompts drive an agent that generates 3D characters procedurally.
-- [NPCs: Autonomous Agents](https://www.youtube.com/watch?v=H97_h5SBunA) (Oct 2024): NPC agents with individual goals that produce group behavior.
 
 ## Writing
 
@@ -42,4 +43,4 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Optional
 
-- [Video archive](https://rozgo.github.io/archive/): all 86 videos from 2007 to 2026, grouped by period and topic.
+- [Video archive](https://rozgo.github.io/archive/): all 87 videos from 2007 to 2026, grouped by period and topic.
