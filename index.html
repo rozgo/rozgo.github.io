@@ -116,7 +116,7 @@
                     <div>
                         <span class="label label--accent">01 · Selected work</span>
                         <h2>Systems</h2>
-                        <p>Six projects with public code, live demos or video. Each project page covers the problem, the design and the results.</p>
+                        <p>Nine projects with public code, live demos or video. Each has a project page or an engineering journal with the problem, the design and the results.</p>
                     </div>
                 </div>
                 <div class="systems" data-video-group>
@@ -145,6 +145,48 @@
                         <p class="proof">A whole fleet retrains in under 20 minutes on one GPU, so agents can test a design change in the same session.</p>
                         <ul class="link-row">
                             <li><a href="work/alienwars-gym/">Project page</a></li><li><a class="ext" href="https://rozgo.github.io/alienwars-gym/maplab/?seed=73&sym=1&a=6&b=6&biome=2&tunnels=1&cut=1" target="_blank" rel="noopener">Map Lab</a></li><li><a class="ext" href="https://github.com/rozgo/alienwars-gym" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="https://rozgo.github.io/le-wm-nv/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/jepa-world-models-800.webp" alt="JEPA Gym comparing two world models flying the same drone" width="800" height="450" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">World models · Rust, CUDA · 2026</span>
+                        <h3><a href="https://rozgo.github.io/le-wm-nv/" target="_blank" rel="noopener">JEPA world models</a></h3>
+                        <p class="system-desc">A Rust and CUDA runtime for JEPA world models. SkyJEPA, rebuilt from its paper, learns how a drone moves and plans its rotor commands, and the JEPA Gym compares model variants on the same drone in MuJoCo.</p>
+                        <p class="proof">The learned model made a hand-written flight controller more accurate, and it passed every tracking run across three training seeds and four test conditions.</p>
+                        <ul class="link-row">
+                            <li><a class="ext" href="https://rozgo.github.io/le-wm-nv/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/le-wm-nv" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="https://rozgo.github.io/mujoco-sandbox/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/mujoco-sandbox-800.webp" alt="Six-legged robot with two arms carrying objects between tables in MuJoCo" width="800" height="450" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Robot simulation · MuJoCo, Python · 2026</span>
+                        <h3><a href="https://rozgo.github.io/mujoco-sandbox/" target="_blank" rel="noopener">MuJoCo Sandbox</a></h3>
+                        <p class="system-desc">Robots built, broken and measured in simulation: a robot dog that keeps walking on three legs, an amphibious quadruped, rovers on a failing radio network, wind-aware drone delivery, a surgical robot and a two-armed hexapod.</p>
+                        <p class="proof">Every project has a journal that shows how it was built, with its videos, run instructions and measured results.</p>
+                        <ul class="link-row">
+                            <li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/" target="_blank" rel="noopener">Journals</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="system">
+                    <a class="system-media" href="https://rozgo.github.io/doom-sandbox/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="media/work/doom-sandbox-800.webp" alt="EmbeddingGemma 2 playing Doom, with its crop and prompt readouts" width="800" height="450" loading="lazy" decoding="async">
+                    </a>
+                    <div class="system-body">
+                        <span class="label">Language models · Python · 2026</span>
+                        <h3><a href="https://rozgo.github.io/doom-sandbox/" target="_blank" rel="noopener">Doom Sandbox</a></h3>
+                        <p class="system-desc">Language and embedding models playing Doom: a trained ModernBERT classifier that reads the game state as text, GLiNER2.5 zero-shot and then fine-tuned, and EmbeddingGemma 2 reading the screen.</p>
+                        <p class="proof">EmbeddingGemma 2 plays from the screen with no training: each decision compares crops of the frame against text prompts.</p>
+                        <ul class="link-row">
+                            <li><a class="ext" href="https://rozgo.github.io/doom-sandbox/" target="_blank" rel="noopener">Journals</a></li><li><a class="ext" href="https://github.com/rozgo/doom-sandbox" target="_blank" rel="noopener">Code</a></li>
                         </ul>
                     </div>
                 </article>
@@ -219,138 +261,145 @@
                     <a class="button" href="archive/">Full video archive (86)</a>
                 </div>
                 <div class="clips" data-video-group>
-                <a class="clip" href="https://www.youtube.com/watch?v=R3CkOR57v4E" data-video data-title="Surgical Thread Robot in MuJoCo" data-sub="Oct 2026" data-preview="media/clips/surgical.mp4">
+                <article class="clip" data-preview="media/clips/surgical.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/R3CkOR57v4E.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Oct 2026</span><span class="label">Medical robotics</span></div>
-                        <h3>Surgical Thread Robot in MuJoCo</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=R3CkOR57v4E" data-video data-title="Surgical Thread Robot in MuJoCo" data-sub="Oct 2026">Surgical Thread Robot in MuJoCo</a></h3>
                         <p class="clip-desc">A learned policy steers a surgical robot that places threads thinner than a human hair into tissue that moves with breathing and pulse, about three times closer to target than the scripted routine it replaced.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/surgical/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=yv_uwpPm9KQ" data-video data-title="Adaptive Locomotion" data-sub="Sep 2026" data-preview="media/clips/loco.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/loco.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/yv_uwpPm9KQ.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Robot learning</span></div>
-                        <h3>Adaptive Locomotion</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=yv_uwpPm9KQ" data-video data-title="Adaptive Locomotion" data-sub="Sep 2026">Adaptive Locomotion</a></h3>
                         <p class="clip-desc">A quadruped learns to walk by practicing in thousands of simulated worlds at the same time.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/dog/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=sA_NDf96Dgo" data-video data-title="Rover Swarm over a Degraded LoRa Mesh" data-sub="Sep 2026" data-preview="media/clips/rovers.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/rovers.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/sA_NDf96Dgo.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Multi-robot</span></div>
-                        <h3>Rover Swarm over a Degraded LoRa Mesh</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=sA_NDf96Dgo" data-video data-title="Rover Swarm over a Degraded LoRa Mesh" data-sub="Sep 2026">Rover Swarm over a Degraded LoRa Mesh</a></h3>
                         <p class="clip-desc">Simulated rovers share data over a Reticulum mesh network with heavy packet loss.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/rovers/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=iAzzoydLlEo" data-video data-title="Fly Flight School" data-sub="Sep 2026" data-preview="media/clips/fly.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/fly.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/iAzzoydLlEo.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neuro-control</span></div>
-                        <h3>Fly Flight School</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=iAzzoydLlEo" data-video data-title="Fly Flight School" data-sub="Sep 2026">Fly Flight School</a></h3>
                         <p class="clip-desc">A simulated fly learns to fly through the wiring map of a real fly’s brain.</p>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=2ecaXifPN2M" data-video data-title="AlienWars Game Dev Harness" data-sub="Sep 2026" data-preview="media/clips/alienwars.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/alienwars.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/2ecaXifPN2M.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Agents</span></div>
-                        <h3>AlienWars Game Dev Harness</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=2ecaXifPN2M" data-video data-title="AlienWars Game Dev Harness" data-sub="Sep 2026">AlienWars Game Dev Harness</a></h3>
                         <p class="clip-desc">A reinforcement learning and game dev harness: coding agents explore a world model in simulation and run reinforcement learning in the loop.</p>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=hXq426rW8gQ" data-video data-title="ModernBERT Plays Doom" data-sub="Sep 2026" data-preview="media/clips/doom.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/doom.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/hXq426rW8gQ.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Language models</span></div>
-                        <h3>ModernBERT Plays Doom</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=hXq426rW8gQ" data-video data-title="ModernBERT Plays Doom" data-sub="Sep 2026">ModernBERT Plays Doom</a></h3>
                         <p class="clip-desc">A small language model plays Doom in real time, more than twice as fast as the game needs.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/doom-sandbox/modernbert/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/doom-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=NMeBjxofL8Y" data-video data-title="Amphibious Quadruped in MuJoCo" data-sub="Sep 2026" data-preview="media/clips/amphibious.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/amphibious.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/NMeBjxofL8Y.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">MuJoCo</span></div>
-                        <h3>Amphibious Quadruped in MuJoCo</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=NMeBjxofL8Y" data-video data-title="Amphibious Quadruped in MuJoCo" data-sub="Sep 2026">Amphibious Quadruped in MuJoCo</a></h3>
                         <p class="clip-desc">A quadruped with leg-mounted floats walks into water, floats and walks out. Built in 40 minutes from a design posted on LinkedIn.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/amphibious/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=300rm4mPcYg" data-video data-title="Self-Improving Agent Trains a UAV with JEPA" data-sub="Sep 2026" data-preview="media/clips/jepa.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/jepa.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/300rm4mPcYg.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">World models</span></div>
-                        <h3>Self-Improving Agent Trains a UAV with JEPA</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=300rm4mPcYg" data-video data-title="Self-Improving Agent Trains a UAV with JEPA" data-sub="Sep 2026">Self-Improving Agent Trains a UAV with JEPA</a></h3>
                         <p class="clip-desc">An AI agent read a research paper, wrote the code, and trained a drone controller that flies more accurately than the hand-written one.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/le-wm-nv/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/le-wm-nv" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=W6TE1dscqE0" data-video data-title="PINO Wind Forecasting for Drone Delivery" data-sub="Sep 2026" data-preview="media/clips/pino.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/pino.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/W6TE1dscqE0.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2026</span><span class="label">Neural operators</span></div>
-                        <h3>PINO Wind Forecasting for Drone Delivery</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=W6TE1dscqE0" data-video data-title="PINO Wind Forecasting for Drone Delivery" data-sub="Sep 2026">PINO Wind Forecasting for Drone Delivery</a></h3>
                         <p class="clip-desc">A drone learns to predict the wind and keeps its package on target in gusts it never trained on.</p>
+                        <ul class="link-row clip-links"><li><a class="ext" href="https://rozgo.github.io/mujoco-sandbox/wind/" target="_blank" rel="noopener">Journal</a></li><li><a class="ext" href="https://github.com/rozgo/mujoco-sandbox" target="_blank" rel="noopener">Code</a></li></ul>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=xP0I3b8d3NI" data-video data-title="Distributed Quadcopter Simulation" data-sub="Sep 2025" data-preview="media/clips/quadcopter.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/quadcopter.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/xP0I3b8d3NI.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Sep 2025</span><span class="label">Simulation</span></div>
-                        <h3>Distributed Quadcopter Simulation</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=xP0I3b8d3NI" data-video data-title="Distributed Quadcopter Simulation" data-sub="Sep 2025">Distributed Quadcopter Simulation</a></h3>
                         <p class="clip-desc">A drone simulation split into separate programs that talk to each other, the way software runs on a real robot.</p>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=KAEwR96vhnA" data-video data-title="Agentic Procedural Augmented Generation" data-sub="Nov 2024" data-preview="media/clips/pag.mp4">
+                </article>
+                <article class="clip" data-preview="media/clips/pag.mp4">
                     <div class="clip-media">
                         <img src="media/thumbs/KAEwR96vhnA.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Nov 2024</span><span class="label">Generative</span></div>
-                        <h3>Agentic Procedural Augmented Generation</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=KAEwR96vhnA" data-video data-title="Agentic Procedural Augmented Generation" data-sub="Nov 2024">Agentic Procedural Augmented Generation</a></h3>
                         <p class="clip-desc">Text and image prompts drive an agent that generates 3D characters procedurally.</p>
                     </div>
-                </a>
-                <a class="clip" href="https://www.youtube.com/watch?v=H97_h5SBunA" data-video data-title="NPCs: Autonomous Agents" data-sub="Oct 2024">
+                </article>
+                <article class="clip">
                     <div class="clip-media">
                         <img src="media/thumbs/H97_h5SBunA.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
                         <span class="clip-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span>
                     </div>
                     <div class="clip-body">
                         <div class="clip-meta"><span class="label">Oct 2024</span><span class="label">Agents</span></div>
-                        <h3>NPCs: Autonomous Agents</h3>
+                        <h3><a class="clip-link" href="https://www.youtube.com/watch?v=H97_h5SBunA" data-video data-title="NPCs: Autonomous Agents" data-sub="Oct 2024">NPCs: Autonomous Agents</a></h3>
                         <p class="clip-desc">NPC agents with individual goals that produce group behavior.</p>
                     </div>
-                </a>
+                </article>
                 </div>
             </div>
         </section>

@@ -2077,3 +2077,52 @@ h3,
 .label.label--accent {
     color: var(--text-2);
 }
+
+/* Lab cards: the title link covers the whole card; Journal and Code links sit above it. */
+
+.clip-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.clip-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.clip-link:focus-visible {
+    outline: none;
+}
+
+.clip:has(.clip-link:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.clip-links {
+    position: relative;
+    z-index: 2;
+    margin-top: 12px;
+}
+
+.clip-links a {
+    font-size: 0.82rem;
+}
+
+/* An odd last system card spans the row, with its image beside the text. */
+
+@media (min-width: 861px) {
+    .systems .system:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+
+    .systems .system:last-child:nth-child(odd) .system-media {
+        flex: 0 0 50%;
+        aspect-ratio: auto;
+        border-bottom: 0;
+        border-right: 1px solid var(--line);
+    }
+}

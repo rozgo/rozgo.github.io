@@ -158,8 +158,8 @@
             };
             card.addEventListener('pointerenter', start);
             card.addEventListener('pointerleave', stop);
-            card.addEventListener('focus', start);
-            card.addEventListener('blur', stop);
+            card.addEventListener('focusin', start);
+            card.addEventListener('focusout', stop);
         });
     }
 
