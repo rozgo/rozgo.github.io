@@ -6,7 +6,7 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Systems
 
-- [Veoveo](https://rozgo.github.io/work/veoveo/): A self-hosted autonomy harness for physical AI, where humans, robots and agents learn, play and evolve together in simulated and real worlds. Agents rehearse in simulation and command robots in the field through the same controls.
+- [Veoveo](https://rozgo.github.io/work/veoveo/): Autonomous operations on infrastructure you own. A self-hosted autonomy harness for physical AI: agents rehearse in simulation, command robots in the field through the same controls, and build their own connectors to new sensors, robots and systems.
 - [JEPA world models](https://rozgo.github.io/le-wm-nv/): A Rust and CUDA runtime for JEPA world models. SkyJEPA, rebuilt from its paper, learns how a drone moves and plans its rotor commands, and the JEPA Gym compares model variants on the same drone in MuJoCo. Code: https://github.com/rozgo/le-wm-nv
 - [World Sandbox](https://rozgo.github.io/world-sandbox/): Experiments with world models and 3D reconstruction, each with an engineering journal and a replayable 3D viewer. Code: https://github.com/rozgo/world-sandbox
 - [MuJoCo Sandbox](https://rozgo.github.io/mujoco-sandbox/): Robots built, broken and measured in simulation, each with an engineering journal. Code: https://github.com/rozgo/mujoco-sandbox
@@ -43,4 +43,4 @@ Contact: alex.rozgo@gmail.com. GitHub: https://github.com/rozgo. CV: https://roz
 
 ## Optional
 
-- [Video archive](https://rozgo.github.io/archive/): all 87 videos from 2007 to 2026, grouped by period and topic.
+- [Video archive](https://rozgo.github.io/archive/): all 88 videos from 2007 to 2026, grouped by period and topic.

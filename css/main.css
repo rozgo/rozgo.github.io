@@ -2193,3 +2193,7 @@ h3,
     color: var(--text-2);
     border-color: var(--line-strong);
 }
+
+.figure--small {
+    max-width: 560px;
+}
